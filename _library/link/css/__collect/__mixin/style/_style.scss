@@ -593,16 +593,28 @@ div.container_video_full_width {
 	@include clearfix;
 	height:194px;
 	background:$color_black;
-	text-decoration:none;
+	text-decoration:none; 
+	margin-bottom:20px;
+	@media screen and (min-width: $tablet_body) {
+		margin-bottom:30px;
+		}
+	@media screen and (min-width: $desktop_body) {
+		margin-bottom:40px;
+		}
 	div.section_previous {
+		@include vp('transition','.25s');
 		background:url(_library/img/asset/texture_fabric.jpg)center no-repeat $color_black;
 		background-size:cover;
 		float:left;
 		width:0;height:100%;
-		a.previous {
+		a.previous { 
 			@include reset;
+			@include vp('transition','.25s');
 			display:block;
-			height:100%;
+			opacity:.5;
+			&:hover {
+				opacity:1;
+				}
 			@media screen and (min-width: $tablet_body) {
 				padding-left:34.948258806665%;
 				padding-right:20.957108416607%;
@@ -626,35 +638,44 @@ div.container_video_full_width {
 		text-align:right;
 		}
 	.thumb { //this is nested inside div.section_next. needed to unnest for dry
-		background:$color_black;
+		@include hide;
 		@include vp('box-sizing','border-box');
-		margin-top:0;
 		@include vp('border-radius','2px');
+		background:$color_black;
+		margin-top:0;
 		display:block;
 		height:0;
 		padding-left:10px;padding-right:10px;
-
+		&:hover {
+			div.left {margin-left:0px;opacity:1.0;}
+			div.right {margin-right:0px;opacity:1.0;}
+			}
 		@media screen and (min-width: $tablet_body) {
+			@include unhide;
 			margin-top:100px;
 			height:40px;
 			padding-top:10px;
 			}
 		@media screen and (min-width: $desktop_body) {
+			@include unhide;
 			margin-top:185px;
 			padding-top:30px;
 			height:80px;
 			}
-
 		div.left {
+			@include vp('transition','.25s');
+			opacity:0;
 			display:inline-block;
 			background:url(_library/img/asset/ico_caret.svg)no-repeat;
 			width:10px;
 			height:19px;
+			margin-left:20px;
 			background-position:100%;
 			background-size:200%;
 			}
 		div.right {
 			@extend .left;
+			margin-right:20px;
 			background-position:0%;
 			}
 		}
@@ -665,8 +686,12 @@ div.container_video_full_width {
 		width:0;height:100%;
 		a.next {
 			@include reset;
+			@include vp('transition','.25s');
 			display:block;
-			height:100%;
+			opacity:.5;
+			&:hover {
+				opacity:1;
+				}
 			@media screen and (min-width: $tablet_body) {
 				padding-left:20.957108416607%;
 				padding-right:34.948258806665%;
@@ -705,3 +730,21 @@ div.container_video_full_width {
 		}
 	}
 
+div.container_profile {
+	.content_left_side {
+		.member_photo {}
+		.member_name {}
+		.member_follow_station {}
+		.member_video {}
+		}
+	.content_right_side {
+		.specs_photo {}
+		.specs_container {}
+		}
+	}
+
+.specs_container {
+	p.title {}
+	p.title_sub {}
+	p.details {}
+	}

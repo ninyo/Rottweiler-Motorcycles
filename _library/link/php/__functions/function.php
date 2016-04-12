@@ -203,6 +203,7 @@ function group_top_about($_section_primary_title){
 function group_top_motorcycle($_section_primary_title){
 	global $array_motorcycles;
 	global $_section_grid_motorcycles;
+	global $loremipsum;
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————- */
@@ -221,7 +222,7 @@ function group_top_motorcycle($_section_primary_title){
 					}
 				}
 			}
-		}
+		} //end of foreach loop
 	$output = $output . '<div class="section" style="background:white;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
@@ -234,21 +235,29 @@ function group_top_motorcycle($_section_primary_title){
 							$output = $output . '</div>';
 						$output = $output . '</div>';
 						}
-					}
+					} //end of foreach loop
 			$output = $output . '</div>';
 			$output = $output . '<h2>'.ucwords('One-liner Illor alibera dolupti oreiumenim quidi volore nos').'</h2>';
 		$output = $output . '</div>';
 		$output = $output . '<div class="container_video_full_width">';
 			$output = $output . '<div class="section_previous">';
-				if($previous >= 0){
 				$output = $output . '<a href="motorcycle.php?id='.$previous.'" class="previous">';
-					$output = $output . '<div class="thumb">';
+				if($previous >= 0){
+					foreach($array_motorcycles as $id => $motorcycle){
+						if($id == $previous){
+							$count = 0;
+							foreach($motorcycle[images] as $url => $description){
+								$count = $count +1;
+								if($count == 1){
+									$output = $output . '<div style="background:url('.$url.')center no-repeat; background-size:cover;" class="thumb">';
+									}
+								}
+							}
+						}
 						$output = $output . '<div class="left"></div>';
 					$output = $output . '</div>';
 				$output = $output . '</a>';
-					}else{
-					$output = $output . '<div>nothing</div>';
-						}
+					}
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_video">';
 				$output = $output . '<div class="video_poster"></div>';
@@ -257,16 +266,27 @@ function group_top_motorcycle($_section_primary_title){
 				$output = $output . '</a>';
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_next">';
-				if($next < $amount){
 				$output = $output . '<a href="motorcycle.php?id='.$next.'" class="next">';
-					$output = $output . '<div class="thumb right">';
+				if($next < $amount){
+					foreach($array_motorcycles as $id => $motorcycle){
+						if($id == $next){
+							$count = 0;
+							foreach($motorcycle[images] as $url => $description){
+								$count = $count +1;
+								if($count == 1){
+									$output = $output . '<div style="background:url('.$url.')center no-repeat; background-size:cover;" class="thumb right">';
+									}
+								}
+							}
+						}
+					}
 						$output = $output . '<div class="right"></div>';
 					$output = $output . '</div>';
 				$output = $output . '</a>';
-					}else{
-					$output = $output . '<div>nothing</div>';
-						}
 			$output = $output . '</div>';
+		$output = $output . '</div>';
+		$output = $output . '<div class="inner">';
+			$output = $output . '<p>'.$loremipsum.'</p>';
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 	/* ———————————————————————————————— */

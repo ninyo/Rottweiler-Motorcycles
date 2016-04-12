@@ -678,12 +678,24 @@ div.title_secondary {
 div.container_video_full_width {
   height: 194px;
   background: #333333;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-bottom: 20px; }
   div.container_video_full_width:after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (min-width: 760px) {
+    div.container_video_full_width {
+      margin-bottom: 30px; } }
+  @media screen and (min-width: 1080px) {
+    div.container_video_full_width {
+      margin-bottom: 40px; } }
   div.container_video_full_width div.section_previous {
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
     background: url(_library/img/asset/texture_fabric.jpg) center no-repeat #333333;
     background-size: cover;
     float: left;
@@ -694,8 +706,15 @@ div.container_video_full_width {
       padding: 0;
       list-style-type: none;
       text-decoration: none;
+      -webkit-transition: .25s;
+      -moz-transition: .25s;
+      -ms-transition: .25s;
+      -o-transition: .25s;
+      transition: .25s;
       display: block;
-      height: 100%; }
+      opacity: .5; }
+      div.container_video_full_width div.section_previous a.previous:hover {
+        opacity: 1; }
       @media screen and (min-width: 760px) {
         div.container_video_full_width div.section_previous a.previous {
           padding-left: 34.948258806665%;
@@ -717,40 +736,60 @@ div.container_video_full_width {
   div.container_video_full_width .right {
     text-align: right; }
   div.container_video_full_width .thumb {
-    background: #333333;
+    height: 0;
+    opacity: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: 0;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px;
+    background: #333333;
+    margin-top: 0;
     display: block;
     height: 0;
     padding-left: 10px;
     padding-right: 10px; }
+    div.container_video_full_width .thumb:hover div.left, div.container_video_full_width .thumb:hover div.right {
+      margin-left: 0px;
+      opacity: 1.0; }
+    div.container_video_full_width .thumb:hover div.right {
+      margin-right: 0px;
+      opacity: 1.0; }
     @media screen and (min-width: 760px) {
       div.container_video_full_width .thumb {
+        height: initial;
+        opacity: 1;
         margin-top: 100px;
         height: 40px;
         padding-top: 10px; } }
     @media screen and (min-width: 1080px) {
       div.container_video_full_width .thumb {
+        height: initial;
+        opacity: 1;
         margin-top: 185px;
         padding-top: 30px;
         height: 80px; } }
     div.container_video_full_width .thumb div.left, div.container_video_full_width .thumb div.right {
+      -webkit-transition: .25s;
+      -moz-transition: .25s;
+      -ms-transition: .25s;
+      -o-transition: .25s;
+      transition: .25s;
+      opacity: 0;
       display: inline-block;
       background: url(_library/img/asset/ico_caret.svg) no-repeat;
       width: 10px;
       height: 19px;
+      margin-left: 20px;
       background-position: 100%;
       background-size: 200%; }
     div.container_video_full_width .thumb div.right {
+      margin-right: 20px;
       background-position: 0%; }
   div.container_video_full_width div.section_next {
     background: url(_library/img/asset/texture_fabric.jpg) center no-repeat #333333;
@@ -763,8 +802,15 @@ div.container_video_full_width {
       padding: 0;
       list-style-type: none;
       text-decoration: none;
+      -webkit-transition: .25s;
+      -moz-transition: .25s;
+      -ms-transition: .25s;
+      -o-transition: .25s;
+      transition: .25s;
       display: block;
-      height: 100%; }
+      opacity: .5; }
+      div.container_video_full_width div.section_next a.next:hover {
+        opacity: 1; }
       @media screen and (min-width: 760px) {
         div.container_video_full_width div.section_next a.next {
           padding-left: 20.957108416607%;
