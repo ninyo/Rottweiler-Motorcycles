@@ -1,0 +1,22 @@
+@import url("//hello.myfonts.net/count/305352");
+  
+@font-face {font-family: 'Geogrotesque-Regular';src: url('webfonts/305352_0_0.eot');src: url('webfonts/305352_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/305352_0_0.woff2') format('woff2'),url('webfonts/305352_0_0.woff') format('woff'),url('webfonts/305352_0_0.ttf') format('truetype');} 
+@font-face {font-family: 'GeogrotesqueComp-SmBd';src: url('webfonts/305352_1_0.eot');src: url('webfonts/305352_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/305352_1_0.woff2') format('woff2'),url('webfonts/305352_1_0.woff') format('woff'),url('webfonts/305352_1_0.ttf') format('truetype');}  
+@font-face {font-family: 'GeogrotesqueXComp-SmBd';src: url('webfonts/305352_2_0.eot');src: url('webfonts/305352_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/305352_2_0.woff2') format('woff2'),url('webfonts/305352_2_0.woff') format('woff'),url('webfonts/305352_2_0.ttf') format('truetype');}
+
+@mixin font_geogrotesque {
+	font-family: Geogrotesque-Regular;
+	font-weight: normal;
+	}
+
+@mixin font_geogrotesque_semibold {
+	font-family: GeogrotesqueComp-SmBd;
+	font-weight: normal;
+	}
+
+@mixin font_geogrotesque_xcomp {
+	font-family: GeogrotesqueXComp-SmBd;
+	font-weight: normal;
+	}
+
+ 

@@ -1,0 +1,50 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3165925, 2016-02-03T18:46:48-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Geogrotesque-Regular by Emtype Foundry
+ * URL: http://www.myfonts.com/fonts/emtype/geogrotesque/regular/
+ * Copyright: Copyright (c) 2009-2011 by Eduardo Manso. All rights reserved.
+ * 
+ * Webfont: GeogrotesqueComp-SmBd by Emtype Foundry
+ * URL: http://www.myfonts.com/fonts/emtype/geogrotesque-compressed /semi-bold-regular/
+ * Copyright: Copyright (c) 2015 by Eduardo Manso. All rights reserved.
+ * 
+ * Webfont: GeogrotesqueXComp-SmBd by Emtype Foundry
+ * URL: http://www.myfonts.com/fonts/emtype/geogrotesque-extra-compressed/semi-bold-regular/
+ * Copyright: Copyright (c) 2015 by Eduardo Manso. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3165925
+ * Licensed pageviews: 10,000
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+ 
+@font-face {
+	font-family: 'Geogrotesque-Regular';
+	src: url('webfonts/304EE5_0_0.eot');
+	src: url('webfonts/304EE5_0_0.eot?#iefix') format('embedded-opentype'),
+		url('webfonts/304EE5_0_0.woff2') format('woff2'),
+		url('webfonts/304EE5_0_0.woff') format('woff'),
+		url('webfonts/304EE5_0_0.ttf') format('truetype');
+	}
+@font-face {
+	font-family: 'GeogrotesqueComp-SmBd';
+	src: url('webfonts/304EE5_1_0.eot');
+	src: url('webfonts/304EE5_1_0.eot?#iefix') format('embedded-opentype'),
+		url('webfonts/304EE5_1_0.woff2') format('woff2'),
+		url('webfonts/304EE5_1_0.woff') format('woff'),
+		url('webfonts/304EE5_1_0.ttf') format('truetype');
+	}
+@font-face {font-family: 'GeogrotesqueXComp-SmBd';src: url('webfonts/304EE5_2_0.eot');src: url('webfonts/304EE5_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/304EE5_2_0.woff2') format('woff2'),url('webfonts/304EE5_2_0.woff') format('woff'),url('webfonts/304EE5_2_0.ttf') format('truetype');}
+ 

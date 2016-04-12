@@ -1,0 +1,56 @@
+$mobile:320px;
+// iphone 4s is 320px wide
+@mixin mobile {width:84.375%;}
+	@mixin mobile-2 {
+		width:($mobile-$gap_sm)/2;
+		margin-right:$gap_sm;
+		&:nth-child(2n+2) {margin-right:0;}
+		}
+	@mixin mobile-3 {
+		width:($mobile-$gap_sm(2))/3;
+		margin-right:$gap_sm;
+		&:nth-child(3n+3) {margin-right:0;}
+		}
+	@mixin mobile-4 {
+		width:($mobile-$gap_sm(3))/4;
+		margin-right:$gap_sm;
+		&:nth-child(4n+4) {margin-right:0;}
+		}
+
+$tablet:760px;
+// ipad-ish is 780px wide
+@mixin tablet {width:89.411764705882%;}
+	@mixin tablet-2 {
+		width:($tablet-$gap_sm)/2;
+		margin-right:$gap_sm;
+		&:nth-child(2n+2) {margin-right:0;}
+		}
+	@mixin tablet-3 {
+		width:($tablet-$gap_sm(2))/3;
+		margin-right:$gap_sm;
+		&:nth-child(3n+3) {margin-right:0;}
+		}
+	@mixin tablet-4 {
+		width:($tablet-$gap_sm(3))/4;
+		margin-right:$gap_sm;
+		&:nth-child(4n+4) {margin-right:0;}
+		}
+
+$desktop:1000px;
+// macbook air is 1440px wide
+@mixin desktop {width:1000px;}
+	@mixin desktop-2 {
+		width:($desktop-$gap_sm)/2;
+		margin-right:$gap_sm;
+		&:nth-child(2n+2) {margin-right:0;}
+		}
+	@mixin desktop-3 {
+		width:($desktop-$gap_sm(2))/3;
+		margin-right:$gap_sm;
+		&:nth-child(3n+3) {margin-right:0;}
+		}
+	@mixin desktop-4 {
+		width:($desktop-$gap_sm(3))/4;
+		margin-right:$gap_sm;
+		&:nth-child(4n+4) {margin-right:0;}
+		}

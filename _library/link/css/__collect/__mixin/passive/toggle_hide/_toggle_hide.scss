@@ -1,0 +1,8 @@
+@mixin hide {
+	height:0;
+	opacity:0;
+	}
+@mixin unhide {
+	height:initial;
+	opacity:1;
+	}
