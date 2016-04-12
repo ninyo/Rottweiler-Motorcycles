@@ -595,13 +595,22 @@ div.container_video_full_width {
 	background:$color_black;
 	text-decoration:none;
 	div.section_previous {
-		background:$color_black;
+		background:url(_library/img/asset/texture_fabric.jpg)center no-repeat $color_black;
+		background-size:cover;
 		float:left;
 		width:0;height:100%;
 		a.previous {
 			@include reset;
 			display:block;
 			height:100%;
+			@media screen and (min-width: $tablet_body) {
+				padding-left:34.948258806665%;
+				padding-right:20.957108416607%;
+				}
+			@media screen and (min-width: $desktop_body) {
+				padding-left:37.515123284074%;
+				padding-right:18.39022605988%;
+				}
 			}
 		}
 	div.section_video {
@@ -613,14 +622,59 @@ div.container_video_full_width {
 			@include reset;
 			}
 		}
-	div.section_next {
+	.right {
+		text-align:right;
+		}
+	.thumb { //this is nested inside div.section_next. needed to unnest for dry
 		background:$color_black;
+		@include vp('box-sizing','border-box');
+		margin-top:0;
+		@include vp('border-radius','2px');
+		display:block;
+		height:0;
+		padding-left:10px;padding-right:10px;
+
+		@media screen and (min-width: $tablet_body) {
+			margin-top:100px;
+			height:40px;
+			padding-top:10px;
+			}
+		@media screen and (min-width: $desktop_body) {
+			margin-top:185px;
+			padding-top:30px;
+			height:80px;
+			}
+
+		div.left {
+			display:inline-block;
+			background:url(_library/img/asset/ico_caret.svg)no-repeat;
+			width:10px;
+			height:19px;
+			background-position:100%;
+			background-size:200%;
+			}
+		div.right {
+			@extend .left;
+			background-position:0%;
+			}
+		}
+	div.section_next {
+		background:url(_library/img/asset/texture_fabric.jpg)center no-repeat $color_black;
+		background-size:cover;
 		float:left;
 		width:0;height:100%;
 		a.next {
 			@include reset;
 			display:block;
 			height:100%;
+			@media screen and (min-width: $tablet_body) {
+				padding-left:20.957108416607%;
+				padding-right:34.948258806665%;
+				}
+			@media screen and (min-width: $desktop_body) {
+				padding-left:18.39022605988%;
+				padding-right:37.515123284074%;
+				}
 			}
 		}
 	@media screen and (min-width: $tablet_body) {

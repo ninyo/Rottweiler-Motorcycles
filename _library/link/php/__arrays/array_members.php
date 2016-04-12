@@ -232,7 +232,7 @@ $array_members['jeli'] = array(
 		'first' => 'jeli',
 		'last' => 'roxas',
 		),
-	'position' => 'grease monkey',
+	'position' => 'booking',
 	'ride' => array(
 		'display' => false,
 		'year' => 1995,
@@ -253,7 +253,4 @@ $array_members['jeli'] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-
-// echo '<span style="font-weight:bold;">members loaded</span>: need to create output functions<br>';
-
 ?>

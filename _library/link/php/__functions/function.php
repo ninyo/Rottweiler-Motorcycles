@@ -214,7 +214,12 @@ function group_top_motorcycle($_section_primary_title){
 	$count = 0;
 	foreach($array_motorcycles as $id => $motorcycle){
 		if($match == $id){
-			$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+			foreach($motorcycle[images] as $url => $description){
+				$count = $count +1;
+				if($count==1){
+					$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+					}
+				}
 			}
 		}
 	$output = $output . '<div class="section" style="background:white;">';
@@ -237,7 +242,9 @@ function group_top_motorcycle($_section_primary_title){
 			$output = $output . '<div class="section_previous">';
 				if($previous >= 0){
 				$output = $output . '<a href="motorcycle.php?id='.$previous.'" class="previous">';
-					$output = $output . '<div></div>';
+					$output = $output . '<div class="thumb">';
+						$output = $output . '<div class="left"></div>';
+					$output = $output . '</div>';
 				$output = $output . '</a>';
 					}else{
 					$output = $output . '<div>nothing</div>';
@@ -252,7 +259,9 @@ function group_top_motorcycle($_section_primary_title){
 			$output = $output . '<div class="section_next">';
 				if($next < $amount){
 				$output = $output . '<a href="motorcycle.php?id='.$next.'" class="next">';
-					$output = $output . '<div></div>';
+					$output = $output . '<div class="thumb right">';
+						$output = $output . '<div class="right"></div>';
+					$output = $output . '</div>';
 				$output = $output . '</a>';
 					}else{
 					$output = $output . '<div>nothing</div>';

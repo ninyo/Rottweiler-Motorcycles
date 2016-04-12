@@ -684,7 +684,8 @@ div.container_video_full_width {
     display: table;
     clear: both; }
   div.container_video_full_width div.section_previous {
-    background: #333333;
+    background: url(_library/img/asset/texture_fabric.jpg) center no-repeat #333333;
+    background-size: cover;
     float: left;
     width: 0;
     height: 100%; }
@@ -695,6 +696,14 @@ div.container_video_full_width {
       text-decoration: none;
       display: block;
       height: 100%; }
+      @media screen and (min-width: 760px) {
+        div.container_video_full_width div.section_previous a.previous {
+          padding-left: 34.948258806665%;
+          padding-right: 20.957108416607%; } }
+      @media screen and (min-width: 1080px) {
+        div.container_video_full_width div.section_previous a.previous {
+          padding-left: 37.515123284074%;
+          padding-right: 18.39022605988%; } }
   div.container_video_full_width div.section_video {
     float: left;
     width: 100%;
@@ -705,8 +714,47 @@ div.container_video_full_width {
       padding: 0;
       list-style-type: none;
       text-decoration: none; }
-  div.container_video_full_width div.section_next {
+  div.container_video_full_width .right {
+    text-align: right; }
+  div.container_video_full_width .thumb {
     background: #333333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    display: block;
+    height: 0;
+    padding-left: 10px;
+    padding-right: 10px; }
+    @media screen and (min-width: 760px) {
+      div.container_video_full_width .thumb {
+        margin-top: 100px;
+        height: 40px;
+        padding-top: 10px; } }
+    @media screen and (min-width: 1080px) {
+      div.container_video_full_width .thumb {
+        margin-top: 185px;
+        padding-top: 30px;
+        height: 80px; } }
+    div.container_video_full_width .thumb div.left, div.container_video_full_width .thumb div.right {
+      display: inline-block;
+      background: url(_library/img/asset/ico_caret.svg) no-repeat;
+      width: 10px;
+      height: 19px;
+      background-position: 100%;
+      background-size: 200%; }
+    div.container_video_full_width .thumb div.right {
+      background-position: 0%; }
+  div.container_video_full_width div.section_next {
+    background: url(_library/img/asset/texture_fabric.jpg) center no-repeat #333333;
+    background-size: cover;
     float: left;
     width: 0;
     height: 100%; }
@@ -717,6 +765,14 @@ div.container_video_full_width {
       text-decoration: none;
       display: block;
       height: 100%; }
+      @media screen and (min-width: 760px) {
+        div.container_video_full_width div.section_next a.next {
+          padding-left: 20.957108416607%;
+          padding-right: 34.948258806665%; } }
+      @media screen and (min-width: 1080px) {
+        div.container_video_full_width div.section_next a.next {
+          padding-left: 18.39022605988%;
+          padding-right: 37.515123284074%; } }
   @media screen and (min-width: 760px) {
     div.container_video_full_width {
       height: 240px;
