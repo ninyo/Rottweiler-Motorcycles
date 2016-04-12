@@ -254,6 +254,53 @@ div.title_secondary {
       div.title_secondary p {
         margin: 38px 0 89px 0; } }
 
+.content_group:after {
+  content: "";
+  display: table;
+  clear: both; }
+.content_group .content_leftside {
+  height: 0;
+  opacity: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  float: left;
+  margin-right: 0%; }
+.content_group .content_rightside {
+  float: left;
+  width: 100%; }
+@media screen and (min-width: 760px) {
+  .content_group .content_leftside {
+    height: initial;
+    opacity: 1;
+    margin-top: 61px;
+    background: black;
+    height: 224px;
+    width: 24.821651090343%;
+    margin-right: 3.115264797508%; }
+  .content_group .content_rightside {
+    width: 72.06308411215%; }
+    .content_group .content_rightside h2 {
+      text-align: left; }
+    .content_group .content_rightside p {
+      text-align: left; } }
+@media screen and (min-width: 1080px) {
+  .content_group .content_leftside {
+    height: initial;
+    opacity: 1;
+    background: black;
+    height: 370px;
+    width: 32.603416666667%;
+    margin-right: 3.333333333333%; }
+  .content_group .content_rightside {
+    width: 64.06325%; }
+    .content_group .content_rightside h2 {
+      text-align: left; }
+    .content_group .content_rightside p {
+      text-align: left; } }
+
 .img_grid_team ul {
   margin: 0;
   padding: 0;
@@ -324,67 +371,69 @@ div.title_secondary {
           color: #333333; }
         .img_grid_team ul li:hover .nametag .position {
           color: #333333; } }
-    .img_grid_team ul li .photo {
-      -webkit-transition: .25s;
-      -moz-transition: .25s;
-      -ms-transition: .25s;
-      -o-transition: .25s;
-      transition: .25s;
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-      filter: grayscale(100%);
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      -o-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      height: 170px;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center; }
-      @media screen and (min-width: 760px) {
-        .img_grid_team ul li .photo {
-          height: 207px; } }
-      @media screen and (min-width: 1080px) {
-        .img_grid_team ul li .photo {
-          height: 288px; } }
-    .img_grid_team ul li .nametag {
-      -webkit-transition: .25s;
-      -moz-transition: .25s;
-      -ms-transition: .25s;
-      -o-transition: .25s;
-      transition: .25s;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-      -o-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow: auto;
-      background: black;
-      padding: 10px 10px 12px 10px;
-      text-align: center; }
-      .img_grid_team ul li .nametag .name {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        text-decoration: none;
-        font-family: GeogrotesqueComp-SmBd;
-        text-transform: uppercase;
-        color: #FFF;
-        margin-bottom: -2px;
-        font-size: 20px; }
-      .img_grid_team ul li .nametag .position {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        text-decoration: none;
-        font-family: asap;
-        font-style: italic;
-        font-size: 16px;
-        color: #555; }
+    .img_grid_team ul li a {
+      text-decoration: none; }
+      .img_grid_team ul li a .photo {
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 170px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center; }
+        @media screen and (min-width: 760px) {
+          .img_grid_team ul li a .photo {
+            height: 207px; } }
+        @media screen and (min-width: 1080px) {
+          .img_grid_team ul li a .photo {
+            height: 288px; } }
+      .img_grid_team ul li a .nametag {
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: auto;
+        background: black;
+        padding: 10px 10px 12px 10px;
+        text-align: center; }
+        .img_grid_team ul li a .nametag .name {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-decoration: none;
+          font-family: GeogrotesqueComp-SmBd;
+          text-transform: uppercase;
+          color: #FFF;
+          margin-bottom: -2px;
+          font-size: 20px; }
+        .img_grid_team ul li a .nametag .position {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-decoration: none;
+          font-family: asap;
+          font-style: italic;
+          font-size: 16px;
+          color: #555; }
 
 .img_grid_motorcycles ul {
   margin: 0;
@@ -493,57 +542,66 @@ div.title_secondary {
       /* For visualization 
       background: #808080; width: 5px;
       */ }
-    .img_grid_motorcycles ul li.parent div.container {
-      -webkit-transition: .25s;
-      -moz-transition: .25s;
-      -ms-transition: .25s;
-      -o-transition: .25s;
-      transition: .25s;
-      z-index: 1;
-      display: inline-block;
-      margin-top: 0px; }
-      @media screen and (min-width: 1080px) {
-        .img_grid_motorcycles ul li.parent div.container {
-          height: 0;
-          opacity: 0; } }
-      .img_grid_motorcycles ul li.parent div.container p.title_year {
-        margin: -7px;
-        color: white; }
-        @media screen and (min-width: 760px) {
-          .img_grid_motorcycles ul li.parent div.container p.title_year {
-            margin: -3px; } }
-        @media screen and (min-width: 1080px) {
-          .img_grid_motorcycles ul li.parent div.container p.title_year {
-            margin: 0; } }
-      .img_grid_motorcycles ul li.parent div.container h1.title_name {
+    .img_grid_motorcycles ul li.parent a {
+      text-decoration: none; }
+      .img_grid_motorcycles ul li.parent a div.container {
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        z-index: 1;
         display: inline-block;
-        color: white;
-        padding-bottom: 0; }
-    .img_grid_motorcycles ul li.parent div.cover {
-      -webkit-transition: .25s;
-      -moz-transition: .25s;
-      -ms-transition: .25s;
-      -o-transition: .25s;
-      transition: .25s;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: -1; }
-    .img_grid_motorcycles ul li.parent div.under {
-      -webkit-transition: .25s;
-      -moz-transition: .25s;
-      -ms-transition: .25s;
-      -o-transition: .25s;
-      transition: .25s;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      z-index: -5;
-      background: #333333; }
+        margin-top: 0px; }
+        @media screen and (min-width: 1080px) {
+          .img_grid_motorcycles ul li.parent a div.container {
+            height: 0;
+            opacity: 0; } }
+        .img_grid_motorcycles ul li.parent a div.container p.title_year {
+          margin: -7px;
+          color: white; }
+          @media screen and (min-width: 760px) {
+            .img_grid_motorcycles ul li.parent a div.container p.title_year {
+              margin: -3px; } }
+          @media screen and (min-width: 1080px) {
+            .img_grid_motorcycles ul li.parent a div.container p.title_year {
+              margin: 0; } }
+        .img_grid_motorcycles ul li.parent a div.container h1.title_name {
+          display: inline-block;
+          color: white;
+          padding-bottom: 0; }
+      .img_grid_motorcycles ul li.parent a div.cover {
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1; }
+      .img_grid_motorcycles ul li.parent a div.under {
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        -ms-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -5;
+        background: #333333;
+        opacity: 0; }
+        @media screen and (min-width: 760px) {
+          .img_grid_motorcycles ul li.parent a div.under {
+            opacity: 0; } }
+        @media screen and (min-width: 1080px) {
+          .img_grid_motorcycles ul li.parent a div.under {
+            opacity: 1; } }
 
 .testimonial {
   text-align: center;
@@ -616,6 +674,69 @@ div.title_secondary {
     background: black;
     color: white;
     padding: 5px 25px; }
+
+div.container_video_full_width {
+  height: 194px;
+  background: #333333;
+  text-decoration: none; }
+  div.container_video_full_width:after {
+    content: "";
+    display: table;
+    clear: both; }
+  div.container_video_full_width div.section_previous {
+    background: #333333;
+    float: left;
+    width: 0;
+    height: 100%; }
+    div.container_video_full_width div.section_previous a.previous {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-decoration: none;
+      display: block;
+      height: 100%; }
+  div.container_video_full_width div.section_video {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: black; }
+    div.container_video_full_width div.section_video a.play {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-decoration: none; }
+  div.container_video_full_width div.section_next {
+    background: #333333;
+    float: left;
+    width: 0;
+    height: 100%; }
+    div.container_video_full_width div.section_next a.next {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-decoration: none;
+      display: block;
+      height: 100%; }
+  @media screen and (min-width: 760px) {
+    div.container_video_full_width {
+      height: 240px;
+      background: #333333; }
+      div.container_video_full_width div.section_previous {
+        width: 22.213289473684%; }
+      div.container_video_full_width div.section_video {
+        width: 55.573421052632%; }
+      div.container_video_full_width div.section_next {
+        width: 22.213289473684%; } }
+  @media screen and (min-width: 1080px) {
+    div.container_video_full_width {
+      height: 450px;
+      background: #333333; }
+      div.container_video_full_width div.section_previous {
+        width: 22.213263888889%; }
+      div.container_video_full_width div.section_video {
+        width: 55.573472222222%; }
+      div.container_video_full_width div.section_next {
+        width: 22.213263888889%; } }
 
 .parallax__group {
   -webkit-transform-style: preserve-3d;

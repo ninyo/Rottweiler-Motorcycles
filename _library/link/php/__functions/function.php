@@ -78,11 +78,13 @@ function section_coreteam(){
 				$output = $output . '<ul>';
 					foreach($array_members as $id => $member){
 						$output = $output . '<li>';
-							$output = $output . '<div class="photo" style="background-image:url(_library/img/team/team-'.$member['name']['first'].'.jpg)"></div>';
-							$output = $output . '<div class="nametag">';
-								$output = $output . '<div class="name">'.$member['name']['first'].' <span class="text_reveal">'.$member['name']['last'].'</span></div>';
-								$output = $output . '<div class="position">'.$member['position'].'</div>';
-							$output = $output . '</div>';
+							$output = $output . '<a href="member.php?id='.$id.'">';
+								$output = $output . '<div class="photo" style="background-image:url(_library/img/team/team-'.$member['name']['first'].'.jpg)"></div>';
+								$output = $output . '<div class="nametag">';
+									$output = $output . '<div class="name">'.$member['name']['first'].' <span class="text_reveal">'.$member['name']['last'].'</span></div>';
+									$output = $output . '<div class="position">'.$member['position'].'</div>';
+								$output = $output . '</div>';
+							$output = $output . '</a>';
 						$output = $output . '</li> ';
 						}
 				$output = $output . '</ul>';
@@ -127,18 +129,20 @@ function section_grid_motorcycles(){
 		$output = $output . '<ul>';
 			foreach($array_motorcycles as $id => $motorcycle){
 				$output = $output . '<li class="parent">';
-					$output = $output . '<div class="container">';
-						$output = $output . '<p class="title_year">'.$motorcycle['specs']['year'].'</p>';
-						$output = $output . '<h1 class="title_name">'.$motorcycle['motorcycle_nick'].'</h1>';
-					$output = $output . '</div>';
-					$photo_count = 0;
-					foreach($motorcycle[images] as $photo => $description){
-						$photo_count = $photo_count + 1;
-						if($photo_count == 1){
-							$output = $output . '<div class="cover" style="background:url('.$photo.')center no-repeat;background-size:cover;"></div>';
+					$output = $output . '<a href="motorcycle.php?id='.$id.'">';
+						$output = $output . '<div class="container">';
+							$output = $output . '<p class="title_year">'.$motorcycle['specs']['year'].'</p>';
+							$output = $output . '<h1 class="title_name">'.$motorcycle['motorcycle_nick'].'</h1>';
+						$output = $output . '</div>';
+						$photo_count = 0;
+						foreach($motorcycle[images] as $photo => $description){
+							$photo_count = $photo_count + 1;
+							if($photo_count == 1){
+								$output = $output . '<div class="cover" style="background:url('.$photo.')center no-repeat;background-size:cover;"></div>';
+								}
 							}
-						}
-					$output = $output . '<div class="under"></div>';
+						$output = $output . '<div class="under"></div>';
+					$output = $output . '</a>';
 				$output = $output . '</li>';
 				}
 		$output = $output . '</ul>';
@@ -152,6 +156,15 @@ function section_grid_motorcycles(){
 
 function group_top_about($_section_primary_title){
 	global $_section_coreteam;
+
+	$array_content_about[] = array(
+		'_library/img/asset/img_2449.jpg',
+		'_library/img/asset/img_2452.jpg',
+		'_library/img/asset/img_2472.jpg',
+		'_library/img/asset/img_2501.jpg',
+		'_library/img/asset/img_2495.jpg',
+		'_library/img/asset/img_2282.jpg',
+		);
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————- */
@@ -162,7 +175,16 @@ function group_top_about($_section_primary_title){
 				$output = $output . section_primary_title("our story",'a look inside');
 			$output = $output . '</div>';
 			$output = $output . '<div class="content_group">';
-				$output = $output . '<div class="content_leftside"></div>';
+				$count = 0;
+				foreach($array_content_about as $location){
+					shuffle($location);
+					foreach($location as $url){
+						$count = $count +1;
+						if($count == 1){
+							$output = $output . '<div class="content_leftside" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';
+							}
+						}
+					}
 				$output = $output . '<div class="content_rightside">';
 					$output = $output . '<h2>'.ucwords('Recently voted the Best in Western Washington').'</h2>';
 					$output = $output . '<p>Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We’ve got you. And at the end of the day if you can’t get your motorcycle down here, we’ll gladly pick it up at no charge. Anything you need or dream of for your ride, we’ve got you. Give us a call or stop by, and we will give you a tour of our shop.</p>';
@@ -179,18 +201,63 @@ function group_top_about($_section_primary_title){
 /* ————————————————————————————————————————————————————————— */
 
 function group_top_motorcycle($_section_primary_title){
+	global $array_motorcycles;
+	global $_section_grid_motorcycles;
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————- */
-	$output = $output . '<div class="header_short" style="background:url(_library/img/asset/bg_motorcyles.jpg)center no-repeat; background-size:cover;"></div>';
+	$match = $_GET['id'];
+	$next = $match + 1;
+	$previous = $match - 1;
+	$amount = count($array_motorcycles);
+
+	$count = 0;
+	foreach($array_motorcycles as $id => $motorcycle){
+		if($match == $id){
+			$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+			}
+		}
 	$output = $output . '<div class="section" style="background:white;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
-				$output = $output . section_primary_title("our motorcycle's",'craftsmanship');
+				foreach($array_motorcycles as $id => $motorcycle){
+					if($match == $id){
+						$output = $output . '<div class="title_primary">';
+							$output = $output . '<div class="container">';
+								$output = $output . '<p class="above">'.$motorcycle[specs][year].'</p>';
+								$output = $output . '<h1 class="title">'.$motorcycle[motorcycle_nick].'</h1>';
+							$output = $output . '</div>';
+						$output = $output . '</div>';
+						}
+					}
 			$output = $output . '</div>';
-			$output = $output . '<h2>'.ucwords('testing multiple words').'</h2>';
-			$output = $output . '<p>We\'re proud of each motorcycle\'s story and personality. We understand their characteristics and influence from their owners, and embrace its history. You can find the extra details by viewing our motorcycle listing below.</p>';
-			$output = $output . $_section_grid_motorcycles;
+			$output = $output . '<h2>'.ucwords('One-liner Illor alibera dolupti oreiumenim quidi volore nos').'</h2>';
+		$output = $output . '</div>';
+		$output = $output . '<div class="container_video_full_width">';
+			$output = $output . '<div class="section_previous">';
+				if($previous >= 0){
+				$output = $output . '<a href="motorcycle.php?id='.$previous.'" class="previous">';
+					$output = $output . '<div></div>';
+				$output = $output . '</a>';
+					}else{
+					$output = $output . '<div>nothing</div>';
+						}
+			$output = $output . '</div>';
+			$output = $output . '<div class="section_video">';
+				$output = $output . '<div class="video_poster"></div>';
+				$output = $output . '<a class="play">';
+					$output = $output . '<div></div>';
+				$output = $output . '</a>';
+			$output = $output . '</div>';
+			$output = $output . '<div class="section_next">';
+				if($next < $amount){
+				$output = $output . '<a href="motorcycle.php?id='.$next.'" class="next">';
+					$output = $output . '<div></div>';
+				$output = $output . '</a>';
+					}else{
+					$output = $output . '<div>nothing</div>';
+						}
+			$output = $output . '</div>';
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 	/* ———————————————————————————————— */
@@ -225,7 +292,7 @@ function group_top_motorcycles($_section_primary_title){
 			$output = $output . '<div style="text-align:center;">';
 				$output = $output . section_primary_title("our motorcycle's",'craftsmanship');
 			$output = $output . '</div>';
-			$output = $output . '<h2>'.ucwords('testing multiple words').'</h2>';
+			$output = $output . '<h2>'.ucwords('One of a kind').'</h2>';
 			$output = $output . '<p>We\'re proud of each motorcycle\'s story and personality. We understand their characteristics and influence from their owners, and embrace its history. You can find the extra details by viewing our motorcycle listing below.</p>';
 			$output = $output . $_section_grid_motorcycles;
 		$output = $output . '</div>';

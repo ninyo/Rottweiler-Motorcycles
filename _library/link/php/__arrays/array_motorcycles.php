@@ -24,7 +24,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 1982,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),
@@ -44,7 +43,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 2015,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),
@@ -64,7 +62,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 1982,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),
@@ -84,7 +81,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 1982,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),
@@ -104,7 +100,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 1982,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),
@@ -124,7 +119,6 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'specs' => array(
 		'year' => 1982,
 		'model' => 'model name',
-		'nickname' => 'nick name',
 		'engine' => 'engine name',
 		'other' => 'other specs',
 		),

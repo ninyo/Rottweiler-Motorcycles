@@ -10,7 +10,7 @@ $array_members = array();
 
 /* ————————————————————————————————————————————————————————— */
 
-$array_members[] = array(
+$array_members['chris'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'chris',
@@ -37,7 +37,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['john'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'john',
@@ -64,7 +64,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['de'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'de',
@@ -91,7 +91,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['donny'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'donny',
@@ -118,7 +118,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['drew'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'drew',
@@ -145,7 +145,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['julius'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'julius',
@@ -172,7 +172,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['thomas'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'thomas',
@@ -199,7 +199,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['tom'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'tom',
@@ -226,7 +226,7 @@ $array_members[] = array(
 	'video' => 'http://vimeo.com/notset', 
 		// this should be an introduction of self. if value is not set, then don't display
 	);
-$array_members[] = array(
+$array_members['jeli'] = array(
 	'description' => $loremipsum,
 	'name' => array(
 		'first' => 'jeli',

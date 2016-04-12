@@ -292,8 +292,46 @@ div.title_secondary {
 	}
 
 .content_group {
-	.content_leftside {}
-	.content_rightside {}
+	@include clearfix;
+	.content_leftside {
+		@include hide;
+		@include vp('border-radius','2px');
+		float:left;
+		margin-right:0%;
+		}
+	.content_rightside {
+		float:left;
+		width:100%;
+		}
+	@media screen and (min-width: $tablet_body) {
+		.content_leftside {
+			@include unhide;
+			margin-top:61px;
+			background:black;
+			height:224px;
+			width:24.821651090343%;
+			margin-right:3.115264797508%;
+			}
+		.content_rightside {
+			width:72.06308411215%;
+			h2 {text-align:left;}
+			p {text-align:left;}
+			}
+		}
+	@media screen and (min-width: $desktop_body) {
+		.content_leftside {
+			@include unhide;
+			background:black;
+			height:370px;
+			width:32.603416666667%;
+			margin-right:3.333333333333%;
+			}
+		.content_rightside {
+			width:64.06325%;
+			h2 {text-align:left;}
+			p {text-align:left;}			
+			}
+		}
 	}
 
 .img_grid_team {
@@ -324,47 +362,49 @@ div.title_secondary {
 						}
 					}
 				}
-
-			.photo {
-				@include vp('transition','.25s');
-				@include vp('filter','grayscale(100%)');
-				@include vp('box-sizing','border-box');
-				width: 100%;
-				height:170px;
-				background-size:100%;
-				background-repeat:no-repeat; 
-				background-position:center;
-				@media screen and (min-width: $tablet_body) {height:207px;}
-				@media screen and (min-width: $desktop_body) {height:288px;}
-				}
-			.nametag {
-				@include vp('transition','.25s');
-				@include vp('box-sizing','border-box');
-				overflow:auto;
-				background:black;
-				padding:10px 10px 12px 10px;
-				text-align:center;
-				@media screen and (min-width: $tablet_body) {}
-				@media screen and (min-width: $desktop_body) {}
-
-				.name {
-					@include reset;
-					font-family:GeogrotesqueComp-SmBd;
-					text-transform:uppercase;
-					color:#FFF;
-					margin-bottom:-2px;
-					font-size:20px;
-					@media screen and (min-width: $tablet_body) {}
-					@media screen and (min-width: $desktop_body) {}
+			a {
+				text-decoration:none;
+				.photo {
+					@include vp('transition','.25s');
+					@include vp('filter','grayscale(100%)');
+					@include vp('box-sizing','border-box');
+					width: 100%;
+					height:170px;
+					background-size:100%;
+					background-repeat:no-repeat; 
+					background-position:center;
+					@media screen and (min-width: $tablet_body) {height:207px;}
+					@media screen and (min-width: $desktop_body) {height:288px;}
 					}
-				.position {
-					@include reset;
-					font-family:asap;
-					font-style:italic;
-					font-size:16px;
-					color:#555;
+				.nametag {
+					@include vp('transition','.25s');
+					@include vp('box-sizing','border-box');
+					overflow:auto;
+					background:black;
+					padding:10px 10px 12px 10px;
+					text-align:center;
 					@media screen and (min-width: $tablet_body) {}
 					@media screen and (min-width: $desktop_body) {}
+
+					.name {
+						@include reset;
+						font-family:GeogrotesqueComp-SmBd;
+						text-transform:uppercase;
+						color:#FFF;
+						margin-bottom:-2px;
+						font-size:20px;
+						@media screen and (min-width: $tablet_body) {}
+						@media screen and (min-width: $desktop_body) {}
+						}
+					.position {
+						@include reset;
+						font-family:asap;
+						font-style:italic;
+						font-size:16px;
+						color:#555;
+						@media screen and (min-width: $tablet_body) {}
+						@media screen and (min-width: $desktop_body) {}
+						}
 					}
 				}
 			}
@@ -422,47 +462,52 @@ div.title_secondary {
 				background: #808080; width: 5px;
 				*/
 				}
-
-			div.container {
-				@include vp('transition','.25s');
-				z-index:1;
-				display:inline-block;
-				margin-top:0px;
-
-				@media screen and (min-width: $desktop_body) {
-					@include hide;
-					}
-
-				p.title_year {
-					margin: -7px;
-					@media screen and (min-width: $tablet_body) {margin:-3px;}
-					@media screen and (min-width: $desktop_body) {margin:0;}
-					color:white;
-					}
-				h1.title_name {
+			a {
+				text-decoration:none;
+				div.container {
+					@include vp('transition','.25s');
+					z-index:1;
 					display:inline-block;
-					color:white;
-					padding-bottom:0;
+					margin-top:0px;
+
+					@media screen and (min-width: $desktop_body) {
+						@include hide;
+						}
+
+					p.title_year {
+						margin: -7px;
+						@media screen and (min-width: $tablet_body) {margin:-3px;}
+						@media screen and (min-width: $desktop_body) {margin:0;}
+						color:white;
+						}
+					h1.title_name {
+						display:inline-block;
+						color:white;
+						padding-bottom:0;
+						}
 					}
-				}
-			div.cover {
-				@include vp('transition','.25s');
-				position:absolute;
-				top:0; 
-				bottom:0; 
-				right:0; 
-				left:0; 
-				z-index:-1;
-				}	
-			div.under{
-				@include vp('transition','.25s');
-				position:absolute;
-				top:0; 
-				bottom:0; 
-				right:0; 
-				left:0; 
-				z-index:-5;
-				background:$color_black;
+				div.cover {
+					@include vp('transition','.25s');
+					position:absolute;
+					top:0; 
+					bottom:0; 
+					right:0; 
+					left:0; 
+					z-index:-1;
+					}	
+				div.under{
+					@include vp('transition','.25s');
+					position:absolute;
+					top:0; 
+					bottom:0; 
+					right:0; 
+					left:0; 
+					z-index:-5;
+					background:$color_black;
+					opacity:0;
+					@media screen and (min-width: $tablet_body) {opacity:0}
+					@media screen and (min-width: $desktop_body) {opacity:1}
+					}
 				}		
 			}
 		}
@@ -544,4 +589,65 @@ div.title_secondary {
 		}
 	}
 
+div.container_video_full_width {
+	@include clearfix;
+	height:194px;
+	background:$color_black;
+	text-decoration:none;
+	div.section_previous {
+		background:$color_black;
+		float:left;
+		width:0;height:100%;
+		a.previous {
+			@include reset;
+			display:block;
+			height:100%;
+			}
+		}
+	div.section_video {
+		float:left;
+		width:100%;height:100%;
+		background:black;
+		div.video_poster {}
+		a.play {
+			@include reset;
+			}
+		}
+	div.section_next {
+		background:$color_black;
+		float:left;
+		width:0;height:100%;
+		a.next {
+			@include reset;
+			display:block;
+			height:100%;
+			}
+		}
+	@media screen and (min-width: $tablet_body) {
+		height:240px;
+		background:$color_black;
+		div.section_previous {
+			width:22.213289473684%;
+			}
+		div.section_video {
+			width:55.573421052632%;
+			}
+		div.section_next {
+			width:22.213289473684%;
+			}
+		}
+	@media screen and (min-width: $desktop_body) {
+		height:450px;
+		background:$color_black;
+		div.section_previous {
+			width:22.213263888889%;
+			}
+		div.section_video {
+			width:55.573472222222%;
+			}
+		div.section_next {
+			width:22.213263888889%;
+			}
+		}
+	}
 
