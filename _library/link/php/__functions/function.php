@@ -224,7 +224,7 @@ function group_top_motorcycle($_section_primary_title){
 		$output = $output . '</div>';
 		$output = $output . '<div class="container_video_full_width">';
 			$output = $output . '<div class="section_previous">';
-				$output = $output . '<a href="motorcycle.php?id='.$previous.'" class="previous">';
+				$output = $output . '<a href="motorcycle.php?id='.$previous.'" class="previous">'; 
 				if($previous >= 0){
 					foreach($array_motorcycles as $id => $motorcycle){
 						if($id == $previous){
@@ -242,31 +242,35 @@ function group_top_motorcycle($_section_primary_title){
 				$output = $output . '</a>';
 					}
 			$output = $output . '</div>';
-			$output = $output . '<div class="section_video js-video [vimeo, widescreen]">';//video-container
-				$output = $output . '<iframe src="https://player.vimeo.com/video/'.$motorcycle[video].'" frameborder="0" allowfullscreen></iframe>';
+			$output = $output . '<div class="section_video js-video [vimeo, widescreen]">';
+				foreach($array_motorcycles as $id => $motorcycle){
+					if($id == $match){
+						$output = $output . '<iframe src="https://player.vimeo.com/video/'.$motorcycle[video].'" frameborder="0" allowfullscreen></iframe>';
+						}
+					}
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_next">';
 				$output = $output . '<a href="motorcycle.php?id='.$next.'" class="next">';
 				if($next < $amount){
 					foreach($array_motorcycles as $id => $motorcycle){
-						if($id == $next){
-							$count = 0;
-							foreach($motorcycle[images] as $url => $description){
-								$count = $count +1;
-								if($count == 1){
+						if($id == $next){ //this checks if the current id is equal to the next number. 
+							$count = 0; //this sets the count to 0 for counting the photos
+							foreach($motorcycle[images] as $url => $description){ //this splits the image array into individual photos
+								$count = $count +1; //this is just to associate a count to each photo
+								if($count == 1){ //this is just to place in the first of array if the photo's number is 1
 									$output = $output . '<div style="background:url('.$url.')center no-repeat; background-size:cover;" class="thumb right">';
 									}
 								}
 							}
 						}
-					}
+					}else{$output = $output . '<div>';}
 						$output = $output . '<div class="right"></div>';
-					$output = $output . '</div>';
-				$output = $output . '</a>';
-			$output = $output . '</div>';
-		$output = $output . '</div>';
+					$output = $output . '</div>'; 
+				$output = $output . '</a>'; //end of a.next
+			$output = $output . '</div>'; 
+		$output = $output . '</div>'; //end of container_video_full_width
 		$output = $output . '<div class="inner">';
-			$output = $output . '<p>'.$loremipsum.'</p>';
+			$output = $output . '<p>'.$motorcycle[description].'</p>';
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 	/* ———————————————————————————————— */
@@ -443,6 +447,65 @@ function group_coreteam(){
 	} //close function 
 	/* ———————————————————————————————— */
 $_group_coreteam = group_coreteam();
+
+/* ————————————————————————————————————————————————————————— */
+
+function group_footer($array_social_network){
+	global $array_social_network;
+	global $description_short;
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	display "landing intro" group on this page
+	—————————————————————————————————— */
+
+	$output = $output . '<div class="container_footer">';
+		$output = $output . '<div class="ending">';
+			$output = $output . '<div class="container_logo">';
+					$output = $output . '<div class="logo_c revealOnScroll" data-animation="flipInX"></div>';
+					$output = $output . '<div class="logo_rm revealOnScroll" data-animation="flipInY"></div>';
+			$output = $output . '</div>';
+		$output = $output . '</div>';
+		$output = $output . '<p class="snippet">'.$description_short.'</p>';
+		$output = $output . '<div class="footer_follow_station">';
+			foreach($array_social_network as $username){
+				foreach($username as $network => $social){
+					if($network == 'vimeo'){$output = $output . '<a href="http://vimeo.com/'.$social.'" class="vimeo" target="none"></a>';}
+					if($network == 'snapchat'){$output = $output . '<a href="" class="snapchat" target="none"></a>';}
+					if($network == 'instagram'){$output = $output . '<a href="http://instagram.com/'.$social.'" class="instagram " target="none"></a>';}
+					if($network == 'facebook'){$output = $output . '<a href="http://facebook.com/'.$social.'" class="facebook " target="none"></a>';}
+					if($network == 'twitter'){$output = $output . '<a href="http://twitter.com/'.$social.'" class="twitter " target="none"></a>';}
+					if($network == 'fyuse'){$output = $output . '<a href="http://fyu.se/u/'.$social.'" class="fyuse " target="none"></a>';}
+					}
+				}
+			$output = $output . '</div>';
+	$output = $output . '</div>';
+
+
+	// 		$output = $output . '<div class="small_block">';
+	// 			$output = $output . '<div id="logo_small" style="margin-bottom:40px;"></div>';
+	// 			$output = $output . '<p>'.$description_short.'</p>';
+	// 			$output = $output . '<ul class="social_network">';
+	// 				foreach($array_social_network as $social){
+	// 					$output = $output . '<li style="display:inline-block" class="icon_'.$social['network'].'">';
+	// 					if($social['network']!=='snapchat'){
+	// 						$output = $output . '<a href="http://'.$social['link'].'" target="none" style="display:block; width:100%; height:100%;"></a>';
+	// 						}else{
+	// 							}
+	// 					$output = $output . '</li>';
+	// 					}
+	// 			$output = $output . '</ul>';
+	// 		$output = $output . '</div>';      
+	// 	$output = $output . '</div>';
+	// $output = $output . '</div>';
+	// $output = $output . '<div class="section">';
+	// 	$output = $output . '<p>Rottweiler Motorcycle Company &copy; '.date("Y").'. All Rights Reserved.</p>';
+	// $output = $output . '</div>';
+	/* ———————————————————————————————— */    
+	return $output;
+	} //close function
+	/* ———————————————————————————————— */
+	$_group_footer = group_footer();
+
 
 /* ————————————————————————————————————————————————————————— */
 
@@ -624,7 +687,7 @@ function group_holding($array_members, $array_controller, $array_social_network)
 
 /* ————————————————————————————————————————————————————————— */
 
-function group_footer($array_social_network){
+function group_footer_old($array_social_network){
 	global $array_social_network;
 	global $description_short;
 	/* ——————————————————————————————————
@@ -673,7 +736,7 @@ function group_footer($array_social_network){
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */
-	$_group_footer = group_footer();
+	$_group_footer_old = group_footer_old();
 
 /* ————————————————————————————————————————————————————————— */
 

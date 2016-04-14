@@ -1,0 +1,1 @@
+function toggleNavigation(){$mainWrap.toggleClass("wrapper--active-nav"),$mainWrap.hasClass("wrapper--active-nav")?$mainContent.on("click",toggleNavigation):$mainContent.off("click",toggleNavigation)}var $mainWrap=$(".wrapper"),$mainContent=$(".main");$(".nav__toggle-btn").on("click",function(){toggleNavigation()});

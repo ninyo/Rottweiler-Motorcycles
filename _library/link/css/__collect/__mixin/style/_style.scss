@@ -2,6 +2,116 @@
 
 ———————————————————————————————————————————————*/
 
+/* global box-sizing */
+*,
+*:after,
+*:before {
+    @include vp('box-sizing','border-box');
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*------------------------------------*\
+    Slide Toggle Thing
+\*------------------------------------*/
+
+/* Wrapper */
+.wrapper {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Animate*/
+.nav,
+.main {
+    transition: transform 0.2s;
+}
+
+.main:after {
+    transition: opacity 0.2s;
+}
+
+/*Active States*/
+.wrapper.wrapper--active-nav .nav {
+    transform: translateX(200px);
+}
+
+.wrapper.wrapper--active-nav .nav__toggle-btn {
+    
+}
+
+.wrapper.wrapper--active-nav .main {
+    transform: translateX(180px);
+}
+
+.wrapper.wrapper--active-nav .main:after {
+    opacity: 1;
+}
+
+/*Navigation !!*/
+.nav {
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: -200px;
+    z-index: 100;
+}
+
+.nav ul {
+    width: 200px;
+    height: 100vh;
+    background: #CCC;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    border-bottom: 1px solid #a0a0a0;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 20px 10px;
+}
+
+.nav__toggle-btn {
+	@include vp('border-radius','2px');
+	background-image:url(_library/img/asset/ico_nav.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 17px;
+    right: -11px;
+}
+
+/*Content*/
+.main {
+    position: relative;
+    display: block;
+}
+
+
+
 $color_offwhite: #f7f8f8;
 $color_wash: #9e8f76;
 $color_rust: #806c5a;
@@ -204,13 +314,13 @@ $desktop_body: 1080px;
 	padding-bottom:38px;
 	@media screen and (min-width: $tablet_body) {padding-bottom:59px;}
 	@media screen and (min-width: $desktop_body) {padding-bottom:91px;}
+	}
 
-	.inner {
-		margin:0 auto;
-		width:93.066666666667%;
-		@media screen and (min-width: $tablet_body) {width:84.473684210526%;}
-		@media screen and (min-width: $desktop_body) {width:83.333333333333%;}
-		}
+.inner {
+	margin:0 auto;
+	width:93.066666666667%;
+	@media screen and (min-width: $tablet_body) {width:84.473684210526%;}
+	@media screen and (min-width: $desktop_body) {width:83.333333333333%;}
 	}
 
 .header_short {
@@ -915,22 +1025,6 @@ div.container_profile {
 				padding: 0 3% 0 3%;
 				}
 			}
-		div.member_follow_station {
-			text-align:center;
-			margin-top:38px;
-			padding:5px;
-			margin-bottom:60px;
-			@media screen and (min-width: $tablet_body) {margin-bottom:40px;}
-			@media screen and (min-width: $desktop_body) {margin:0;}
-			a {
-				@include reset;
-				@include vp('border-radius','2px;');
-				display:inline-block;
-				margin-right:3px;
-				height:30px;width:30px;
-				&:last-child {margin-right:0%;}
-				}
-			}
 		}
 	div.content_right_side {
 		
@@ -953,6 +1047,38 @@ div.container_profile {
 		div.specs_container {
 			@include vp('transition','.25s');
 			}
+		}
+	}
+
+div.member_follow_station {
+	text-align:center;
+	margin-top:38px;
+	padding:5px;
+	margin-bottom:60px;
+	@media screen and (min-width: $tablet_body) {margin-bottom:40px;}
+	@media screen and (min-width: $desktop_body) {margin:0;}
+	a {
+		@include reset;
+		@include vp('border-radius','2px;');
+		display:inline-block;
+		margin-right:3px;
+		height:30px;width:30px;
+		&:last-child {margin-right:0%;}
+		}
+	}
+
+div.footer_follow_station {
+	text-align:center;
+	margin-top:38px;
+	padding:5px;
+	margin-bottom:60px;
+	a {
+		@include reset;
+		@include vp('border-radius','2px;');
+		display:inline-block;
+		margin-right:3px;
+		height:30px;width:30px;
+		&:last-child {margin-right:0%;}
 		}
 	}
 
@@ -1014,7 +1140,6 @@ div#specs_non_mobile {
 			}
 		}
 	}
-
 div.specs_photo {
 	@include vp('border-radius','2px 2px 0 0');
 	}
@@ -1064,5 +1189,39 @@ div.specs_container { //this is overall styling for specs section
 				color:lighten($color_ground,20%);
 				}
 			}
+		}
+	}
+div.container_footer {
+	@include vp('box-sizing','border-box');
+	padding-top:80px;
+	text-align:center;
+	height:525px;
+	background-color:$color_black;
+	background-image:url(_library/img/asset/bg_map.png);
+	background-position:center;
+	background-size:cover;
+	div.ending {
+		display:inline-block;
+		div.container_logo {
+			position:relative;
+			height:73px;width:73px;
+			div.logo_c {
+				position:absolute;
+				height:73px;width:73px;
+				background:url(_library/img/asset/logo_c.svg)center no-repeat;
+				}
+			div.logo_rm {
+				position:absolute;
+				height:73px;width:73px;
+				background:url(_library/img/asset/logo_rm.svg)center no-repeat;
+				}
+			}
+		}
+	p.snippet {
+		@extend .inner;
+		color:white;
+		padding-top:58px;
+		@media screen and (min-width: $tablet_body) {}
+		@media screen and (min-width: $desktop_body) {}
 		}
 	}

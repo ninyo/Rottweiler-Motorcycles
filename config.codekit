@@ -57,6 +57,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_library\/img\/asset\/bg_map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 417967,
+		"inputAbbreviatedPath": "\/_library\/img\/asset\/bg_map.png",
+		"outputAbbreviatedPath": "\/_library\/img\/asset\/bg_map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_library\/img\/asset\/bg_motorcyles.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -86,6 +97,17 @@
 		"initialSize": 514,
 		"inputAbbreviatedPath": "\/_library\/img\/asset\/fav_icon.png",
 		"outputAbbreviatedPath": "\/_library\/img\/asset\/fav_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_library\/img\/asset\/ico_nav.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1183,
+		"inputAbbreviatedPath": "\/_library\/img\/asset\/ico_nav.png",
+		"outputAbbreviatedPath": "\/_library\/img\/asset\/ico_nav.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -317,17 +339,6 @@
 		"initialSize": 2.39885e+06,
 		"inputAbbreviatedPath": "\/_library\/img\/old\/bg_hero_fade.png",
 		"outputAbbreviatedPath": "\/_library\/img\/old\/bg_hero_fade.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/old\/bg_map.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 417967,
-		"inputAbbreviatedPath": "\/_library\/img\/old\/bg_map.png",
-		"outputAbbreviatedPath": "\/_library\/img\/old\/bg_map.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1014,6 +1025,24 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_library\/link\/css\/animate.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_library\/link\/css\/animate.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_library\/link\/css\/animations.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_library\/link\/css\/animations.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_library\/link\/css\/app.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1054,6 +1083,39 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_library\/link\/js\/app.js",
 		"outputAbbreviatedPath": "\/_library\/link\/js\/min\/app-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_library\/link\/js\/css3-animate-it.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_library\/link\/js\/css3-animate-it.js",
+		"outputAbbreviatedPath": "\/_library\/link\/js\/min\/css3-animate-it-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_library\/link\/js\/min\/app-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_library\/link\/js\/min\/app-min.js",
+		"outputAbbreviatedPath": "\/_library\/link\/js\/min\/min\/app-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/_library\/link\/js\/min\/css3-animate-it-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_library\/link\/js\/min\/css3-animate-it-min.js",
+		"outputAbbreviatedPath": "\/_library\/link\/js\/min\/min\/css3-animate-it-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

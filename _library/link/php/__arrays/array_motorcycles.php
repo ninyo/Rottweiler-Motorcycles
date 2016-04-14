@@ -13,7 +13,7 @@ $array_motorcycles = array();
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '1982 Rottweiler XS650 Custom', //Excess Steel tank
 	'motorcycle_nick' => 'motor-1',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'one Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 5200,
 	'video' => '51996591', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -32,7 +32,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '2015 Yamaha XS650 Custom', //Excess Steel tank
 	'motorcycle_nick' => 'motor-2',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'two Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 7200,
 	'video' => '53363288', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -51,7 +51,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '1982 something', //Excess Steel tank
 	'motorcycle_nick' => 'motor three',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'three Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 4500,
 	'video' => '76355633', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -70,7 +70,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '1982 something', //Excess Steel tank
 	'motorcycle_nick' => 'motor quad',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 4500,
 	'video' => '23181483', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -89,7 +89,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '1982 something', //Excess Steel tank
 	'motorcycle_nick' => 'five motor',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 4500,
 	'video' => '70901373', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -108,7 +108,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_name' => '1982 something', //Excess Steel tank
 	'motorcycle_nick' => '6 motor',
-	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
+	'description' => 'last Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 4500,
 	'video' => '26251563', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(

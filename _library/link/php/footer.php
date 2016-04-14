@@ -1,31 +1,12 @@
-<?
-
-if($display == 'default'){
-	echo $_group_footer; //located in ('_library/link/php/__functions/function.php')
-	}else{}
-
-echo $_group_copyright; //located in ('_library/link/php/__functions/function.php') 
-?>
-
 
 <?// ————————————————————————— END OF CONTENT DISPLAY —————————————————————————?>
+</section>
+</main>
 </div>
 <?// ————————————————————————— START OF FOOTER FOR ALL PAGES —————————————————————————?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="_library/link/js/app.js"></script>
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript">
-	/*$(document).ready(function(){
-		$("#my-menu").menu();
-		var API = $("#my-menu").data("mmenu");
-
-		$("#menu-button").click(function(){
-			API.open();
-		});
-	});*/
- 
- 
-</script>
 
 </body>
 </html>

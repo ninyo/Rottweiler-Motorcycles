@@ -18,32 +18,13 @@ $array_social_network = array();
 /* ————————————————————————————————————————————————————————— */
 
 $array_social_network[] = array(
-	"network" => 'instagram',
-	"link" => 'instagram.com/rottweilermoto',
-	//"description" => $loremipsum,
+	'vimeo' => 'rottweilermoto',
+	// 'snapchat' => 'rottweilermoto',
+	'instagram' => 'rottweilermoto',
+	'facebook' => 'rottweilermoto',
+	'twitter' => 'rottweilermoto',
 	);
-$array_social_network[] = array(
-	"network" => 'twitter',
-	"link" => 'twitter.com/rottweilermoto',
-	//"description" => $loremipsum,
-	);
-$array_social_network[] = array(
-	"network" => 'vimeo',
-	"link" => 'vimeo.com/rottweilermoto',
-	//"description" => $loremipsum,
-	);
-$array_social_network[] = array(
-	"network" => 'facebook',
-	"link" => 'facebook.com/rottweilerbikes',
-	//"description" => $loremipsum,
-	);
-/*$array_social_network[] = array(
-	"network" => 'snapchat',
-	"link" => 'rottweilermotorcycles',
-	//"description" => $loremipsum,
-	);*/
-// $array_social_network['contact'] = array(	"description" => $loremipsum,	);
-
+	
 /* ————————————————————————————————————————————————————————— */
 
 // echo '<span style="font-weight:bold;">navigation loaded</span>: need to create output functions<br>';
