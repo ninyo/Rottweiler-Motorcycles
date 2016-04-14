@@ -15,7 +15,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'motor-1',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 5200,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '51996591', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2453_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2453_2.jpg' => 'photo2', //pair photo 1
@@ -34,7 +34,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'motor-2',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 7200,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '53363288', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2474_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2474_2.jpg' => 'photo2', //pair photo 1
@@ -53,7 +53,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'motor three',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 4500,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '76355633', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2483_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2483_2.jpg' => 'photo2', //pair photo 1
@@ -72,7 +72,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'motor quad',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 4500,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '23181483', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2484_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2484_2.jpg' => 'photo2', //pair photo 1
@@ -91,7 +91,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'five motor',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 4500,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '70901373', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2489_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2489_2.jpg' => 'photo2', //pair photo 1
@@ -110,7 +110,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => '6 motor',
 	'description' => 'Nimetur mil ipid quias mo vernam nonsequis eaquaecabor aut ex eos mi, quam esequi rescim undis doloreprat. Accullab ipsam sam et offictorio modi odi.',
 	'price' => 4500,
-	'video' => 'http://vimeo.com/notset', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '26251563', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
 		'_library/img/motorcycles/img_2494_1.jpg' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2494_2.jpg' => 'photo2', //pair photo 1

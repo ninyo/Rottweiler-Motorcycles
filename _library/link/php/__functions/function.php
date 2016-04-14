@@ -242,11 +242,8 @@ function group_top_motorcycle($_section_primary_title){
 				$output = $output . '</a>';
 					}
 			$output = $output . '</div>';
-			$output = $output . '<div class="section_video">';
-				$output = $output . '<div class="video_poster"></div>';
-				$output = $output . '<a class="play">';
-					$output = $output . '<div></div>';
-				$output = $output . '</a>';
+			$output = $output . '<div class="section_video js-video [vimeo, widescreen]">';//video-container
+				$output = $output . '<iframe src="https://player.vimeo.com/video/'.$motorcycle[video].'" frameborder="0" allowfullscreen></iframe>';
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_next">';
 				$output = $output . '<a href="motorcycle.php?id='.$next.'" class="next">';
