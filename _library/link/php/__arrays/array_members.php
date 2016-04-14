@@ -10,59 +10,56 @@ $array_members = array();
 
 /* ————————————————————————————————————————————————————————— */
 
-$array_members['chris'] = array(
+// $array_members['chris'] = array(
+// 	'description' => $loremipsum,
+// 	'name' => array(
+// 		'first' => 'chris',
+// 		'last' => 'hicks',
+// 		),
+// 	'position' => 'inspiration',
+//  'motorcycle' => 'img_2453_1.jpg',
+// 	'details' => array(
+// 		'display' => false,
+// 		'year' => 1995,
+// 		'nickname' => '',
+// 		'model' => '',
+// 		'engine' => '',
+// 		),
+//  'still' => '', 
+// 	'video' => '152640613', 
+// 		// this should be an introduction of self. if value is not set, then don't display
+// 	'social' => array(
+// 		'vimeo' => '',
+// 		'snapchat' => '',
+// 		'instagram' => '',
+// 		'facebook' => '',
+// 		'twitter' => '',
+// 		),
+// 	);
+$array_members['jonathan'] = array(
 	'description' => $loremipsum,
 	'name' => array(
-		'first' => 'chris',
-		'last' => 'hicks',
-		),
-	'position' => 'inspiration',
-	'ride' => array(
-		'display' => false,
-		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
-		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
-		// this should be an introduction of self. if value is not set, then don't display
-	);
-$array_members['john'] = array(
-	'description' => $loremipsum,
-	'name' => array(
-		'first' => 'john',
+		'first' => 'jonathan',
 		'last' => 'hicks',
 		),
 	'position' => 'co-founder',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '427473_2796012182632_755203632_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		// 'instagram' => '',
+		'facebook' => 'jonathan.hicks.96',
+		// 'twitter' => '',
+		),
 	);
 $array_members['de'] = array(
 	'description' => $loremipsum,
@@ -71,52 +68,48 @@ $array_members['de'] = array(
 		'last' => 'hicks',
 		),
 	'position' => 'co-founder',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '22616_888645114512207_830161086553893108_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		// 'instagram' => '',
+		'facebook' => 'de.hicks.3',
+		// 'twitter' => '',
+		),
 	);
-$array_members['donny'] = array(
+$array_members['donnie'] = array(
 	'description' => $loremipsum,
 	'name' => array(
-		'first' => 'donny',
+		'first' => 'donnie',
 		'last' => 'quitugua',
 		),
 	'position' => 'co-owner',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '10006948_10152831292468292_2512636140231297245_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		// 'instagram' => '',
+		'facebook' => 'y2kitagwa',
+		// 'twitter' => '',
+		),
 	);
 $array_members['drew'] = array(
 	'description' => $loremipsum,
@@ -125,25 +118,23 @@ $array_members['drew'] = array(
 		'last' => 'quitugua',
 		),
 	'position' => 'director of marketing',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '1918362_10207968150616037_493336305896669720_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		'instagram' => 'drewboogie',
+		'facebook' => 'DREWBOOOGIE',
+		// 'twitter' => '',
+		),
 	);
 $array_members['julius'] = array(
 	'description' => $loremipsum,
@@ -152,52 +143,48 @@ $array_members['julius'] = array(
 		'last' => 'melendres',
 		),
 	'position' => 'front desk',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '11034893_10205818552843984_992403180111264289_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		'instagram' => 'julius.melendres',
+		'facebook' => 'julius.melendres',
+		'twitter' => 'julius.melendres',
+		),
 	);
 $array_members['thomas'] = array(
 	'description' => $loremipsum,
 	'name' => array(
-		'first' => 'thomas',
-		'last' => 'parker',
+		'first' => 'parker',
+		'last' => 'thomas',
 		),
 	'position' => 'back garage',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '313234_181637965245909_215796362_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		// 'instagram' => '',
+		'facebook' => '100001991199723',
+		// 'twitter' => '',
+		),
 	);
 $array_members['tom'] = array(
 	'description' => $loremipsum,
@@ -206,25 +193,23 @@ $array_members['tom'] = array(
 		'last' => 'pike',
 		),
 	'position' => 'grease monkey',
-	'ride' => array(
-		'display' => false,
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'motorcycle' => 'something name that uses numbers and versions',
 		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+		'nickname' => 'nickname of motorcycle',
+		'engine' => 'strength of engine',
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '12249588_10206854279349961_4007804606185636489_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		// 'instagram' => '',
+		'facebook' => 'thomas.pike.18',
+		// 'twitter' => '',
+		),
 	);
 $array_members['jeli'] = array(
 	'description' => $loremipsum,
@@ -233,24 +218,20 @@ $array_members['jeli'] = array(
 		'last' => 'roxas',
 		),
 	'position' => 'booking',
-	'ride' => array(
-		'display' => false,
-		'year' => 1995,
-		'nickname' => '',
-		'model' => '',
-		'engine' => '',
-		'image' => '', // this should be a full on side shot against a wall
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'vehicle' => 'Scion',
+		'year' => 2012,
 		),
-	'coverphoto' => '_library/img/assets/', // this should be an action shot that highlights detail
-	'selfie' => array(
-		'still' => '', 
-			// this should be straight on portrait, confident, known, rough
-			// this still will be used in the about page that will be shown with everyone else
-		'gif' => '', 
-			// this should be the same still photo, but with motion as a gif.
-			// this GIF will be used in their own member portfolio page
-		), // this should be a full on portrait within shop
-	'video' => 'http://vimeo.com/notset', 
+	'still' => '12344443_23948234_n.jpg', 
+	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		'vimeo' => 'anjelica.roas.1',
+		'snapchat' => 'anjelica.roas.1',
+		'instagram' => 'anjelica.roas.1',
+		'facebook' => 'anjelica.roas.1',
+		'twitter' => 'anjelica.roas.1',
+		),
 	);
 ?>

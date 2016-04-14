@@ -2,22 +2,7 @@
 
 [function.php]
 
-global functions to help control data output
-
-• function snip_testimonial
-
-• function group_header 			• function group_about_intro
-• function group_holding 			• function group_about_ourteam
-• function group_footer
-• function group_navbar
-• function group_lax
-• function group_next
-• function group_featured_items
-• function group_events
-• function group_about
-• function group_member
-
-• function group_new
+global functions to help control output
 
 ———————————————————————————————————————————————————————————— */
 
@@ -31,8 +16,7 @@ function section_testimonial(){
 	global $array_testimonial;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	shuffle($array_testimonial);
 	$output = $output . '<div class="section" style="background:url(_library/img/asset/bg_testimonial.png) center no-repeat; background-size:cover;">';
 		$output = $output . '<div class="inner">';
@@ -70,8 +54,7 @@ function section_coreteam(){
 	global $array_members;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	$output = $output . '<div class="section">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div class="img_grid_team">';
@@ -79,7 +62,7 @@ function section_coreteam(){
 					foreach($array_members as $id => $member){
 						$output = $output . '<li>';
 							$output = $output . '<a href="member.php?id='.$id.'">';
-								$output = $output . '<div class="photo" style="background-image:url(_library/img/team/team-'.$member['name']['first'].'.jpg)"></div>';
+								$output = $output . '<div class="photo" style="background-image:url(_library/img/team/'.$member[still].')"></div>';
 								$output = $output . '<div class="nametag">';
 									$output = $output . '<div class="name">'.$member['name']['first'].' <span class="text_reveal">'.$member['name']['last'].'</span></div>';
 									$output = $output . '<div class="position">'.$member['position'].'</div>';
@@ -167,9 +150,9 @@ function group_top_about($_section_primary_title){
 		);
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	$output = $output . '<div class="header_short" style="background:url(_library/img/asset/bg_about.jpg)center no-repeat; background-size:cover;"></div>';
-	$output = $output . '<div class="section" style="background:white;">';
+	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
 				$output = $output . section_primary_title("our story",'a look inside');
@@ -206,7 +189,7 @@ function group_top_motorcycle($_section_primary_title){
 	global $loremipsum;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	$match = $_GET['id'];
 	$next = $match + 1;
 	$previous = $match - 1;
@@ -223,7 +206,7 @@ function group_top_motorcycle($_section_primary_title){
 				}
 			}
 		} //end of foreach loop
-	$output = $output . '<div class="section" style="background:white;">';
+	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
 				foreach($array_motorcycles as $id => $motorcycle){
@@ -297,10 +280,115 @@ function group_top_motorcycle($_section_primary_title){
 /* ————————————————————————————————————————————————————————— */
 
 function group_top_member(){
+	global $array_members;
+	global $loremipsum;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	——————————————————————————————————- */
-
+	——————————————————————————————————— */
+	$match = $_GET['id'];
+	$count = 0;
+	$array_content_cover[] = array(
+		'_library/img/asset/img_2449.jpg',
+		'_library/img/asset/img_2452.jpg',
+		'_library/img/asset/img_2472.jpg',
+		'_library/img/asset/img_2501.jpg',
+		'_library/img/asset/img_2495.jpg',
+		'_library/img/asset/img_2282.jpg',
+		);
+	foreach($array_content_cover as $cover){
+		shuffle($cover);
+		foreach($cover as $url){}
+		}		
+	$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+		$output = $output . '<div class="section" style="background:#f7f8f8;">';
+			$output = $output . '<div class="inner">';
+				$output = $output . '<div class="container_profile">';
+					$output = $output . '<div class="content_left_side">';
+						foreach($array_members as $id => $member){
+							if($match == $id){
+								$output = $output . '<div class="member_infotag">';
+									$output = $output . '<div class="member_photo" style="background:url(_library/img/team/'.$member[still].') center no-repeat;background-size:cover;"></div>';
+									$output = $output . '<div class="bound_text">';
+										$output = $output . '<h1 class="member_name">'.$member[name][first].' '.$member[name][last].'</h1>';
+										$output = $output . '<p class="member_position">'.titlecase($member[position]).'</p>';
+									$output = $output . '</div>';
+									$popularity = count($member[social]);
+									if($popularity != 0){
+										$output = $output . '<div class="member_follow_station" id="follow_station_desktop">';
+										foreach($member[social] as $network => $username){
+											if($network == 'vimeo'){$output = $output . '<a href="http://vimeo.com/'.$username.'" class="vimeo" target="none"></a>';}
+											if($network == 'snapchat'){$output = $output . '<a href="" class="snapchat" target="none"></a>';}
+											if($network == 'instagram'){$output = $output . '<a href="http://instagram.com/'.$username.'" class="instagram" target="none"></a>';}
+											if($network == 'facebook'){$output = $output . '<a href="http://facebook.com/'.$username.'" class="facebook" target="none"></a>';}
+											if($network == 'twitter'){$output = $output . '<a href="http://twitter.com/'.$username.'" class="twitter" target="none"></a>';}
+											if($network == 'fyuse'){$output = $output . '<a href="http://fyu.se/u/'.$username.'" class="fyuse" target="none"></a>';}
+											} //close foreach loop
+										$output = $output . '</div>';
+										} //close conditional
+								$output = $output . '</div>';
+								$output = $output . '<p class="member_description">'.$member[description].'</p>';
+								$popularity = count($member[social]);
+								if($popularity != 0){
+									$output = $output . '<div class="member_follow_station" id="follow_station_nondesktop">';
+									foreach($member[social] as $network => $username){
+										if($network == 'vimeo'){$output = $output . '<a href="http://vimeo.com/'.$username.'" class="vimeo opposite" target="none"></a>';}
+										if($network == 'snapchat'){$output = $output . '<a href="" class="snapchat opposite" target="none"></a>';}
+										if($network == 'instagram'){$output = $output . '<a href="http://instagram.com/'.$username.'" class="instagram opposite" target="none"></a>';}
+										if($network == 'facebook'){$output = $output . '<a href="http://facebook.com/'.$username.'" class="facebook opposite" target="none"></a>';}
+										if($network == 'twitter'){$output = $output . '<a href="http://twitter.com/'.$username.'" class="twitter opposite" target="none"></a>';}
+										if($network == 'fyuse'){$output = $output . '<a href="http://fyu.se/u/'.$username.'" class="fyuse opposite" target="none"></a>';}
+										} //close foreach loop
+									$output = $output . '</div>';
+									} //close conditional
+								} //close conditional
+							} //close foreach
+					$output = $output . '<div class="video-container">';
+						$output = $output . '<iframe src="https://player.vimeo.com/video/'.$member[video].'"></iframe>';
+					$output = $output . '</div>';
+				$output = $output . '</div>'; //close content_left_side
+				$output = $output . '<div class="content_right_side" id="specs_non_mobile">';
+					$output = $output . '<div class="specs_photo" style="background:url(_library/img/motorcycles/'.$member[motorcycle].')center no-repeat;background-size:cover;"></div>';
+					$output = $output . '<div class="specs_container">';
+						$output = $output . '<p class="title">details</p>';
+						$output = $output . '<ul class="details">';
+							foreach($array_members as $id => $member){
+								if($match == $id){
+									foreach($member[details] as $category => $detail){
+										$output = $output . '<li>';
+											$output = $output . '<p class="category">'.ucwords($category).'</p>';
+											$output = $output . '<p class="detail">'.ucfirst($detail).'</p>';
+										$output = $output . '</li>';
+										}
+									}
+								}
+						$output = $output . '</ul>';
+					$output = $output . '</div>';
+				$output = $output . '</div>'; //close content_right_side
+			$output = $output . '</div>'; //close container_profile
+		$output = $output . '</div>'; //close inner
+		$output = $output . '<div class="section" id="specs_mobile" style="background:#312b29;">';
+			$output = $output . '<div class="container_profile">';
+				$output = $output . '<div class="content_right_side">';
+					$output = $output . '<div class="specs_container">';
+						$output = $output . '<p class="title">details</p>';
+						$output = $output . '<ul class="details">';
+							foreach($array_members as $id => $member){
+								if($match == $id){
+									foreach($member[details] as $category => $detail){
+										$output = $output . '<li>';
+											$output = $output . '<p class="category">'.ucwords($category).'</p>';
+											$output = $output . '<p class="detail">'.ucfirst($detail).'</p>';
+										$output = $output . '</li>';
+										}
+									}
+								}
+						$output = $output . '</ul>';
+					$output = $output . '</div>';
+				$output = $output . '</div>'; //close content_right_side
+			$output = $output . '</div>';
+		$output = $output . '</div>';
+	$output = $output . '</div>'; //close section
+			
 	/* ———————————————————————————————— */
 	return $output;} //close function
 	/* ———————————————————————————————— */
@@ -314,14 +402,14 @@ function group_top_motorcycles($_section_primary_title){
 	global $loremipsum;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	$output = $output . '<div class="header_short" style="background:url(_library/img/asset/bg_motorcyles.jpg)center no-repeat; background-size:cover;"></div>';
-	$output = $output . '<div class="section" style="background:white;">';
+	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
 				$output = $output . section_primary_title("our motorcycle's",'craftsmanship');
 			$output = $output . '</div>';
-			$output = $output . '<h2>'.ucwords('One of a kind').'</h2>';
+			$output = $output . '<h2>'.titlecase('One of a kind').'</h2>'; 
 			$output = $output . '<p>We\'re proud of each motorcycle\'s story and personality. We understand their characteristics and influence from their owners, and embrace its history. You can find the extra details by viewing our motorcycle listing below.</p>';
 			$output = $output . $_section_grid_motorcycles;
 		$output = $output . '</div>';
@@ -338,7 +426,7 @@ function group_coreteam(){
 	global $_section_coreteam;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	——————————————————————————————————- */
+	——————————————————————————————————— */
 	$output = $output . '<div style="section">';
 		$output = $output . '<div class="inner" style="text-align:center;">';
 			$output = $output . '<div class="title_secondary" style="display:inline-block;">';
@@ -387,6 +475,8 @@ function titlecase($string, $delimiters = array(" ", "-", "O'"), $exceptions = a
 	// titlecase(); can be used to intermingle.
 	} 
 
+/* ————————————————————————————————————————————————————————— */
+// OLD CODE BELOW
 /* ————————————————————————————————————————————————————————— */
 
 function group_header($array_members, $array_controller){

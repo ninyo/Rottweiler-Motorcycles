@@ -12,10 +12,86 @@ $color_snapchat:#fffc01;
 $color_instagram:#2a5b83;
 $color_facebook:#4b6daa;
 $color_twitter:#659fcb;
+$color_fyuse:#f99805;
 
 $tablet_body: 760px;
 $desktop_body: 1080px;
-//
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 30px;
+	@media screen and (min-width: $desktop_body) {margin-bottom:0;}
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.common_social {
+	@include vp('transition','.25s');
+	background-image:url(_library/img/asset/ico_sprite_social.svg);
+	background-size:500%;
+	&:hover {
+		background-position-y: 60px;
+		}
+	}
+
+.opposite {
+	background-color:$color_offwhite !important;
+	background-position-y: -30px;
+	}
+.vimeo {
+	@extend .common_social;
+	background-position-x: -90px;
+	&:hover {
+		background-color:$color_vimeo;
+		}
+	}
+.snapchat {
+	@extend .common_social;
+	background-position-x: -60px;
+	&:hover {
+		background-color:$color_snapchat;
+		}
+	}
+.instagram {
+	@extend .common_social;
+	background-position-x: 0px;
+	&:hover {
+		background-color:$color_instagram;
+		}
+	}
+.facebook {
+	@extend .common_social;
+	background-position-x: -30px;
+	&:hover {
+		background-color:$color_facebook;
+		}
+	}
+.twitter {
+	@extend .common_social;
+	background-position-x: -120px;
+	&:hover {
+		background-color:$color_twitter;
+		}
+	}
+.fyuse {
+	@extend .common_social;
+	background-position-x: 0px;
+	&:hover {
+		background-color:$color_fyuse;
+		}
+	}
 
 .color_offwhite {color:$color_offwhite;}
 .color_wash {color:$color_wash;}
@@ -116,6 +192,7 @@ $desktop_body: 1080px;
 
 .header_short {
 	height:275px;
+	display:block;
 	@media screen and (min-width: $tablet_body) {height:310px;}
 	@media screen and (min-width: $desktop_body) {height:330px;}
 	}
@@ -199,7 +276,10 @@ div.title_primary {
 	display:inline-block;
 	padding:13px;
 	margin-top:-60px;
-	background:url(_library/img/asset/texture_fabric.jpg) center no-repeat;
+	background-image:url(_library/img/asset/texture_fabric.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:$color_black;
 	background-size:cover;
 	@media screen and (min-width: $tablet_body) {
 		padding:14px;
@@ -349,16 +429,12 @@ div.title_secondary {
 				&:hover {
 					.photo {
 						@include vp('transition','.25s');
-						background-size:105%;
+						@include vp('filter','grayscale(0%)');
 						}
 					.nametag {
 						background:white;
-						.name {
-							color:$color_black;
-							}
-						.position {
-							color:$color_black;
-							}
+						.name {color:$color_black;}
+						.position {color:$color_black;}
 						}
 					}
 				}
@@ -366,13 +442,13 @@ div.title_secondary {
 				text-decoration:none;
 				.photo {
 					@include vp('transition','.25s');
-					@include vp('filter','grayscale(100%)');
 					@include vp('box-sizing','border-box');
-					width: 100%;
+					@include vp('filter','grayscale(100%)');
 					height:170px;
-					background-size:100%;
+					background-size:cover;
 					background-repeat:no-repeat; 
 					background-position:center;
+
 					@media screen and (min-width: $tablet_body) {height:207px;}
 					@media screen and (min-width: $desktop_body) {height:288px;}
 					}
@@ -383,8 +459,6 @@ div.title_secondary {
 					background:black;
 					padding:10px 10px 12px 10px;
 					text-align:center;
-					@media screen and (min-width: $tablet_body) {}
-					@media screen and (min-width: $desktop_body) {}
 
 					.name {
 						@include reset;
@@ -393,8 +467,6 @@ div.title_secondary {
 						color:#FFF;
 						margin-bottom:-2px;
 						font-size:20px;
-						@media screen and (min-width: $tablet_body) {}
-						@media screen and (min-width: $desktop_body) {}
 						}
 					.position {
 						@include reset;
@@ -402,8 +474,6 @@ div.title_secondary {
 						font-style:italic;
 						font-size:16px;
 						color:#555;
-						@media screen and (min-width: $tablet_body) {}
-						@media screen and (min-width: $desktop_body) {}
 						}
 					}
 				}
@@ -629,10 +699,6 @@ div.container_video_full_width {
 		float:left;
 		width:100%;height:100%;
 		background:black;
-		div.video_poster {}
-		a.play {
-			@include reset;
-			}
 		}
 	.right {
 		text-align:right;
@@ -652,15 +718,15 @@ div.container_video_full_width {
 			}
 		@media screen and (min-width: $tablet_body) {
 			@include unhide;
-			margin-top:100px;
-			height:40px;
-			padding-top:10px;
+			margin-top:92px;
+		    height:58px;
+		    padding-top:20px;
 			}
 		@media screen and (min-width: $desktop_body) {
 			@include unhide;
-			margin-top:185px;
-			padding-top:30px;
-			height:80px;
+			margin-top:170px;
+		    padding-top:45px;
+		    height:110px;
 			}
 		div.left {
 			@include vp('transition','.25s');
@@ -731,20 +797,248 @@ div.container_video_full_width {
 	}
 
 div.container_profile {
-	.content_left_side {
-		.member_photo {}
-		.member_name {}
-		.member_follow_station {}
-		.member_video {}
+	@include clearfix;
+	@media screen and (min-width: $desktop_body) {
+		padding-top:20px;
 		}
-	.content_right_side {
-		.specs_photo {}
-		.specs_container {}
+
+	div.content_left_side {
+		text-align:center;
+		
+		@media screen and (min-width: $tablet_body) {}
+		@media screen and (min-width: $desktop_body) {
+			@include vp('box-shadow','0 0 7px rgba(0,0,0,0.05)');
+			@include vp('border-radius','2px');
+			width:66.25%;
+			margin-right:1.666666666667%;
+			float:left;
+			background:white;
+			}
+		div.member_infotag {
+			@include clearfix;
+
+			@media screen and (min-width: $desktop_body) {
+				@include vp('border-radius','2px 2px 0 0');
+				margin-top:0px;
+			    position:relative;
+			    display:block;
+			    background:url(_library/img/asset/texture_fabric.jpg) center no-repeat $color_black;
+			    background-size:cover;
+			    padding-right:15px;
+				}
+
+			div.member_photo {
+				@include vp('box-sizing','border-box');
+				@include vp('border-radius','2px');
+				@include vp('filter','grayscale(100%)');
+				@include vp('box-shadow', '0 0 3px #222');
+				background:$color_black;
+				display:inline-block;
+				width:122px;
+				height:122px;
+				margin-top:-100px;
+				margin-bottom:25px;
+				border:2px white solid;
+				@media screen and (min-width: $tablet_body) {
+					height:140px;width:140px;
+					}
+				@media screen and (min-width: $desktop_body) {
+					@include vp('box-shadow', '0 0 0 0');
+					@include vp('border-radius','2px 0 0 0');
+					float:left;
+					height:102px;width:102px;
+					margin-bottom:0px;
+					display:absolute;
+					margin-top:0;
+					border:0px;
+					}
+				}
+			div.bound_text {
+				@media screen and (min-width: $desktop_body) {
+					float:left;
+					margin:18px 0px 0 24px;
+					width:220px;
+					}
+				h1.member_name {
+					@media screen and (min-width: $desktop_body) {
+						text-align:left;
+						color:white;
+						padding: 0 5.095541401274% 0 0;
+						}
+					color:$color_black;
+					font-size:30px;
+					}
+				p.member_position {
+					@media screen and (min-width: $desktop_body) {
+						text-align:left;
+						margin-top: -9px;
+						padding: 0 5.095541401274% 0 0;
+						margin-bottom:0;
+						}
+					font-family:asap;
+					font-style:italic;
+					font-size:16px;
+					margin-bottom:35px;
+					color:$color_rust;
+					}
+				}
+			}
+		p.member_description {
+			margin-bottom:38px;
+			@media screen and (min-width: $desktop_body) {
+				text-align:left;
+				margin-top:25px;
+				padding: 0 3% 0 3%;
+				}
+			}
+		div.member_follow_station {
+			text-align:center;
+			margin-top:38px;
+			padding:5px;
+			margin-bottom:60px;
+			@media screen and (min-width: $tablet_body) {margin-bottom:40px;}
+			@media screen and (min-width: $desktop_body) {margin:0;}
+			a {
+				@include reset;
+				@include vp('border-radius','2px;');
+				display:inline-block;
+				margin-right:3px;
+				height:30px;width:30px;
+				&:last-child {margin-right:0%;}
+				}
+			}
+		}
+	div.content_right_side {
+		
+		&:hover {
+			div.specs_container {
+				background-color:darken($color_ground,2%);
+				}
+			}
+		@media screen and (min-width: $desktop_body) {
+			@include vp('box-shadow','0 0 7px rgba(0,0,0,0.05)');
+			width:31.25%;
+			float:left;
+			}
+		div.specs_photo {
+			height:0px;
+			background:black;
+			@media screen and (min-width: $tablet_body) {height:400px;}
+			@media screen and (min-width: $desktop_body) {height:250px;}
+			}
+		div.specs_container {
+			@include vp('transition','.25s');
+			}
 		}
 	}
 
-.specs_container {
-	p.title {}
-	p.title_sub {}
-	p.details {}
+div#follow_station_desktop {
+	display:none;
+	@media screen and (min-width: $desktop_body) {
+		float:right;
+		display:initial;
+		margin:0;
+		margin-top:15px;
+		}
+	}
+div#follow_station_nondesktop {
+	a {
+		&:hover {
+			background-color:$color_black !important;
+			background-position-y:0px;
+			}
+		}
+	@media screen and (min-width: $desktop_body) {
+		@include hide;
+		}
+	}
+
+div.member_video {
+	@include vp('border-radius','2px');
+	height:194px;
+	background:black;
+	margin-bottom:32px;
+	@media screen and (min-width: $tablet_body) {
+		height:289px;
+		}
+	@media screen and (min-width: $desktop_body) {
+		@include vp('border-radius','0 0 2px 2px');
+		height:433px;
+		margin-bottom:0;
+		}
+	}
+div#specs_mobile {
+	@media screen and (min-width: $tablet_body) {
+		@include hide;
+		}
+	@media screen and (min-width: $desktop_body) {
+		display:none;
+		}
+	}
+div#specs_non_mobile {
+	@include hide;
+	@media screen and (min-width: $tablet_body) {
+		@include unhide;
+		.specs_container {
+			@include vp('border-radius','0 0 2px 2px');
+			}
+		}
+	@media screen and (min-width: $desktop_body) {
+		@include unhide;
+		.specs_container {
+			@include vp('border-radius','0 0 2px 2px');
+			}
+		}
+	}
+
+div.specs_photo {
+	@include vp('border-radius','2px 2px 0 0');
+	}
+div.specs_container { //this is overall styling for specs section
+	padding:27px 4% 27px 4%;
+	background:$color_ground;
+	@media screen and (min-width: $tablet_body) {
+		padding:19px 3% 31px 3%;
+		}
+	@media screen and (min-width: $desktop_body) {
+		padding:19px 4.2% 31px 4.2%;
+		}
+	p.title {
+		text-align:left;
+		font-family:asap;
+		font-weight:bold;
+		font-size:16px;
+		text-transform:uppercase;
+		color:white;
+		padding-bottom:8px;
+		border-bottom:3px solid white;
+		margin-bottom:-1px;
+		}
+	ul.details {
+		@include reset;
+
+		li {
+			@include reset;
+			padding:11px 0;
+			border-bottom:1px solid lighten($color_ground,20%);
+			p.category {
+				margin-right:8px;
+				display:inline-block;
+				text-align:left;
+				font-family:asap;
+				font-size:16px;
+				color:white;
+				margin-bottom:-5px;
+				}
+			p.detail {
+				baseline-shift:1px;
+				display:inline-block;
+				text-align:left;
+				font-family:asap;
+				font-size:16px;
+				line-height: 25px;
+				color:lighten($color_ground,20%);
+				}
+			}
+		}
 	}
