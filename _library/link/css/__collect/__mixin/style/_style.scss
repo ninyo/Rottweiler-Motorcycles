@@ -110,8 +110,6 @@
     display: block;
 }
 
-
-
 $color_offwhite: #f7f8f8;
 $color_wash: #9e8f76;
 $color_rust: #806c5a;
@@ -126,6 +124,16 @@ $color_fyuse:#f99805;
 
 $tablet_body: 760px;
 $desktop_body: 1080px;
+
+#giphy {
+	@include vp('filter','grayscale(0%)');
+	background-position-y:0% !important;
+	background-repeat:no-repeat  !important;
+	background-size:100%  !important;
+	&:hover {
+		background-position-y:100%  !important;
+		}
+	}
 
 .video-container {
 	position: relative;
@@ -991,7 +999,7 @@ div.container_profile {
 				@media screen and (min-width: $desktop_body) {
 					float:left;
 					margin:18px 0px 0 24px;
-					width:220px;
+					width:320px;
 					}
 				h1.member_name {
 					@media screen and (min-width: $desktop_body) {

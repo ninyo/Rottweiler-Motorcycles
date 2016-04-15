@@ -12,6 +12,10 @@ $description_about = 'Recently voted the Best in Western Washington, Rottweiler 
 
 /* ————————————————————————————————————————————————————————— */
 
+function section_logo_vertical(){return $output;} //close function $_section_logo_vertical = section_logo_vertical();
+
+/* ————————————————————————————————————————————————————————— */
+
 function section_testimonial(){
 	global $array_testimonial;
 	/* ——————————————————————————————————
@@ -41,10 +45,10 @@ function section_testimonial(){
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 
-	/* ———————————————————————————————- */   
+	/* ———————————————————————————————— */   
 	return $output;	
 	} //close function
-	/* ———————————————————————————————- */   
+	/* ———————————————————————————————— */      
 	$_section_testimonial = section_testimonial();
 
 
@@ -65,7 +69,7 @@ function section_coreteam(){
 								$output = $output . '<div class="photo" style="background-image:url(_library/img/team/'.$member[still].')"></div>';
 								$output = $output . '<div class="nametag">';
 									$output = $output . '<div class="name">'.$member['name']['first'].' <span class="text_reveal">'.$member['name']['last'].'</span></div>';
-									$output = $output . '<div class="position">'.$member['position'].'</div>';
+									$output = $output . '<div class="position">'.titlecase($member['position']).'</div>';
 								$output = $output . '</div>';
 							$output = $output . '</a>';
 						$output = $output . '</li> ';
@@ -74,7 +78,7 @@ function section_coreteam(){
 			$output = $output . '</div>';
 		$output = $output . '</div>';
 	$output = $output . '</div>';
-	/* ———————————————————————————————- */    
+	/* ———————————————————————————————— */       
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */
@@ -308,7 +312,11 @@ function group_top_member(){
 						foreach($array_members as $id => $member){
 							if($match == $id){
 								$output = $output . '<div class="member_infotag">';
-									$output = $output . '<div class="member_photo" style="background:url(_library/img/team/'.$member[still].') center no-repeat;background-size:cover;"></div>';
+									if(!isset($member[gif])){//for still
+										$output = $output . '<div class="member_photo" style="background:url(_library/img/team/'.$member[still].') center no-repeat;background-size:cover;"></div>';
+										}else{//for gif
+										$output = $output . '<div class="member_photo" id="giphy" style="background:url(_library/img/team/'.$member[gif].')"></div>';	
+										}
 									$output = $output . '<div class="bound_text">';
 										$output = $output . '<h1 class="member_name">'.$member[name][first].' '.$member[name][last].'</h1>';
 										$output = $output . '<p class="member_position">'.titlecase($member[position]).'</p>';
@@ -344,13 +352,13 @@ function group_top_member(){
 								} //close conditional
 							} //close foreach
 					$output = $output . '<div class="video-container">';
-						$output = $output . '<iframe src="https://player.vimeo.com/video/'.$member[video].'"></iframe>';
+						$output = $output . '<iframe src="https://player.vimeo.com/video/'.$member[video].'" frameborder="0" allowfullscreen></iframe>';
 					$output = $output . '</div>';
 				$output = $output . '</div>'; //close content_left_side
 				$output = $output . '<div class="content_right_side" id="specs_non_mobile">';
 					$output = $output . '<div class="specs_photo" style="background:url(_library/img/motorcycles/'.$member[motorcycle].')center no-repeat;background-size:cover;"></div>';
 					$output = $output . '<div class="specs_container">';
-						$output = $output . '<p class="title">details</p>';
+						$output = $output . '<p class="title">ride details</p>';
 						$output = $output . '<ul class="details">';
 							foreach($array_members as $id => $member){
 								if($match == $id){
@@ -371,7 +379,7 @@ function group_top_member(){
 			$output = $output . '<div class="container_profile">';
 				$output = $output . '<div class="content_right_side">';
 					$output = $output . '<div class="specs_container">';
-						$output = $output . '<p class="title">details</p>';
+						$output = $output . '<p class="title">ride details</p>';
 						$output = $output . '<ul class="details">';
 							foreach($array_members as $id => $member){
 								if($match == $id){
@@ -408,7 +416,7 @@ function group_top_motorcycles($_section_primary_title){
 	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
-				$output = $output . section_primary_title("our motorcycle's",'craftsmanship');
+				$output = $output . section_primary_title("our motorcycle's",'lineup');
 			$output = $output . '</div>';
 			$output = $output . '<h2>'.titlecase('One of a kind').'</h2>'; 
 			$output = $output . '<p>We\'re proud of each motorcycle\'s story and personality. We understand their characteristics and influence from their owners, and embrace its history. You can find the extra details by viewing our motorcycle listing below.</p>';
@@ -748,7 +756,7 @@ function group_navbar(){
 	$output = $output . '<div id="group_navbar">';
 		$output = $output . '<div class="logo_horiz" style="position:absolute;top:0;left:0;height:10px;width:10px;"></div>';
 	$output = $output . '</div>';
-	/* ———————————————————————————————- */    
+	/* ———————————————————————————————— */       
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */
@@ -1098,7 +1106,7 @@ function group_about_ourstory(){
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 
-	/* ———————————————————————————————- */    
+	/* ———————————————————————————————— */       
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */
@@ -1144,7 +1152,7 @@ function group_about_motorcycle(){
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 
-	/* ———————————————————————————————- */    
+	/* ———————————————————————————————— */       
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */
@@ -1159,7 +1167,7 @@ function group_new(){
 	——————————————————————————————————- */
 	// $output = $output . '<div>';
 	// $output = $output . '</div>';
-	/* ———————————————————————————————- */    
+	/* ———————————————————————————————— */       
 	return $output;
 	} //close function
 	/* ———————————————————————————————— */

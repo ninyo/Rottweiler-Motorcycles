@@ -21,7 +21,7 @@ $array_social_network[] = array(
 	'vimeo' => 'rottweilermoto',
 	// 'snapchat' => 'rottweilermoto',
 	'instagram' => 'rottweilermoto',
-	'facebook' => 'rottweilermoto',
+	'facebook' => 'RottweilerBikes',
 	'twitter' => 'rottweilermoto',
 	);
 	

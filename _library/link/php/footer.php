@@ -1,4 +1,6 @@
 
+<?echo $_group_footer;?>
+
 <?// ————————————————————————— END OF CONTENT DISPLAY —————————————————————————?>
 </section>
 </main>

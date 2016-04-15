@@ -114,10 +114,18 @@ body {@include reset;}
 .parallax__layer {
  	position: absolute;
  	top: 0;
- 	right: 0;
+ 	right: 0; 
  	bottom: 0;
  	left: 0;
  	// transform-origin-x: 100%;
+	}
+#giphy {
+	background-position-y:0% !important;
+	background-repeat:no-repeat  !important;
+	background-size:100%  !important;
+	&:hover {
+		background-position-y:100%  !important;
+		}
 	}
 .parallax__layer--face {
 	@include vp('transform','translateZ(200) scale(0.3)');

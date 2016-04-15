@@ -37,7 +37,7 @@ $array_members = array();
 // 		),
 // 	);
 $array_members['jonathan'] = array(
-	'description' => $loremipsum,
+	'description' => 'My name is Jonathan. I am one of the co-founders of Rottweiler motorcycle company. My brother Christopher, father De, and myself started this thing back in 06\'. I had absolutely no idea what I was getting into! This thing we started and grown has been intense to say the least. It has tested me more than I ever thought it would, and has also been profoundly rewarding. I have always loved the motorcycle world, hands on, solving things and meeting unique people.',
 	'name' => array(
 		'first' => 'jonathan',
 		'last' => 'hicks',
@@ -45,12 +45,12 @@ $array_members['jonathan'] = array(
 	'position' => 'co-founder',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 2012,
+		'make' => 'rottweiler motorcycles',
+		'model' => 'CRH2',
 		),
-	'still' => '427473_2796012182632_755203632_n.jpg', 
+	'gif' => 'gif_jon.gif',
+	'still' => 'rmco-cover-2591.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -62,19 +62,22 @@ $array_members['jonathan'] = array(
 		),
 	);
 $array_members['de'] = array(
-	'description' => $loremipsum,
+	'description' => array(
+		"In 2006 Christopher, Jonathan and I sat in the sunshine on our front deck and dreamed of building a company that would last a generation or more. A company that combined our passion for adventure, our love of motorcycles and our creative instincts. Rottweiler is that company. With every year, through every adventure, with the very best people, we continue to thrive.",
+		"I really believe that people who have the courage to ride have a better life than those who don't; that those who push themselves out of the warm comfort of a predictable routine are truly alive. For me, building RMC is much like that: exhilarating, challenging, freeing and worth every minute. We are all about getting more people to wake up and really live. Join us.",
+		),
 	'name' => array(
 		'first' => 'de',
 		'last' => 'hicks',
 		),
-	'position' => 'co-founder',
+	'position' => 'CEO',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 2008,
+		'make' => 'harley davidson',
+		'model' => 'street glide',
 		),
+	// 'gif' => '',
 	'still' => '22616_888645114512207_830161086553893108_n.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
@@ -87,19 +90,21 @@ $array_members['de'] = array(
 		),
 	);
 $array_members['donnie'] = array(
-	'description' => $loremipsum,
+	'description' => array(
+		'My name is Donnie and I am the Executive Vice President & COO of RMC group of companies. Back in 2007 the entire RMC family experienced a very tragic event...the loss of a Christopher Ryan. Speaking for myself, this was a very pivotal time in my life. I had been working elsewhere but had this overwhelming feeling that I needed to step in and help. I left a job not knowing what I was getting into. I will always remember De saying, "If you have to choose between comfort or adventure, always choose adventure and you\'ll never go wrong." This resonates with me daily. Without choosing adventure, I would\'ve never discovered the joy of riding a motorcycle and experiencing the rumble beneath my feet. It\'s true...four wheels move the body and two wheels move the soul. Amen...ride safe!',
+		),
 	'name' => array(
 		'first' => 'donnie',
 		'last' => 'quitugua',
 		),
-	'position' => 'co-owner',
+	'position' => 'director of operations',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 2009,
+		'make' => 'harley davidson',
+		'model' => 'XL883L',
 		),
+	// 'gif' => '',
 	'still' => '10006948_10152831292468292_2512636140231297245_n.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
@@ -112,20 +117,20 @@ $array_members['donnie'] = array(
 		),
 	);
 $array_members['drew'] = array(
-	'description' => $loremipsum,
+	'description' => 'What up y’all! My name is Drew. I am the Director of Business Development at Rottweiler Motorcycle Co. I started working here in late 2007 under Chris Hicks as a T-Shirt “Designer” in which I was HARDLY that. Now, years later I find myself embodying the brand & what it stands for… or at least trying to do so. Growing as an adult in a small business has been an amazing experience with its fair share of trials & tribulations, but it has provided a great deal of inspiration that I use towards, not only Rottweiler, but in other areas of my life. I am blessed to be apart of such a great company.',
 	'name' => array(
 		'first' => 'drew',
 		'last' => 'quitugua',
 		),
-	'position' => 'director of marketing',
+	'position' => 'director of business development',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 2008,
+		'make' => 'harley davidson',
+		'model' => 'street glide',
 		),
-	'still' => '1918362_10207968150616037_493336305896669720_n.jpg', 
+	'gif' => 'gif_drew.gif',
+	'still' => 'rmco-cover-2595.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -142,15 +147,15 @@ $array_members['julius'] = array(
 		'first' => 'julius',
 		'last' => 'melendres',
 		),
-	'position' => 'front desk',
+	'position' => 'customer service representative',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 2013,
+		'make' => 'harley davidson',
+		'model' => 'XL883N Iron 83',
 		),
-	'still' => '11034893_10205818552843984_992403180111264289_n.jpg', 
+	'gif' => 'gif_julius.gif',
+	'still' => 'rmco-cover-2598.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -161,46 +166,21 @@ $array_members['julius'] = array(
 		'twitter' => 'julius.melendres',
 		),
 	);
-$array_members['thomas'] = array(
-	'description' => $loremipsum,
-	'name' => array(
-		'first' => 'parker',
-		'last' => 'thomas',
-		),
-	'position' => 'back garage',
-	'motorcycle' => 'img_2453_1.jpg',
-	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
-		),
-	'still' => '313234_181637965245909_215796362_n.jpg', 
-	'video' => '152640613', 
-		// this should be an introduction of self. if value is not set, then don't display
-	'social' => array(
-		// 'vimeo' => '',
-		// 'snapchat' => '',
-		// 'instagram' => '',
-		'facebook' => '100001991199723',
-		// 'twitter' => '',
-		),
-	);
 $array_members['tom'] = array(
-	'description' => $loremipsum,
+	'description' => "Hi, I'm Tom Pike, and I have been around motorcycles all my life. I started working at the local Honda Shop when I was 15. I am an ASE Master Technician. I had my own shop called Spikes Bikes until I got smart and started working at Rottweiler Motorcycle Company. I own a Shovelhead called the Nastyboy, and a FLHS called the Black Pearl. I truly am a motorcyclist for life.",
 	'name' => array(
 		'first' => 'tom',
 		'last' => 'pike',
 		),
-	'position' => 'grease monkey',
+	'position' => 'master technician',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
-		'motorcycle' => 'something name that uses numbers and versions',
-		'year' => 1995,
-		'nickname' => 'nickname of motorcycle',
-		'engine' => 'strength of engine',
+		'year' => 1980,
+		'make' => 'harley davidson',
+		'model' => 'FXE',
 		),
-	'still' => '12249588_10206854279349961_4007804606185636489_n.jpg', 
+	'gif' => 'gif_tom.gif',
+	'still' => 'rmco-cover-2601.jpg', 
 	'video' => '152640613', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -211,27 +191,28 @@ $array_members['tom'] = array(
 		// 'twitter' => '',
 		),
 	);
-$array_members['jeli'] = array(
-	'description' => $loremipsum,
-	'name' => array(
-		'first' => 'jeli',
-		'last' => 'roxas',
-		),
-	'position' => 'booking',
-	'motorcycle' => 'img_2453_1.jpg',
-	'details' => array(
-		'vehicle' => 'Scion',
-		'year' => 2012,
-		),
-	'still' => '12344443_23948234_n.jpg', 
-	'video' => '152640613', 
-		// this should be an introduction of self. if value is not set, then don't display
-	'social' => array(
-		'vimeo' => 'anjelica.roas.1',
-		'snapchat' => 'anjelica.roas.1',
-		'instagram' => 'anjelica.roas.1',
-		'facebook' => 'anjelica.roas.1',
-		'twitter' => 'anjelica.roas.1',
-		),
-	);
+// $array_members['jeli'] = array(
+// 	'description' => $loremipsum,
+// 	'name' => array(
+// 		'first' => 'jeli',
+// 		'last' => 'roxas',
+// 		),
+// 	'position' => 'booking',
+// 	'motorcycle' => 'img_2453_1.jpg',
+// 	'details' => array(
+// 		'vehicle' => 'Scion',
+// 		'year' => 2012,
+// 		),
+// 	'still' => '12344443_23948234_n.jpg', 
+// 	'video' => '152640613', 
+// 		// this should be an introduction of self. if value is not set, then don't display
+// 	'social' => array(
+// 		'vimeo' => 'anjelica.roas.1',
+// 		'snapchat' => 'anjelica.roas.1',
+// 		'instagram' => 'anjelica.roas.1',
+// 		'facebook' => 'anjelica.roas.1',
+// 		'twitter' => 'anjelica.roas.1',
+// 		),
+// 	);
+
 ?>

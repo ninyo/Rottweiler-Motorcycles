@@ -73,3 +73,8 @@
 	 <section>
 
 
+
+
+
+<?echo $_section_navigation;?>
+

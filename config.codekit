@@ -178,6 +178,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_library\/img\/asset\/logo_nav.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1479,
+		"inputAbbreviatedPath": "\/_library\/img\/asset\/logo_nav.png",
+		"outputAbbreviatedPath": "\/_library\/img\/asset\/logo_nav.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_library\/img\/asset\/texture_fabric.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -552,50 +563,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_library\/img\/team\/11034893_10205818552843984_992403180111264289_n.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 66391,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/11034893_10205818552843984_992403180111264289_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/11034893_10205818552843984_992403180111264289_n.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/12249588_10206854279349961_4007804606185636489_n.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 133986,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/12249588_10206854279349961_4007804606185636489_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/12249588_10206854279349961_4007804606185636489_n.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/12344443_23948234_n.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 178775,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/12344443_23948234_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/12344443_23948234_n.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/1918362_10207968150616037_493336305896669720_n.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 77811,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/1918362_10207968150616037_493336305896669720_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/1918362_10207968150616037_493336305896669720_n.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/_library\/img\/team\/22616_888645114512207_830161086553893108_n.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -607,123 +574,46 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_library\/img\/team\/313234_181637965245909_215796362_n.jpg": {
+	"\/_library\/img\/team\/rmco-cover-2591.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 67100,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/313234_181637965245909_215796362_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/313234_181637965245909_215796362_n.jpg",
+		"initialSize": 379910,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2591.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2591.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_library\/img\/team\/427473_2796012182632_755203632_n.jpg": {
+	"\/_library\/img\/team\/rmco-cover-2595.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 24624,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/427473_2796012182632_755203632_n.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/427473_2796012182632_755203632_n.jpg",
+		"initialSize": 411113,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2595.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2595.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_library\/img\/team\/team-chris.jpg": {
+	"\/_library\/img\/team\/rmco-cover-2598.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-chris.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-chris.jpg",
+		"initialSize": 402342,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2598.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2598.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_library\/img\/team\/team-de.jpg": {
+	"\/_library\/img\/team\/rmco-cover-2601.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-de.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-de.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-donny.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-donny.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-donny.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-drew.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-drew.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-drew.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-jeli.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-jeli.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-jeli.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-john.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-john.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-john.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-julius.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-julius.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-julius.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-thomas.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-thomas.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-thomas.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_library\/img\/team\/team-tom.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 84761,
-		"inputAbbreviatedPath": "\/_library\/img\/team\/team-tom.jpg",
-		"outputAbbreviatedPath": "\/_library\/img\/team\/team-tom.jpg",
+		"initialSize": 427432,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2601.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2601.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
