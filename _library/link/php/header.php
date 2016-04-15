@@ -53,22 +53,14 @@
 	-->
 
 </head>
-<body style="background:#1e1e1e;">
+<body style="background:#312b29;">
 
 <?// ————————————————————————— END OF HEADER —————————————————————————?>
 
 <?// ————————————————————————— START OF CONTENT DISPLAY —————————————————————————?>
 
 <div id="body" class="wrapper">
-    <nav class="nav" role="navigation">
-        <ul>
-            <li><a href="#">Menu Item</a></li>
-            <li><a href="#">Menu Item</a></li>
-            <li><a href="#">Menu Item</a></li>
-            <li><a href="#">Menu Item</a></li>
-        </ul>
-        <div class="nav__toggle-btn"></div>
-    </nav>
+   <?echo $_section_nav_section?>
 	 <main class="main" role="main">
 	 <section>
 
@@ -76,5 +68,8 @@
 
 
 
-<?echo $_section_navigation;?>
+<?
+echo $_section_navigation;
+echo $_vertical_logo;
+?>
 

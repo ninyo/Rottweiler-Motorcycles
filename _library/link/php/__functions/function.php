@@ -12,7 +12,176 @@ $description_about = 'Recently voted the Best in Western Washington, Rottweiler 
 
 /* ————————————————————————————————————————————————————————— */
 
-function section_logo_vertical(){return $output;} //close function $_section_logo_vertical = section_logo_vertical();
+
+/* ———————————————————————————————— */  
+//function name_function(){return $output;}//close function $_name_function = name_function();
+/* ———————————————————————————————— */  
+
+
+/* ————————————————————————————————————————————————————————— */
+
+
+function section_copyright(){
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	——————————————————————————————————— */
+
+	$output = $output . '<div class="section_copyright" style="background:black; padding:20px;width:100%;text-align:center;"><p style="font-size:0.9em;">Rottweiler Motorcycle Company &copy; 2006&ndash;'.date('Y').'. All Rights Reserved. Site design by <a style="text-decoration:none;" href="http://nin-yo.com" target="none">nin-yo.com</a> in Bremerton, WA</p></div>';
+
+	/* ———————————————————————————————— */
+	return $output;}//close function 
+	/* ———————————————————————————————— */
+	$_section_copyright = section_copyright();
+
+
+/* ————————————————————————————————————————————————————————— */
+
+function group_header(){
+	global $_section_grid_motorcycles;
+	global $_section_primary_title;
+	global $description_long;
+	global $description_short;
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	——————————————————————————————————— */
+	$output = $output . '<div class="parallax-window header_main" style="height:100vh; background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="_library/img/asset/bg_motorcyles.jpg">';
+		$output = $output . '<div class="block_header">';
+			$output = $output . '<div class="logo"></div>';
+			$output = $output . '<p>'.$description_short.'</p>';
+		$output = $output . '</div>';
+	$output = $output . '</div>';
+	$output = $output . '<div class="container_introduction">';
+		$output = $output . '<div class="section" style="background:#f7f8f8;">';
+		$output = $output . '<div class="inner">';
+			$output = $output . '<h1 class="title">'.titlecase('Your one stop motorcycle shop').'</h1>'; 
+			$output = $output . '<p>'.$description_long.'</p>';
+		$output = $output . '</div>';
+	$output = $output . '</div>';
+	$output = $output . '</div>';
+
+
+	/* ———————————————————————————————— */
+	return $output;} //close function 
+	/* ———————————————————————————————— */
+	$_group_header = group_header();
+
+/* ————————————————————————————————————————————————————————— */
+
+function group_footer($array_social_network){
+	global $array_social_network;
+	global $description_short;
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	—————————————————————————————————— */
+
+	$output = $output . '<div class="container_footer">';
+		$output = $output . '<div class="ending">';
+			$output = $output . '<div class="container_logo">';
+					$output = $output . '<div class="logo_c revealOnScroll" data-animation="flipInX"></div>';
+					$output = $output . '<div class="logo_rm revealOnScroll" data-animation="flipInY"></div>';
+			$output = $output . '</div>';
+		$output = $output . '</div>';
+		$output = $output . '<p class="snippet">'.$description_short.'</p>';
+		$output = $output . '<div class="footer_follow_station">';
+			foreach($array_social_network as $username){
+				foreach($username as $network => $social){
+					if($network == 'vimeo'){$output = $output . '<a href="http://vimeo.com/'.$social.'" class="vimeo" target="none"></a>';}
+					if($network == 'snapchat'){$output = $output . '<a href="" class="snapchat" target="none"></a>';}
+					if($network == 'instagram'){$output = $output . '<a href="http://instagram.com/'.$social.'" class="instagram " target="none"></a>';}
+					if($network == 'facebook'){$output = $output . '<a href="http://facebook.com/'.$social.'" class="facebook " target="none"></a>';}
+					if($network == 'twitter'){$output = $output . '<a href="http://twitter.com/'.$social.'" class="twitter " target="none"></a>';}
+					if($network == 'fyuse'){$output = $output . '<a href="http://fyu.se/u/'.$social.'" class="fyuse " target="none"></a>';}
+					}
+				}
+			$output = $output . '</div>';
+	$output = $output . '</div>';
+
+	/* ———————————————————————————————— */    
+	return $output;
+	} //close function
+	/* ———————————————————————————————— */
+	$_group_footer = group_footer();
+
+
+/* ————————————————————————————————————————————————————————— */
+
+function titlecase($string, $delimiters = array(" ", "-", "O'"), $exceptions = array("to", "a", "the", "of", "by", "for", "and", "with", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")) { 
+	/* 
+	Exceptions in lower case are words you don't want converted 
+	Exceptions all in upper case are any words you don't want converted to title case 
+	but should be converted to upper case, e.g.: 
+	king henry viii or king henry Viii should be King Henry VIII 
+	*/ 
+	foreach ($delimiters as $delimiter){ 
+		$words = explode($delimiter, $string); 
+		$newwords = array(); 
+		foreach ($words as $word){ 
+			if (in_array(strtoupper($word), $exceptions)){ 
+							// check exceptions list for any words that should be in upper case 
+							$word = strtoupper($word); 
+				} elseif (!in_array($word, $exceptions)){ 
+							// convert to uppercase 
+					$word = ucfirst($word); 
+					} 
+			array_push($newwords, $word); 
+			} 
+		$string = join($delimiter, $newwords); 
+		} 
+		return $string; 
+	// titlecase(); can be used to intermingle.
+	} 
+
+/* ————————————————————————————————————————————————————————— */
+
+function vertical_logo(){
+	global $headtitle;
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	——————————————————————————————————— */
+
+	if($headtitle !== 'main'){$output = $output . '<div class="vertical_logo"></div>';}
+
+	/* ———————————————————————————————— */  
+	return $output;} //close function 
+	/* ———————————————————————————————— */  
+	$_vertical_logo = vertical_logo();
+
+/* ————————————————————————————————————————————————————————— */
+
+function section_nav_section(){
+	$array_pages[] = array(
+		'about',
+		'motorcycles',
+		);
+	/* ——————————————————————————————————
+	DESCRIPTION:
+	——————————————————————————————————— */
+
+	$output = $output . '<nav class="nav" role="navigation">';
+		$output = $output . '<div class="container_logo">';
+			$output = $output . '<div class="logo_c"></div>';
+			$output = $output . '<div class="logo_rm"></div>';
+		$output = $output . '</div>';
+    	$output = $output . ' <ul>';
+            $output = $output . '<li><a href="index.php">Home</a></li>';
+            foreach($array_pages as $id => $pages){
+            	foreach($pages as $page)
+            	$output = $output . '<li><a href="'.$page.'.php">'.ucfirst($page).'</a></li>';
+            }
+            $output = $output . '<li><a href="http://shop.rmco.us/">Shop</a></li>';
+        $output = $output . '</ul>';
+
+        $output = $output . '<div class="nav__toggle-btn"></div>';
+        $output = $output . '<div class="section_nav_bottom">';
+	        $output = $output . '<p>282 Wilkes Ave, Bremerton, WA 98312</p>';
+			$output = $output . '<p>Hours of Operations: 9:00AM &ndash; 6:00PM</p>';
+		$output = $output . '</div>';
+    $output = $output . '</nav>';
+
+	/* ———————————————————————————————— */  
+	return $output;} //close function 
+	/* ———————————————————————————————— */  
+	$_section_nav_section = section_nav_section();
 
 /* ————————————————————————————————————————————————————————— */
 
@@ -155,7 +324,7 @@ function group_top_about($_section_primary_title){
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————— */
-	$output = $output . '<div class="header_short" style="background:url(_library/img/asset/bg_about.jpg)center no-repeat; background-size:cover;"></div>';
+	$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="_library/img/asset/bg_about.jpg"></div>';	
 	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
@@ -205,7 +374,7 @@ function group_top_motorcycle($_section_primary_title){
 			foreach($motorcycle[images] as $url => $description){
 				$count = $count +1;
 				if($count==1){
-					$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+					$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="'.$url.'"></div>';	
 					}
 				}
 			}
@@ -274,7 +443,11 @@ function group_top_motorcycle($_section_primary_title){
 			$output = $output . '</div>'; 
 		$output = $output . '</div>'; //end of container_video_full_width
 		$output = $output . '<div class="inner">';
-			$output = $output . '<p>'.$motorcycle[description].'</p>';
+			foreach($array_motorcycles as $id => $motorcycle){
+				if($id == $match){
+					$output = $output . '<p>'.$motorcycle[description].'</p>';
+					}
+				}
 		$output = $output . '</div>';
 	$output = $output . '</div>';
 	/* ———————————————————————————————— */
@@ -303,8 +476,8 @@ function group_top_member(){
 	foreach($array_content_cover as $cover){
 		shuffle($cover);
 		foreach($cover as $url){}
-		}		
-	$output = $output . '<div class="header_short" style="background:url('.$url.')center no-repeat; background-size:cover;"></div>';	
+		}
+	$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="'.$url.'"></div>';	
 		$output = $output . '<div class="section" style="background:#f7f8f8;">';
 			$output = $output . '<div class="inner">';
 				$output = $output . '<div class="container_profile">';
@@ -412,7 +585,7 @@ function group_top_motorcycles($_section_primary_title){
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————— */
-	$output = $output . '<div class="header_short" style="background:url(_library/img/asset/bg_motorcyles.jpg)center no-repeat; background-size:cover;"></div>';
+	$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="_library/img/asset/bg_motorcyles.jpg"></div>';	
 	$output = $output . '<div class="section" style="background:#f7f8f8;">';
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div style="text-align:center;">';
@@ -457,312 +630,37 @@ function group_coreteam(){
 $_group_coreteam = group_coreteam();
 
 /* ————————————————————————————————————————————————————————— */
-
-function group_footer($array_social_network){
-	global $array_social_network;
-	global $description_short;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	—————————————————————————————————— */
-
-	$output = $output . '<div class="container_footer">';
-		$output = $output . '<div class="ending">';
-			$output = $output . '<div class="container_logo">';
-					$output = $output . '<div class="logo_c revealOnScroll" data-animation="flipInX"></div>';
-					$output = $output . '<div class="logo_rm revealOnScroll" data-animation="flipInY"></div>';
-			$output = $output . '</div>';
-		$output = $output . '</div>';
-		$output = $output . '<p class="snippet">'.$description_short.'</p>';
-		$output = $output . '<div class="footer_follow_station">';
-			foreach($array_social_network as $username){
-				foreach($username as $network => $social){
-					if($network == 'vimeo'){$output = $output . '<a href="http://vimeo.com/'.$social.'" class="vimeo" target="none"></a>';}
-					if($network == 'snapchat'){$output = $output . '<a href="" class="snapchat" target="none"></a>';}
-					if($network == 'instagram'){$output = $output . '<a href="http://instagram.com/'.$social.'" class="instagram " target="none"></a>';}
-					if($network == 'facebook'){$output = $output . '<a href="http://facebook.com/'.$social.'" class="facebook " target="none"></a>';}
-					if($network == 'twitter'){$output = $output . '<a href="http://twitter.com/'.$social.'" class="twitter " target="none"></a>';}
-					if($network == 'fyuse'){$output = $output . '<a href="http://fyu.se/u/'.$social.'" class="fyuse " target="none"></a>';}
-					}
-				}
-			$output = $output . '</div>';
-	$output = $output . '</div>';
-
-
-	// 		$output = $output . '<div class="small_block">';
-	// 			$output = $output . '<div id="logo_small" style="margin-bottom:40px;"></div>';
-	// 			$output = $output . '<p>'.$description_short.'</p>';
-	// 			$output = $output . '<ul class="social_network">';
-	// 				foreach($array_social_network as $social){
-	// 					$output = $output . '<li style="display:inline-block" class="icon_'.$social['network'].'">';
-	// 					if($social['network']!=='snapchat'){
-	// 						$output = $output . '<a href="http://'.$social['link'].'" target="none" style="display:block; width:100%; height:100%;"></a>';
-	// 						}else{
-	// 							}
-	// 					$output = $output . '</li>';
-	// 					}
-	// 			$output = $output . '</ul>';
-	// 		$output = $output . '</div>';      
-	// 	$output = $output . '</div>';
-	// $output = $output . '</div>';
-	// $output = $output . '<div class="section">';
-	// 	$output = $output . '<p>Rottweiler Motorcycle Company &copy; '.date("Y").'. All Rights Reserved.</p>';
-	// $output = $output . '</div>';
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_footer = group_footer();
-
-
-/* ————————————————————————————————————————————————————————— */
-
-function titlecase($string, $delimiters = array(" ", "-", "O'"), $exceptions = array("to", "a", "the", "of", "by", "for", "and", "with", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")) { 
-	/* 
-	Exceptions in lower case are words you don't want converted 
-	Exceptions all in upper case are any words you don't want converted to title case 
-	but should be converted to upper case, e.g.: 
-	king henry viii or king henry Viii should be King Henry VIII 
-	*/ 
-	foreach ($delimiters as $delimiter){ 
-		$words = explode($delimiter, $string); 
-		$newwords = array(); 
-		foreach ($words as $word){ 
-			if (in_array(strtoupper($word), $exceptions)){ 
-							// check exceptions list for any words that should be in upper case 
-							$word = strtoupper($word); 
-				} elseif (!in_array($word, $exceptions)){ 
-							// convert to uppercase 
-					$word = ucfirst($word); 
-					} 
-			array_push($newwords, $word); 
-			} 
-		$string = join($delimiter, $newwords); 
-		} 
-		return $string; 
-	// titlecase(); can be used to intermingle.
-	} 
-
-/* ————————————————————————————————————————————————————————— */
 // OLD CODE BELOW
 /* ————————————————————————————————————————————————————————— */
 
-function group_header($array_members, $array_controller){
-	global $array_controller;
-	global $headtitle;
-	global $loremipsum;
-	global $description_short;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	depending on what page you land on, it will switch out the
-	header to match the page you're on
+// function group_header($array_members, $array_controller){
+// 	global $array_controller;
+// 	global $headtitle;
+// 	global $loremipsum;
+// 	global $description_short;
+// 	/* ——————————————————————————————————
+// 	DESCRIPTION:
+// 	depending on what page you land on, it will switch out the
+// 	header to match the page you're on
 
-	USED:
-	on all rootlevel .php pages at the top.
-	—————————————————————————————————— */
+// 	USED:
+// 	on all rootlevel .php pages at the top.
+// 	—————————————————————————————————— */
 
-	$switch_status = $array_controller['landing_page']['switch_status'];
+// 	$switch_status = $array_controller['landing_page']['switch_status'];
 
-	if($headtitle == 'main'){
-		if($switch_status == 'default'){
-			$output = $output . '<div id="group_header" class="parallax__group">';
-				$output = $output . '<video loop muted autoplay class="fullscreen-bg__video parallax__layer parallax__layer--base" style="background:#333333;">';//poster="_library/img/asset/bg_hero_fade.png"
-					$output = $output . '<source src="_library/img/asset/rmco_header.mp4" type="video/mp4">';
-					$output = $output . '<source src="_library/img/asset/rmco_header.webm" type="video/webm">';
-				    $output = $output . '<source src="_library/img/asset/rmco_header.ogv" type="video/ogg">';
-				$output = $output . '</video>';
-				$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-					$output = $output . '<div class="block_vh_center">';
-						$output = $output . '<div id="logo_large"></div>';
-						// $output = $output . '<h1>We build custom motorcycles</h1>';
-						$output = $output . '<p style="color:white;">'.$description_short.'</p>';
-						// $output = $output . '<div class="btn copper">Open Garage</div>';
-					$output = $output . '</div>';
-				$output = $output . '</div>';			
-			$output = $output . '</div>'; //closed group_header, but left parallax class open so the whole body document will be affected.	
-			}else{
-				$output = $output . '<div id="group_header" class="parallax__group">';
-					$output = $output . '<div class="parallax__layer parallax__layer--base" style="background:#333333; background:url(_library/img/asset/bg_hero_fade.png) center; background-size:cover;"></div>';
-					$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-						$output = $output . '<div class="block_vh_center">';
-							$output = $output . '<div id="logo_large"></div>';
-							$output = $output . '<h1>We build custom motorcycles</h1>';
-							$output = $output . '<p>Get a glance of our new customized motorcycles!</p>';
-							$output = $output . '<div class="btn copper">Open Garage</div>';
-						$output = $output . '</div>';
-					$output = $output . '</div>';			
-				$output = $output . '</div>'; //closed group_header, but left parallax class open so the whole body document will be affected.
-				}
-		}elseif($headtitle == 'about'){
-			$output = $output . '<div id="group_header" class="parallax__group" style="height:540px;">';
-				$output = $output . '<div class="parallax__layer parallax__layer--back" style="top:-87px;background:#333333; background:url(_library/img/asset/bg_about.jpg) center; background-size:cover;"></div>';
-				$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-					$output = $output . '<div class="block_vh_center">';
-						$output = $output . '<h1 style="margin:183px 0 0 0;">We build custom motorcycles</h1>';
-					$output = $output . '</div>';
-				$output = $output . '</div>';			
-			$output = $output . '</div>'; //closed group_header, but left parallax class open so the whole body document will be affected.
-		}elseif($headtitle == 'motorcycle'){
-			$output = $output . '<div id="group_header" class="parallax__group" style="height:540px;">';
-				$output = $output . '<div class="parallax__layer parallax__layer--back" style="top:-87px;background:#333333; background:url(_library/img/asset/bg_about.jpg) center; background-size:cover;"></div>';
-				$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-					$output = $output . '<div class="block_vh_center">';
-						$output = $output . '<h1 style="margin:183px 0 0 0;">We build custom motorcycles</h1>';
-					$output = $output . '</div>';
-				$output = $output . '</div>';			
-			$output = $output . '</div>'; //closed group_header, but left parallax class open so the whole body document will be affected.
-		}elseif($headtitle == 'member'){
-			$output = $output . '<div id="group_header" class="parallax__group" style="height:540px;">';
-				$output = $output . '<div class="parallax__layer parallax__layer--back" style="top:-87px;background:#333333; background:url(_library/img/asset/bg_about.jpg) center; background-size:cover;"></div>';
-				$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-					$output = $output . '<div class="block_vh_center">';
-						$output = $output . '<h1 style="margin:183px 0 0 0;">We build custom motorcycles</h1>';
-					$output = $output . '</div>';
-				$output = $output . '</div>';			
-			$output = $output . '</div>'; //closed group_header, but left parallax class open so the whole body document will be affected.
-			}
+// 	$output = $output . '<div class="header_main">';
+// 		$output = $output . '<div style="background:url(_library/img/asset/bg_motorcyles.jpg)center no-repeat;">';
+// 	$output = $output . '</div>';
+
 		
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_header = group_header();
+// 	/* ———————————————————————————————— */    
+// 	return $output;
+// 	} //close function
+// 	/* ———————————————————————————————— */
+// 	$_group_header = group_header();
 
 
-/* ————————————————————————————————————————————————————————— */
-
-function group_holding($array_members, $array_controller, $array_social_network){
-	global $array_controller;
-	global $array_social_network;
-	global $headtitle;
-	global $loremipsum;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	depending on what page you land on, it will switch out the
-	header to match the page you're on
-
-	USED:
-	on all rootlevel .php pages at the top.
-	—————————————————————————————————— */
-
-	$switch_status = $array_controller['landing_page']['switch_status'];
-
-	
-	if($switch_status == 'default'){
-		$output = $output . '<video loop muted autoplay class="fullscreen-bg__video parallax__layer parallax__layer--base" style="background:#333333;">'; //poster="_library/img/asset/bg_hero_fade.png" 
-		    $output = $output . '<source class="sourcevideo" src="_library/img/asset/rmco_header.mp4" type="video/mp4">';
-		    $output = $output . '<source class="sourcevideo" src="_library/img/asset/rmco_header.webm" type="video/webm">';
-		    $output = $output . '<source class="sourcevideo" src="_library/img/asset/rmco_header.ogv" type="video/ogg">';
-		$output = $output . '</video>';
-		}else{
-			$output = $output . '<div class="parallax__layer parallax__layer--base" style="background:#333333; background-image:url(_library/img/asset/bg_hero_fade.png); background-size:cover;></div>';//
-			}
-	$output = $output . '<div class="lock parallax__layer parallax__layer--fore" style="text-align:center;">';
-			$output = $output . '<div class="block_vh_center">';
-				$output = $output . '<div style="display:inline-block; height:270px; width:270px; margin-bottom:20px; background:url(_library/img/asset/asset_logo.svg) no-repeat"></div>';
-				$output = $output . '<p style="color:white; margin:0;">Stay tuned for our new site launch!</p>'; //Be sure to check us out in the near future for our new site launch!
-				$output = $output . '<ul class="social_network">';
-					foreach($array_social_network as $social){
-						$output = $output . '<li style="display:inline-block" class="icon_'.$social['network'].'">';
-						if($social['network']!=='snapchat'){
-							$output = $output . '<a href="http://'.$social['link'].'" target="none" style="display:block; width:100%; height:100%;"></a>';
-							}else{
-								/* COMEBACK
-								• here is where you'll create an absolute div that has 20px margins on all sides
-								• this will also have a background-color of $color_snapchat in scss file
-								• this page will contain:
-									1) the snapchat ghost
-									2) snapchat scan pic
-									3) snapchat account name
-									4) quick description for:
-										mobile:  "please take a screenshot, and add by snapcode using your library" <tutorial_snapchat_1.gif>
-										tablet:  "please scan the code above from within snapchat" <tutorial_snapchat_2.gif>
-										desktop: "please scan the code above from within snapchat" <tutorial_snapchat_2.gif>
-								*/
-								}
-						$output = $output . '</li>';
-						}
-				$output = $output . '</ul>';
-			$output = $output . '</div>';
-		$output = $output . '</div>';			
-	
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_holding = group_holding();
-
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_footer_old($array_social_network){
-	global $array_social_network;
-	global $description_short;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	—————————————————————————————————— */
-
-		$output = $output . '<div id="group_footer" class="parallax__group" style="z-index:300">';
-			$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-				$output = $output . '<div class="small_block">';
-					$output = $output . '<div id="logo_small" style="margin-bottom:40px;"></div>';
-					$output = $output . '<p>'.$description_short.'</p>';
-					$output = $output . '<ul class="social_network">';
-						foreach($array_social_network as $social){
-							$output = $output . '<li style="display:inline-block" class="icon_'.$social['network'].'">';
-							if($social['network']!=='snapchat'){
-								$output = $output . '<a href="http://'.$social['link'].'" target="none" style="display:block; width:100%; height:100%;"></a>';
-								// $output = $output . '<a href="http://google.com" target="none" style="display:block; width:100%; height:100%;"></a>';
-								}else{
-									/* COMEBACK
-									• here is where you'll create an absolute div that has 20px margins on all sides
-									• this will also have a background-color of $color_snapchat in scss file
-									• this page will contain:
-										1) the snapchat ghost
-										2) snapchat scan pic
-										3) snapchat account name
-										4) quick description for:
-											mobile:  "please take a screenshot, and add by snapcode using your library" <tutorial_snapchat_1.gif>
-											tablet:  "please scan the code above from within snapchat" <tutorial_snapchat_2.gif>
-											desktop: "please scan the code above from within snapchat" <tutorial_snapchat_2.gif>
-									*/
-									}
-							$output = $output . '</li>';
-							}
-					$output = $output . '</ul>';
-				$output = $output . '</div>';      
-			$output = $output . '</div>';
-			$output = $output . '<div class="bar_stopper"></div>';
-		$output = $output . '</div>';
-		$output = $output . '<div id="group_copyright" class="parallax__group">';
-			$output = $output . '<div class="lock parallax__layer parallax__layer--back">';
-			$output = $output . '<p>Rottweiler Motorcycle Company &copy; '.date("Y").'. All Rights Reserved.</p>';
-			$output = $output . '</div>';
-		$output = $output . '</div>';
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_footer_old = group_footer_old();
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_navbar(){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	——————————————————————————————————- */
-	$output = $output . '<div id="group_navbar">';
-		$output = $output . '<div class="logo_horiz" style="position:absolute;top:0;left:0;height:10px;width:10px;"></div>';
-	$output = $output . '</div>';
-	/* ———————————————————————————————— */       
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_navbar = group_navbar();
-
-/* ————————————————————————————————————————————————————————— */
 
 function group_lax(){
 	/* ——————————————————————————————————
@@ -807,7 +705,7 @@ function group_next($description_long){
 
 /* ————————————————————————————————————————————————————————— */
 
-function group_featured_items($array_items){
+function group_featured_items($array_items, $_section_primary_title){
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	display "featured items" group on this page
@@ -826,11 +724,11 @@ function group_featured_items($array_items){
 	if($headtitle == 'main'){
 		$output = $output . '<div id="group_featured_items" class="parallax__group">';
 			$output = $output . '<div class="lock">';
-				$output = $output . '<div class="small_block">';
-					$output = $output . '<h1>Featured Items</h1>';
-					$output = $output . '<p>If you would like to see more of our products, visit our shop!</p>';
-					$output = $output . '<div class="btn copper">Visit Shop</div>';
-				$output = $output . '</div>'; 
+				$output = $output . '<div style="text-align:center;">';
+					$output = $output . section_primary_title("our",'featured items');
+				$output = $output . '</div>';
+				$output = $output . '<h2>If you would like to see more of our products, visit our shop!</p>';
+				$output = $output . '<div class="btn copper">Visit Shop</div>';
 			$output = $output . '</div>';
 			$output = $output . '<ul>';
 				$count = 0;
@@ -952,227 +850,5 @@ function group_events(){
 	} //close function
 	/* ———————————————————————————————— */
 	$_group_events = group_events(); 
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_about($array_members){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "about" group on this page, if GET variable ?team hasn't been set.
-	—————————————————————————————————— */
-	
-	// $output = $output . 'board about';
-
-	$output = $output . '<div id="wrap_intro" class="parallax__group">';
-		$output = $output . '<div id="lock_intro">';
-			$output = $output . '<h1>Our Story</h1>';
-			$output = $output . '<p>Velendeb itatem haribus a il idellor roviduc iendandae volorio vento consequ aessum doluptatur? Quidi ut fuga. Pa cullat omnisquis doloriberit, </p>';
-		$output = $output . '</div>';
-	$output = $output . '</div>';
-
-	$output = $output . '<div id="wrap_intro">';
-		$output = $output . '<div id="lock_intro">';
-			$output = $output . '<h1>Our Team</h1>';
-			$output = $output . '<p>Velendeb itatem haribus a il idellor roviduc iendandae volorio vento consequ aessum doluptatur? Quidi ut fuga. Pa cullat omnisquis doloriberit, </p>';
-			$output = $output . '<ul class="grid">';
-			foreach($array_members as $member => $info){
-				$output = $output . '<li style="list-style:none;" class="'.$member.'">';
-				$output = $output . '<a style="display:block;" href="about.php?team='.$member.'">';
-				$output = $output . ucfirst($member) . " " . ucfirst($info['name']['last']);
-				$output = $output . '</a>';
-				$output = $output . '</li>';
-				}
-			$output = $output . '</ul>';  
-		$output = $output . '</div>';
-	$output = $output . '</div>'; 
-
-	/* ———————————————————————————————— */
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_about = group_about($array_members);
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_member($array_members){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "member" group on this page, if GET variable ?team is set.
-	—————————————————————————————————— */
-
-	$member = $_GET['team'];
-	$output = $output . '<h2>';
-	$output = $output . ucfirst($member);
-	$output = $output . '</h2>';
-	$member_namelast = $array_members[$member]['name']['last'];
-
-	/* ———————————————————————————————— */
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_member = group_member($array_members);
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_about_intro($array_members){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display groups depending on if GET variable ?team is or isnt set.
-
-	NOTE:
-	this only works if you output the function WITH its argument, not by its variable.
-	—————————————————————————————————— */
-
-	if(!isset($_GET['team'])){ 
-		//——————SHOW board_about——————————
-		$output = $output . group_about($array_members);
-	}else{
-		//——————SHOW board_member—————————
-		$output = $output . group_member($array_members);
-		}
-
-	/* ———————————————————————————————— */
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_about_intro = group_about_intro($array_members);
-
-/* ————————————————————————————————————————————————————————— */
-
-function snip_testimonial($array_testimonial){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	this function basically creates a container that holds one quote from the $array_testimonial arrays
-	and displays it.
-	—————————————————————————————————— */
-	$count = 0;
-	shuffle($array_testimonial);
-	foreach($array_testimonial as $testimonial){
-		$count = $count +1;
-		if($count == 1){
-			$output = $output . '<div class="snip_testimonial">';
-				$output = $output . '<div class="testimonial">';
-					$output = $output . '<h1>Testimonial</h1>';
-					$output = $output . '<div class="quotemark_l"></div>';
-					$output = $output . '<div class="quotemark_r"></div>';
-					$output = $output . '<p class="quote">"' .$testimonial[testimonial]. '"</p>';
-					$output = $output . '<p class="person"><i>' .$testimonial[name].', '.titlecase($testimonial[location]).', '.strtoupper($testimonial[state]).'</i></p>';
-				$output = $output . '</div>';
-			$output = $output . '</div>';
-			} //close foreach loop
-		}
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_snip_testimonial = snip_testimonial($array_testimonial);
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_about_ourstory(){
-	global $_snip_testimonial;
-	global $description_about;
-	global $array_members;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	——————————————————————————————————- */
-	$output = $output . '<div id="group_about_ourstory" class="parallax__group" style="z-index:300">';
-		$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-			$output = $output . '<div class="small_block">';
-				$output = $output . '<h1>Our Story</h1>';
-				$output = $output . "<p>$description_about</p>";
-			$output = $output . '</div>';
-			$output = $output . $_snip_testimonial;
-		$output = $output . '</div>';
-	$output = $output . '</div>';
-	$output = $output . '<div id="group_about_ourteam" class="parallax__group" style="z-index:300">';
-		$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-			$output = $output . '<div class="small_block">';
-				$output = $output . '<h1>Our Team</h1>';
-				$output = $output . "<p>Velendeb itatem haribus a il idellor roviduc iendandae volorio vento consequ aessum doluptatur? Quidi ut fuga. Pa cullat omnisquis doloriberit, </p>";
-			$output = $output . '</div>';
-			$output = $output . '<ul>';
-				foreach($array_members as $name => $member){
-					$output = $output . '<li class="parent">';
-						$output = $output . '<div class="container">';
-							$output = $output .'<h2 color="white">'.$name.'</h2>';
-							$output = $output .'<div style="width: 50px;margin: 0 auto;margin-top: -4px;margin-bottom: 6px;height: 2px;background: red;"></div>';
-							$output = $output .'<p color="white">'.$member[position].'</p>';
-						$output = $output . '</div>';
-						$output = $output . '<div class="cover" style="background:url(_library/img/asset/img_team_'.$name.'.jpg) center; background-size:cover;"></div>';
-					$output = $output . '</li>';
-					}
-			$output = $output . '</ul>';
-		$output = $output . '</div>';
-	$output = $output . '</div>';
-
-	/* ———————————————————————————————— */       
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_about_ourstory = group_about_ourstory();
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_about_motorcycle(){
-	global $_snip_testimonial;
-	global $description_about;
-	global $array_members;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	——————————————————————————————————- */
-	$output = $output . '<div id="group_about_motorcycle" class="parallax__group" style="z-index:300">';
-		$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-			$output = $output . '<div class="small_block">';
-				$output = $output . '<h1>Our Story</h1>';
-				$output = $output . "<p>$description_about</p>";
-			$output = $output . '</div>';
-			$output = $output . $_snip_testimonial;
-		$output = $output . '</div>';
-	$output = $output . '</div>';
-	$output = $output . '<div id="group_about_ourteam" class="parallax__group" style="z-index:300">';
-		$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-			$output = $output . '<div class="small_block">';
-				$output = $output . '<h1>Our Team</h1>';
-				$output = $output . "<p>Velendeb itatem haribus a il idellor roviduc iendandae volorio vento consequ aessum doluptatur? Quidi ut fuga. Pa cullat omnisquis doloriberit, </p>";
-			$output = $output . '</div>';
-			$output = $output . '<ul>';
-				foreach($array_members as $name => $member){
-					$output = $output . '<li class="parent">';
-						$output = $output . '<div class="container">';
-							$output = $output .'<h2 color="white">'.$name.'</h2>';
-							$output = $output .'<div style="width: 50px;margin: 0 auto;margin-top: -4px;margin-bottom: 6px;height: 2px;background: red;"></div>';
-							$output = $output .'<p color="white">'.$member[position].'</p>';
-						$output = $output . '</div>';
-						$output = $output . '<div class="cover" style="background:url(_library/img/asset/img_team_'.$name.'.jpg) center; background-size:cover;"></div>';
-					$output = $output . '</li>';
-					}
-			$output = $output . '</ul>';
-		$output = $output . '</div>';
-	$output = $output . '</div>';
-
-	/* ———————————————————————————————— */       
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_about_motorcycle = group_about_motorcycle();
-
-/* ————————————————————————————————————————————————————————— */
-
-function group_new(){
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	——————————————————————————————————- */
-	// $output = $output . '<div>';
-	// $output = $output . '</div>';
-	/* ———————————————————————————————— */       
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_new = group_new();
-
-/* ————————————————————————————————————————————————————————— */	
 
 ?>

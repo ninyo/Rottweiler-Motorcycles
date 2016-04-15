@@ -1,5 +1,9 @@
 
-<?echo $_group_footer;?>
+<?
+echo $_group_footer;
+echo $_section_copyright;
+?>
+
 
 <?// ————————————————————————— END OF CONTENT DISPLAY —————————————————————————?>
 </section>

@@ -15,6 +15,7 @@ PASTE BOARD BELOW
 ————————————————————————————————————————————————————————— */
 
 echo $_group_top_motorcycle;
+echo $_section_testimonial;
 
 ?>
 

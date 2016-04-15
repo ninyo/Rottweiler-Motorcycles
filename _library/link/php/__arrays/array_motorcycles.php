@@ -16,7 +16,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'price' => 7995,
 	'video' => '162911217', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
-		'_library/img/motorcycles/img_2453_1.jpg' => 'photo1', //full width top photo
+		'_library/img/motorcycles/2016-04-14_112032.png' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2453_2.jpg' => 'photo2', //pair photo 1
 		'_library/img/motorcycles/img_2453_3.jpg' => 'photo3', //pair photo 2
 		),
@@ -33,9 +33,9 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'Shovelhead',
 	'description' => 'two Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 'call for pricing',
-	'video' => '53363288', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '162915972', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
-		'_library/img/motorcycles/img_2474_1.jpg' => 'photo1', //full width top photo
+		'_library/img/motorcycles/2016-04-14_112116.png' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2474_2.jpg' => 'photo2', //pair photo 1
 		'_library/img/motorcycles/img_2474_3.jpg' => 'photo3', //pair photo 2
 		),
@@ -53,9 +53,9 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'Deluxe',
 	'description' => 'three Haris suntessum que odita volest, consequ atibus. Piet et apidit quaeperit inciet quiam, quo berepel endipid quos rernam fugiam quiae. Nequos vercima volore opturec tionsequibus expel illiqui resti sum doluptat aut voles et moluptam, ipisqui blab ius sim illant omnistion cullore venet maximus abo. Nem num viti vent quid que volori at. Veniaernam ipit faccusant. Ehendio. Del ma vellorem. Nam faceprae pa quis as aut mint. Facepro vitisqui aceationsed mo molorest ma dolore, intotae qui di',
 	'price' => 11995,
-	'video' => '76355633', // IF(value is=='http://vimeo.com/notset'){don't show video area}
+	'video' => '162915973', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
-		'_library/img/motorcycles/img_2483_1.jpg' => 'photo1', //full width top photo
+		'_library/img/motorcycles/2016-04-14_112226.png' => 'photo1', //full width top photo
 		'_library/img/motorcycles/img_2483_2.jpg' => 'photo2', //pair photo 1
 		'_library/img/motorcycles/img_2483_3.jpg' => 'photo3', //pair photo 2
 		),
