@@ -51,7 +51,7 @@ $array_members['jonathan'] = array(
 		),
 	'gif' => 'gif_jon.gif',
 	'still' => 'rmco-cover-2591.jpg', 
-	'video' => '152640613', 
+	'video' => '162911217', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',
@@ -62,10 +62,7 @@ $array_members['jonathan'] = array(
 		),
 	);
 $array_members['de'] = array(
-	'description' => array(
-		"In 2006 Christopher, Jonathan and I sat in the sunshine on our front deck and dreamed of building a company that would last a generation or more. A company that combined our passion for adventure, our love of motorcycles and our creative instincts. Rottweiler is that company. With every year, through every adventure, with the very best people, we continue to thrive.",
-		"I really believe that people who have the courage to ride have a better life than those who don't; that those who push themselves out of the warm comfort of a predictable routine are truly alive. For me, building RMC is much like that: exhilarating, challenging, freeing and worth every minute. We are all about getting more people to wake up and really live. Join us.",
-		),
+	'description' => "In 2006 Christopher, Jonathan and I sat in the sunshine on our front deck and dreamed of building a company that would last a generation or more. A company that combined our passion for adventure, our love of motorcycles and our creative instincts. Rottweiler is that company. With every year, through every adventure, with the very best people, we continue to thrive. <br> I really believe that people who have the courage to ride have a better life than those who don't; that those who push themselves out of the warm comfort of a predictable routine are truly alive. For me, building RMC is much like that: exhilarating, challenging, freeing and worth every minute. We are all about getting more people to wake up and really live. Join us.",
 	'name' => array(
 		'first' => 'de',
 		'last' => 'hicks',
@@ -79,7 +76,7 @@ $array_members['de'] = array(
 		),
 	// 'gif' => '',
 	'still' => '22616_888645114512207_830161086553893108_n.jpg', 
-	'video' => '152640613', 
+	'video' => '162915973', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',
@@ -90,9 +87,7 @@ $array_members['de'] = array(
 		),
 	);
 $array_members['donnie'] = array(
-	'description' => array(
-		'My name is Donnie and I am the Executive Vice President & COO of RMC group of companies. Back in 2007 the entire RMC family experienced a very tragic event...the loss of a Christopher Ryan. Speaking for myself, this was a very pivotal time in my life. I had been working elsewhere but had this overwhelming feeling that I needed to step in and help. I left a job not knowing what I was getting into. I will always remember De saying, "If you have to choose between comfort or adventure, always choose adventure and you\'ll never go wrong." This resonates with me daily. Without choosing adventure, I would\'ve never discovered the joy of riding a motorcycle and experiencing the rumble beneath my feet. It\'s true...four wheels move the body and two wheels move the soul. Amen...ride safe!',
-		),
+	'description' => 'My name is Donnie and I am the Executive Vice President & COO of RMC group of companies. Back in 2007 the entire RMC family experienced a very tragic event...the loss of a Christopher Ryan. Speaking for myself, this was a very pivotal time in my life. I had been working elsewhere but had this overwhelming feeling that I needed to step in and help. I left a job not knowing what I was getting into. I will always remember De saying, "If you have to choose between comfort or adventure, always choose adventure and you\'ll never go wrong." This resonates with me daily. Without choosing adventure, I would\'ve never discovered the joy of riding a motorcycle and experiencing the rumble beneath my feet. It\'s true...four wheels move the body and two wheels move the soul. Amen...ride safe!',
 	'name' => array(
 		'first' => 'donnie',
 		'last' => 'quitugua',
@@ -106,7 +101,7 @@ $array_members['donnie'] = array(
 		),
 	// 'gif' => '',
 	'still' => '10006948_10152831292468292_2512636140231297245_n.jpg', 
-	'video' => '152640613', 
+	'video' => '162915973', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',
@@ -131,7 +126,7 @@ $array_members['drew'] = array(
 		),
 	'gif' => 'gif_drew.gif',
 	'still' => 'rmco-cover-2595.jpg', 
-	'video' => '152640613', 
+	'video' => '162915972', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',
@@ -142,7 +137,7 @@ $array_members['drew'] = array(
 		),
 	);
 $array_members['julius'] = array(
-	'description' => $loremipsum,
+	'description' => "Hey everybody! I'm Julius. I started at working with the Rottweiler team in July of 2013 and riding motorcycles shortly beforehand. We didn't have a specific title for me when I first started, but, it seems like \"Customer Service Representative\" fits the bill. Family and motorcycles are two important aspects in my life, luckily, at this job I'm able to be surrounded by both. About 99% of the time I'm swamped in estimates, parts research, invoicing, etc. But every now and then, I meet a customer with a killer story, motorcycle or life related, and I'm beyond intrigued. Working in a company with so many great people here you learn that the greatest joy from this business comes not from the motorcycles, but the people we are surrounded by. Thanks for your time and I hope to see you down at the shop.",
 	'name' => array(
 		'first' => 'julius',
 		'last' => 'melendres',
@@ -156,7 +151,7 @@ $array_members['julius'] = array(
 		),
 	'gif' => 'gif_julius.gif',
 	'still' => 'rmco-cover-2598.jpg', 
-	'video' => '152640613', 
+	'video' => '162915972', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',
@@ -181,7 +176,7 @@ $array_members['tom'] = array(
 		),
 	'gif' => 'gif_tom.gif',
 	'still' => 'rmco-cover-2601.jpg', 
-	'video' => '152640613', 
+	'video' => '162911217', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
 		// 'vimeo' => '',

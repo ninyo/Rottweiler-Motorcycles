@@ -15,7 +15,7 @@ PASTE BOARD BELOW
 ————————————————————————————————————————————————————————— */
 
 echo $_group_top_about;
-echo $_section_testimonial;
+
 echo $_group_coreteam;
 
 ?>

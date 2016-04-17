@@ -8,7 +8,7 @@ global functions to help control output
 
 $description_short = 'Voted Best Motorcycle Shop in Western WA. All makes, models and years. You deserve the best. Nobody\'s better at getting you on the road.';
 $description_long = "Rottweiler Motorcycle Co. is your go-to motorcycle shop in Bremerton, Washington. We began production of top-of-the-line motorcycles in 2006. These motorcycles appeal to enthusiasts from all over the country as well as any walk of life. Rottweiler ensures that each motorcycle fits its owner perfectly. Rottweiler Motorcycle Co. boasts an exceptional design and fabrication team with the skills and passion that makes each motorcycle a work of art. What sets Rottweiler Motorcycle Co. apart is our high attention to detail & obsession with perfection while providing the ultimate experience for our customers. Each Rottweiler team member is an artist and master at their craft, bringing a unique style to our approach.";
-$description_about = 'Recently voted the Best in Western Washington, Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We\'ve got you. And at the end of the day if you can’t get your motorcycle down here, we’ll gladly pick it up at no charge. Anything you need or dream of for your ride, we\'ve got you. Give us a call or stop by, and we will give you a tour of our shop.';
+$description_about = "Recently voted the Best in Western Washington, Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We&#146;ve got you. And at the end of the day if you can&#146;t get your motorcycle down here, we&#146;ll gladly pick it up at no charge. Anything you need or dream of for your ride, we&#146;ve got you. Give us a call or stop by, and we will give you a tour of our shop.";
 
 /* ————————————————————————————————————————————————————————— */
 
@@ -150,8 +150,8 @@ function vertical_logo(){
 
 function section_nav_section(){
 	$array_pages[] = array(
-		'about',
 		'motorcycles',
+		'about',
 		);
 	/* ——————————————————————————————————
 	DESCRIPTION:
@@ -187,11 +187,28 @@ function section_nav_section(){
 
 function section_testimonial(){
 	global $array_testimonial;
+	$array_bg_testimonial[] = array(
+		'bg_2606.jpg',
+		'bg_2607.jpg',
+		'bg_2618.jpg',
+		);
 	/* ——————————————————————————————————
 	DESCRIPTION:
 	——————————————————————————————————— */
 	shuffle($array_testimonial);
-	$output = $output . '<div class="section" style="background:url(_library/img/asset/bg_testimonial.png) center no-repeat; background-size:cover;">';
+	shuffle($array_bg_testimonial);
+	$counta = 0;
+
+		foreach($array_bg_testimonial as $cover){
+			shuffle($cover);
+			foreach($cover as $urls){
+				$counta = $counta +1;
+
+				if($counta == 1){
+					$output = $output . '<div class="section testimonial_photo" style="background:url(_library/img/asset/'.$urls.') center no-repeat; background-size:cover;">';
+					}
+				}
+			}
 		$output = $output . '<div class="inner">';
 			$output = $output . '<div class="testimonial">';
 				$output = $output . '<div class="bar_testimonial_title">';
@@ -294,7 +311,7 @@ function section_grid_motorcycles(){
 						foreach($motorcycle[images] as $photo => $description){
 							$photo_count = $photo_count + 1;
 							if($photo_count == 1){
-								$output = $output . '<div class="cover" style="background:url('.$photo.')center no-repeat;background-size:cover;"></div>';
+								$output = $output . '<div class="cover" style="background:url(_library/img/motorcycles/'.$photo.')center no-repeat;background-size:cover;"></div>';
 								}
 							}
 						$output = $output . '<div class="under"></div>';
@@ -374,7 +391,7 @@ function group_top_motorcycle($_section_primary_title){
 			foreach($motorcycle[images] as $url => $description){
 				$count = $count +1;
 				if($count==1){
-					$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="'.$url.'"></div>';	
+					$output = $output . '<div class="parallax-window header_short" style="background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="_library/img/motorcycles/'.$url.'"></div>';	
 					}
 				}
 			}
@@ -405,7 +422,7 @@ function group_top_motorcycle($_section_primary_title){
 							foreach($motorcycle[images] as $url => $description){
 								$count = $count +1;
 								if($count == 1){
-									$output = $output . '<div style="background:url('.$url.')center no-repeat; background-size:cover;" class="thumb">';
+									$output = $output . '<div style="background:url(_library/img/motorcycles/'.$url.')center no-repeat; background-size:cover;" class="thumb">';
 									}
 								}
 							}
@@ -431,7 +448,7 @@ function group_top_motorcycle($_section_primary_title){
 							foreach($motorcycle[images] as $url => $description){ //this splits the image array into individual photos
 								$count = $count +1; //this is just to associate a count to each photo
 								if($count == 1){ //this is just to place in the first of array if the photo's number is 1
-									$output = $output . '<div style="background:url('.$url.')center no-repeat; background-size:cover;" class="thumb right">';
+									$output = $output . '<div style="background:url(_library/img/motorcycles/'.$url.')center no-repeat; background-size:cover;" class="thumb right">';
 									}
 								}
 							}
@@ -446,6 +463,15 @@ function group_top_motorcycle($_section_primary_title){
 			foreach($array_motorcycles as $id => $motorcycle){
 				if($id == $match){
 					$output = $output . '<p>'.$motorcycle[description].'</p>';
+					$output = $output . '<div class="img_grid_double" style="">';
+					$count = 0;
+					foreach($motorcycle[images] as $url => $description){
+						$count = $count +1;
+						if($count != 1){
+							$output = $output . '<div class="" style="background:url(_library/img/motorcycles/'.$url.')center no-repeat;background-size:cover;"></div>';	
+							}
+						}
+					$output = $output . '</div>';
 					}
 				}
 		$output = $output . '</div>';
@@ -508,7 +534,9 @@ function group_top_member(){
 										$output = $output . '</div>';
 										} //close conditional
 								$output = $output . '</div>';
-								$output = $output . '<p class="member_description">'.$member[description].'</p>';
+								
+									$output = $output . '<p class="member_description">'.$member[description].'</p>';
+									
 								$popularity = count($member[social]);
 								if($popularity != 0){
 									$output = $output . '<div class="member_follow_station" id="follow_station_nondesktop">';
@@ -592,7 +620,7 @@ function group_top_motorcycles($_section_primary_title){
 				$output = $output . section_primary_title("our motorcycle's",'lineup');
 			$output = $output . '</div>';
 			$output = $output . '<h2>'.titlecase('One of a kind').'</h2>'; 
-			$output = $output . '<p>We\'re proud of each motorcycle\'s story and personality. We understand their characteristics and influence from their owners, and embrace its history. You can find the extra details by viewing our motorcycle listing below.</p>';
+			$output = $output . "<p>Each motorcycle contains a personal story. We\'re proud of understanding each motorcycle's past. We embrace its unique characteristics given by their previous owners. You will find extra details by selecting a motorcycle below.</p>";
 			$output = $output . $_section_grid_motorcycles;
 		$output = $output . '</div>';
 	$output = $output . '</div>';

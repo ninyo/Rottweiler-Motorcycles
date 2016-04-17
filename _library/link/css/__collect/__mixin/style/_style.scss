@@ -164,9 +164,32 @@ body {
 		}
 	}
 
+@mixin grid_2_2_2 {
+	@include vp('transition','.25s');
+	@include vp('border-radius', '2px'); 
+	float:left;
+	&:last-child{
+		margin-right:0;
+		}
+	width:50%;
+	height:200px;
+	margin-right:0;
+	@media screen and (min-width: $tablet_body) {
+		width:49.221183800623%;
+		margin-right:1.557632398754%;
+		height:250px;
+		}
+	@media screen and (min-width: $desktop_body) {
+		width:49.375%;
+		margin-right:1.25%;
+		height:360px;
+		}
+	}
+
 @mixin grid_2_3_3 {
 	// [2 columns]
 	@include vp('transition','.25s');
+	@include vp('border-radius', '2px'); 
 	float:left;
 	&:nth-child(2n+2){margin-right:0;}
 	width:49.275362318841%;
@@ -193,6 +216,7 @@ body {
 @mixin grid_2_3_4 {
 	// [2 columns]
 	@include vp('transition','.25s');
+	@include vp('border-radius', '2px'); 
 	float:left;
 	&:nth-child(2n+2){margin-right:0;}
 	width:49.275362318841%;
@@ -628,7 +652,16 @@ div.title_secondary {
 		}
 	}
 			
-.img_grid_double {}
+.img_grid_double {
+	@include clearfix;
+	width:100%;
+	padding-top:20px;
+	@media screen and (min-width: $tablet_body) {padding-top:30px;}
+	@media screen and (min-width: $desktop_body) {padding-top:40px;}
+	div {
+		@include grid_2_2_2;
+		}
+	}
 .testimonial {
 	text-align:center;
 	padding: 90px 0 70px 0;
@@ -671,6 +704,7 @@ div.title_secondary {
 				}
 			}
 		h1.txt_testimonial {
+			@include vp('text-shadow','0 0 7px rgba(0,0,0,0.2)');
 			display:inline-block;
 			font-size:30px;
 			color:white;
@@ -685,6 +719,7 @@ div.title_secondary {
 			}
 		}
 	p.message_testimonial {
+		@include vp('box-shadow','0 0 7px rgba(0,0,0,0.2)');
 		@include vp('border-radius','3px');
 		display:inline-block;
 		background:white;
@@ -694,7 +729,7 @@ div.title_secondary {
 		p {
 			@include vp('border-radius','2px');
 			display:inline-block;
-			margin-top:5px;
+			margin-top:17px;
 			font-family:asap;
 			font-size:14px;
 			background:black;
@@ -1325,6 +1360,7 @@ div.header_main {
 			@media screen and (min-width: $desktop_body) {background-size:100%;}
 	    	}
 	    p {
+	    	@include vp('text-shadow','0 0 7px rgba(0,0,0,0.2)');
 	    	display:table;
 	    	color:white;
 	    	margin-top:62px;
@@ -1448,3 +1484,6 @@ div.section_copyright {
 		}
 	}
 
+div.testimonial_photo {
+	@include vp('filter','grayscale(100%)');
+	}
