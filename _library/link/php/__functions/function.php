@@ -620,7 +620,7 @@ function group_top_motorcycles($_section_primary_title){
 				$output = $output . section_primary_title("our motorcycle's",'lineup');
 			$output = $output . '</div>';
 			$output = $output . '<h2>'.titlecase('One of a kind').'</h2>'; 
-			$output = $output . "<p>Each motorcycle contains a personal story. We\'re proud of understanding each motorcycle's past. We embrace its unique characteristics given by their previous owners. You will find extra details by selecting a motorcycle below.</p>";
+			$output = $output . "<p>Each motorcycle contains a personal story. We're proud of understanding each motorcycle's past. We embrace its unique characteristics given by their previous owners. You will find extra details by selecting a motorcycle below.</p>";
 			$output = $output . $_section_grid_motorcycles;
 		$output = $output . '</div>';
 	$output = $output . '</div>';
