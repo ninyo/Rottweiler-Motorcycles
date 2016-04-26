@@ -143,7 +143,7 @@ function vertical_logo(){
 	DESCRIPTION:
 	——————————————————————————————————— */
 
-	if($headtitle !== 'main'){$output = $output . '<div class="vertical_logo"></div>';}
+	if($headtitle !== 'main'){$output = $output . '<div class="vertical_logo"><a href="/" style="width:100%;height:100%;display:block;"></a></div>';}
 
 	/* ———————————————————————————————— */  
 	return $output;} //close function 
