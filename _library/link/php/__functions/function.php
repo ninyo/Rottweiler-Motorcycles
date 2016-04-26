@@ -571,7 +571,7 @@ function group_top_member(){
 									foreach($member[details] as $category => $detail){
 										$output = $output . '<li>';
 											$output = $output . '<p class="category">'.ucwords($category).'</p>';
-											$output = $output . '<p class="detail">'.ucfirst($detail).'</p>';
+											$output = $output . '<p class="detail">'.ucwords($detail).'</p>';
 										$output = $output . '</li>';
 										}
 									}
@@ -592,7 +592,7 @@ function group_top_member(){
 									foreach($member[details] as $category => $detail){
 										$output = $output . '<li>';
 											$output = $output . '<p class="category">'.ucwords($category).'</p>';
-											$output = $output . '<p class="detail">'.ucfirst($detail).'</p>';
+											$output = $output . '<p class="detail">'.ucwords($detail).'</p>';
 										$output = $output . '</li>';
 										}
 									}
@@ -688,9 +688,6 @@ function group_chris(){
 			$output = $output . '</div>';
 		$output = $output . '</div>';
 	$output = $output . '</div>';
-
-
-	
 
 	/* ———————————————————————————————— */
 	return $output;} //close function 
