@@ -31,7 +31,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'Shovelhead',
-	'description' => "The shovel head motor has always been the mark of someone who truly loves what Harley has to offer. It seems that if you run into someone with a shovel that 8 out of 10 times they’re the original owner.. the other 2 times are probably the spike in trend over the last few years. This specific shovel has a special place in our hearts. The beauty of vintage Harley motors is each one has a soul, a unique, & often times stubborn, attitude. You can’t say that about many of the newer bikes but with out a doubt… This Shovel has soul.",
+	'description' => "The shovel head motor has always been the mark of someone who truly loves what Harley has to offer. It seems that if you run into someone with a shovel that 8 out of 10 times they're the original owner. The other 2 times are probably the spike in trend over the last few years. This specific shovel has a special place in our hearts. The beauty of vintage Harley motors is each one has a soul, a unique, & often times stubborn, attitude. You can't say that about many of the newer bikes but with out a doubt. This Shovel has soul.",
 	'price' => 'call for pricing',
 	'video' => '162915972', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(
@@ -51,7 +51,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 
 $array_motorcycles[] = array( //——–––––––motorcycle 1
 	'motorcycle_nick' => 'Deluxe',
-	'description' => "I love the Deluxe. I rode this bike for a summer. Every single stop light someone will yell out they're window with a compliment. We didn't veer too far from stock on this one because of what the bike already stands for. If you love classic, chrome and comfort, come fire this thing off.",
+	'description' => "I love the Deluxe. I rode this bike for a summer. Every single stop light someone will yell out their window with a compliment. We didn't veer too far from stock on this one because of what the bike already stands for. If you love classic, chrome and comfort, come fire this thing off.",
 	'price' => 11995,
 	'video' => '162915973', // IF(value is=='http://vimeo.com/notset'){don't show video area}
 	'images' => array(

@@ -745,6 +745,7 @@ div.container_video_full_width {
 	background:$color_black;
 	text-decoration:none; 
 	margin-bottom:20px;
+	margin-top:40px;
 	@media screen and (min-width: $tablet_body) {
 		margin-bottom:30px;
 		}
@@ -1486,4 +1487,23 @@ div.section_copyright {
 
 div.testimonial_photo {
 	@include vp('filter','grayscale(100%)');
+	}
+
+div.photo_chris {
+	@include vp('border-radius','2px');
+	background:url(_library/img/asset/img_2901.jpg)center no-repeat; 
+	background-size:cover;
+	height:230px;
+	width:100%;
+	margin-top: 46px;
+	@media screen and (min-width: $tablet_body) {
+		width:24.821651090343%;
+		margin-right:3.115264797508%;
+		float:left;
+		}
+	@media screen and (min-width: $desktop_body) {
+		width:32.603416666667%;
+		margin-right:3.333333333333%;
+		float:left;
+		}
 	}

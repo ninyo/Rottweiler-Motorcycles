@@ -856,7 +856,8 @@ div.container_video_full_width {
   height: 194px;
   background: #333333;
   text-decoration: none;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 40px; }
   div.container_video_full_width:after {
     content: "";
     display: table;
@@ -1685,3 +1686,25 @@ div.testimonial_photo {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%); }
+
+div.photo_chris {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: url(_library/img/asset/img_2901.jpg) center no-repeat;
+  background-size: cover;
+  height: 230px;
+  width: 100%;
+  margin-top: 46px; }
+  @media screen and (min-width: 760px) {
+    div.photo_chris {
+      width: 24.821651090343%;
+      margin-right: 3.115264797508%;
+      float: left; } }
+  @media screen and (min-width: 1080px) {
+    div.photo_chris {
+      width: 32.603416666667%;
+      margin-right: 3.333333333333%;
+      float: left; } }

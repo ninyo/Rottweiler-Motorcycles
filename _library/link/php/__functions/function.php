@@ -4,11 +4,15 @@
 
 global functions to help control output
 
+Ugly Apostraphe = ’; //find all and replace with '
+
+
 ———————————————————————————————————————————————————————————— */
 
-$description_short = 'Voted Best Motorcycle Shop in Western WA. All makes, models and years. You deserve the best. Nobody\'s better at getting you on the road.';
+$description_short = "Voted Best Motorcycle Shop in Western WA. All makes, models and years. You deserve the best. Nobody's better at getting you on the road.";
 $description_long = "Rottweiler Motorcycle Co. is your go-to motorcycle shop in Bremerton, Washington. We began production of top-of-the-line motorcycles in 2006. These motorcycles appeal to enthusiasts from all over the country as well as any walk of life. Rottweiler ensures that each motorcycle fits its owner perfectly. Rottweiler Motorcycle Co. boasts an exceptional design and fabrication team with the skills and passion that makes each motorcycle a work of art. What sets Rottweiler Motorcycle Co. apart is our high attention to detail & obsession with perfection while providing the ultimate experience for our customers. Each Rottweiler team member is an artist and master at their craft, bringing a unique style to our approach.";
-$description_about = "Recently voted the Best in Western Washington, Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We&#146;ve got you. And at the end of the day if you can&#146;t get your motorcycle down here, we&#146;ll gladly pick it up at no charge. Anything you need or dream of for your ride, we&#146;ve got you. Give us a call or stop by, and we will give you a tour of our shop.";
+$description_about = "Recently voted the Best in Western Washington, Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We&#8217;ve got you. And at the end of the day if you can&#8217;t get your motorcycle down here, we&#8217;ll gladly pick it up at no charge. Anything you need or dream of for your ride, we&#8217;ve got you. Give us a call or stop by, and we will give you a tour of our shop.";
+$description_medium = "Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We've got you. And at the end of the day if you can't get your motorcycle down here, we'll gladly pick it up at no charge. Anything you need or dream of for your ride, we've got you. Give us a call or stop by, and we will give you a tour of our shop.";
 
 /* ————————————————————————————————————————————————————————— */
 
@@ -329,6 +333,7 @@ function section_grid_motorcycles(){
 
 function group_top_about($_section_primary_title){
 	global $_section_coreteam;
+	global $description_medium;
 
 	$array_content_about[] = array(
 		'_library/img/asset/img_2449.jpg',
@@ -360,7 +365,7 @@ function group_top_about($_section_primary_title){
 					}
 				$output = $output . '<div class="content_rightside">';
 					$output = $output . '<h2>'.ucwords('Recently voted the Best in Western Washington').'</h2>';
-					$output = $output . '<p>Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We’ve got you. And at the end of the day if you can’t get your motorcycle down here, we’ll gladly pick it up at no charge. Anything you need or dream of for your ride, we’ve got you. Give us a call or stop by, and we will give you a tour of our shop.</p>';
+					$output = $output . '<p>'.$description_medium.'</p>';
 				$output = $output . '</div>';
 			$output = $output . '</div>';
 			$output = $output . $_section_grid_motorcycles;
@@ -410,7 +415,7 @@ function group_top_motorcycle($_section_primary_title){
 						}
 					} //end of foreach loop
 			$output = $output . '</div>';
-			$output = $output . '<h2>'.ucwords('One-liner Illor alibera dolupti oreiumenim quidi volore nos').'</h2>';
+			// $output = $output . '<h2>'.ucwords('One-liner Illor alibera dolupti oreiumenim quidi volore nos').'</h2>';
 		$output = $output . '</div>';
 		$output = $output . '<div class="container_video_full_width">';
 			$output = $output . '<div class="section_previous">';
@@ -552,9 +557,9 @@ function group_top_member(){
 									} //close conditional
 								} //close conditional
 							} //close foreach
-					$output = $output . '<div class="video-container">';
-						$output = $output . '<iframe src="https://player.vimeo.com/video/'.$member[video].'" frameborder="0" allowfullscreen></iframe>';
-					$output = $output . '</div>';
+					// $output = $output . '<div class="video-container">';
+					// 	$output = $output . '<iframe src="https://player.vimeo.com/video/'.$member[video].'" frameborder="0" allowfullscreen></iframe>';
+					// $output = $output . '</div>';
 				$output = $output . '</div>'; //close content_left_side
 				$output = $output . '<div class="content_right_side" id="specs_non_mobile">';
 					$output = $output . '<div class="specs_photo" style="background:url(_library/img/motorcycles/'.$member[motorcycle].')center no-repeat;background-size:cover;"></div>';
@@ -620,7 +625,7 @@ function group_top_motorcycles($_section_primary_title){
 				$output = $output . section_primary_title("our motorcycle's",'lineup');
 			$output = $output . '</div>';
 			$output = $output . '<h2>'.titlecase('One of a kind').'</h2>'; 
-			$output = $output . "<p>Each motorcycle contains a personal story. We're proud of understanding each motorcycle's past. We embrace its unique characteristics given by their previous owners. You will find extra details by selecting a motorcycle below.</p>";
+			$output = $output . "<p>Each motorcycle contains a personal story. We're proud of understanding each motorcycle's past. We embrace its unique characteristics given by their previous owners. You will find more details by selecting a motorcycle below.</p>";
 			$output = $output . $_section_grid_motorcycles;
 		$output = $output . '</div>';
 	$output = $output . '</div>';
@@ -658,79 +663,42 @@ function group_coreteam(){
 $_group_coreteam = group_coreteam();
 
 /* ————————————————————————————————————————————————————————— */
-// OLD CODE BELOW
-/* ————————————————————————————————————————————————————————— */
 
-// function group_header($array_members, $array_controller){
-// 	global $array_controller;
-// 	global $headtitle;
-// 	global $loremipsum;
-// 	global $description_short;
-// 	/* ——————————————————————————————————
-// 	DESCRIPTION:
-// 	depending on what page you land on, it will switch out the
-// 	header to match the page you're on
-
-// 	USED:
-// 	on all rootlevel .php pages at the top.
-// 	—————————————————————————————————— */
-
-// 	$switch_status = $array_controller['landing_page']['switch_status'];
-
-// 	$output = $output . '<div class="header_main">';
-// 		$output = $output . '<div style="background:url(_library/img/asset/bg_motorcyles.jpg)center no-repeat;">';
-// 	$output = $output . '</div>';
-
-		
-// 	/* ———————————————————————————————— */    
-// 	return $output;
-// 	} //close function
-// 	/* ———————————————————————————————— */
-// 	$_group_header = group_header();
-
-
-
-function group_lax(){
+function group_chris(){
+	global $loremipsum;
 	/* ——————————————————————————————————
 	DESCRIPTION:
-	display "landing intro" group on this page
-	—————————————————————————————————— */
-	$output = $output . '<div id="group_lax" class="parallax__group">';
-		$output = $output . '<div class="mask parallax__layer parallax__layer--base"></div>';
-		$output = $output . '<div class="bg parallax__layer parallax__layer--deep"></div>';
-	$output = $output . '</div>';
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_lax = group_lax();
+	——————————————————————————————————— */
 
-/* ————————————————————————————————————————————————————————— */
-
-function group_next($description_long){
-	global $_snip_testimonial;
-	global $description_long;
-	/* ——————————————————————————————————
-	DESCRIPTION:
-	display "landing intro" group on this page
-	—————————————————————————————————— */
-	$output = $output . '<div id="group_next" class="parallax__group">';
-		$output = $output . '<div class="lock parallax__layer parallax__layer--base">';
-			$output = $output . '<div class="small_block">';
-				$output = $output . '<h1>YOUR ONE STOP MOTORCYCLE SHOP</h1>';
+	$output = $output . '<div class="section" style="background:black;">';
+		$output = $output . '<div class="inner" style="text-align:center;">';
+			$output = $output . '<div class="title_secondary" style="display:inline-block;">';
+				$output = $output . '<div class="liner">';
+					$output = $output . '<div class="line"></div>';
+					$output = $output . '<p class="above">remembering</p>';
+					$output = $output . '<div class="line"></div>';
+				$output = $output . '</div>';
+				$output = $output . '<h1 class="title">Chris Hicks</h1>';
+				$output = $output . '<div class="content_group">';
+					$output = $output . '<div class="photo_chris"></div>';
+					$output = $output . '<div class="content_rightside">';
+						$output = $output . "<p>Rottweiler Motorcycle Company began producing quality motorcycles in 2006, (in Bremerton, WA) quickly creating broad appeal to enthusiasts and new riders alike. RMC is your full service shop (all makes, all models, all years) with a highly skilled design, fabrication, and service team. We do what no one else can. Your motorcycle is a source of pride. You deserve the best, even down to the smallest details. Tire changes? Performance issues? New bars, new seat, controls or suspension? We've got you. And at the end of the day if you can't get your motorcycle down here, we'll gladly pick it up at no charge. Anything you need or dream of for your ride, we've got you. Give us a call or stop by, and we will give you a tour of our shop.</p>";
+					$output = $output . '</div>';
+				$output = $output . '</div>';
 			$output = $output . '</div>';
-			$output = $output . '<p>'.$description_long.'</p>';
-			$output = $output . '<div class="photo"></div>';
-			$output = $output . $_snip_testimonial;
 		$output = $output . '</div>';
 	$output = $output . '</div>';
-	
-	/* ———————————————————————————————— */    
-	return $output;
-	} //close function
-	/* ———————————————————————————————— */
-	$_group_next = group_next();
 
+
+	
+
+	/* ———————————————————————————————— */
+	return $output;} //close function 
+	/* ———————————————————————————————— */
+	$_group_chris = group_chris();
+
+/* ————————————————————————————————————————————————————————— */
+// OLD CODE BELOW
 /* ————————————————————————————————————————————————————————— */
 
 function group_featured_items($array_items, $_section_primary_title){

@@ -15,8 +15,8 @@ PASTE BOARD BELOW
 ————————————————————————————————————————————————————————— */
 
 echo $_group_top_about;
-
 echo $_group_coreteam;
+echo $_group_chris;
 
 ?>
 

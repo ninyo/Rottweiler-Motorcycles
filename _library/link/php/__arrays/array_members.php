@@ -37,7 +37,7 @@ $array_members = array();
 // 		),
 // 	);
 $array_members['jonathan'] = array(
-	'description' => 'My name is Jonathan. I am one of the co-founders of Rottweiler motorcycle company. My brother Christopher, father De, and myself started this thing back in 06\'. I had absolutely no idea what I was getting into! This thing we started and grown has been intense to say the least. It has tested me more than I ever thought it would, and has also been profoundly rewarding. I have always loved the motorcycle world, hands on, solving things and meeting unique people.',
+	'description' => "My name is Jonathan. I am one of the co-founders of Rottweiler motorcycle company. My brother Christopher, father De, and myself started this thing back in 06'. I had absolutely no idea what I was getting into! This thing we started and grown has been intense to say the least. It has tested me more than I ever thought it would, and has also been profoundly rewarding. I have always loved the motorcycle world, hands on, solving things and meeting unique people.",
 	'name' => array(
 		'first' => 'jonathan',
 		'last' => 'hicks',
@@ -74,8 +74,8 @@ $array_members['de'] = array(
 		'make' => 'harley davidson',
 		'model' => 'street glide',
 		),
-	// 'gif' => '',
-	'still' => '22616_888645114512207_830161086553893108_n.jpg', 
+	'gif' => 'gif_de.gif',
+	'still' => 'rmco-cover-2643.jpg', 
 	'video' => '162915973', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -87,20 +87,20 @@ $array_members['de'] = array(
 		),
 	);
 $array_members['donnie'] = array(
-	'description' => 'My name is Donnie and I am the Executive Vice President & COO of RMC group of companies. Back in 2007 the entire RMC family experienced a very tragic event...the loss of a Christopher Ryan. Speaking for myself, this was a very pivotal time in my life. I had been working elsewhere but had this overwhelming feeling that I needed to step in and help. I left a job not knowing what I was getting into. I will always remember De saying, "If you have to choose between comfort or adventure, always choose adventure and you\'ll never go wrong." This resonates with me daily. Without choosing adventure, I would\'ve never discovered the joy of riding a motorcycle and experiencing the rumble beneath my feet. It\'s true...four wheels move the body and two wheels move the soul. Amen...ride safe!',
+	'description' => "My name is Donnie and I am the Executive Vice President & COO of RMC group of companies. Back in 2007 the entire RMC family experienced a very tragic event... the loss of a Christopher Ryan. Speaking for myself, this was a very pivotal time in my life. I had been working elsewhere but had this overwhelming feeling that I needed to step in and help. I left a job not knowing what I was getting into. I will always remember De saying, \"If you have to choose between comfort or adventure, always choose adventure and you'll never go wrong.\" This resonates with me daily. Without choosing adventure, I would've never discovered the joy of riding a motorcycle and experiencing the rumble beneath my feet. It's true... four wheels move the body and two wheels move the soul. Amen. Ride safe!",
 	'name' => array(
 		'first' => 'donnie',
 		'last' => 'quitugua',
 		),
-	'position' => 'director of operations',
+	'position' => 'Executive Vice President & COO',
 	'motorcycle' => 'img_2453_1.jpg',
 	'details' => array(
 		'year' => 2009,
 		'make' => 'harley davidson',
 		'model' => 'XL883L',
 		),
-	// 'gif' => '',
-	'still' => '10006948_10152831292468292_2512636140231297245_n.jpg', 
+	'gif' => 'gif_donnie.gif',
+	'still' => 'rmco-cover-2640.jpg', 
 	'video' => '162915973', 
 		// this should be an introduction of self. if value is not set, then don't display
 	'social' => array(
@@ -112,7 +112,7 @@ $array_members['donnie'] = array(
 		),
 	);
 $array_members['drew'] = array(
-	'description' => 'What up y’all! My name is Drew. I am the Director of Business Development at Rottweiler Motorcycle Co. I started working here in late 2007 under Chris Hicks as a T-Shirt “Designer” in which I was HARDLY that. Now, years later I find myself embodying the brand & what it stands for… or at least trying to do so. Growing as an adult in a small business has been an amazing experience with its fair share of trials & tribulations, but it has provided a great deal of inspiration that I use towards, not only Rottweiler, but in other areas of my life. I am blessed to be apart of such a great company.',
+	'description' => "What up y'all! My name is Drew. I am the Director of Business Development at Rottweiler Motorcycle Co. I started working here in late 2007 under Chris Hicks as a T-Shirt “Designer” in which I was HARDLY that. Now, years later I find myself embodying the brand & what it stands for… or at least trying to do so. Growing as an adult in a small business has been an amazing experience with its fair share of trials & tribulations, but it has provided a great deal of inspiration that I use towards, not only Rottweiler, but in other areas of my life. I am blessed to be apart of such a great company.",
 	'name' => array(
 		'first' => 'drew',
 		'last' => 'quitugua',
@@ -134,31 +134,6 @@ $array_members['drew'] = array(
 		'instagram' => 'drewboogie',
 		'facebook' => 'DREWBOOOGIE',
 		// 'twitter' => '',
-		),
-	);
-$array_members['julius'] = array(
-	'description' => "Hey everybody! I'm Julius. I started at working with the Rottweiler team in July of 2013 and riding motorcycles shortly beforehand. We didn't have a specific title for me when I first started, but, it seems like \"Customer Service Representative\" fits the bill. Family and motorcycles are two important aspects in my life, luckily, at this job I'm able to be surrounded by both. About 99% of the time I'm swamped in estimates, parts research, invoicing, etc. But every now and then, I meet a customer with a killer story, motorcycle or life related, and I'm beyond intrigued. Working in a company with so many great people here you learn that the greatest joy from this business comes not from the motorcycles, but the people we are surrounded by. Thanks for your time and I hope to see you down at the shop.",
-	'name' => array(
-		'first' => 'julius',
-		'last' => 'melendres',
-		),
-	'position' => 'customer service representative',
-	'motorcycle' => 'img_2453_1.jpg',
-	'details' => array(
-		'year' => 2013,
-		'make' => 'harley davidson',
-		'model' => 'XL883N Iron 83',
-		),
-	'gif' => 'gif_julius.gif',
-	'still' => 'rmco-cover-2598.jpg', 
-	'video' => '162915972', 
-		// this should be an introduction of self. if value is not set, then don't display
-	'social' => array(
-		// 'vimeo' => '',
-		// 'snapchat' => '',
-		'instagram' => 'julius.melendres',
-		'facebook' => 'julius.melendres',
-		'twitter' => 'julius.melendres',
 		),
 	);
 $array_members['tom'] = array(
@@ -186,6 +161,56 @@ $array_members['tom'] = array(
 		// 'twitter' => '',
 		),
 	);
+$array_members['julius'] = array(
+	'description' => "Hey everybody! I'm Julius. I started out working with the Rottweiler team in July of 2013 and riding motorcycles shortly beforehand. We didn't have a specific title for me when I first started, but it seems like \"Customer Service Representative\" fits the bill. Family and motorcycles are two important aspects in my life. Luckily at this job, I'm able to be surrounded by both. About 99% of the time I'm swamped in: estimates, parts research, invoicing, etc. But every now and then, I meet a customer with a killer story (either motorcycle or life-related) and I'm beyond intrigued. Working in a company with so many great people, you learn that the greatest joy from this business comes not from the motorcycles, but from the people we are surrounded by. Thanks for your time and I hope to see you down at the shop.",
+	'name' => array(
+		'first' => 'julius',
+		'last' => 'melendres',
+		),
+	'position' => 'customer service representative',
+	'motorcycle' => 'img_2453_1.jpg',
+	'details' => array(
+		'year' => 2013,
+		'make' => 'harley davidson',
+		'model' => 'XL883N Iron 83',
+		),
+	'gif' => 'gif_julius.gif',
+	'still' => 'rmco-cover-2598.jpg', 
+	'video' => '162915972', 
+		// this should be an introduction of self. if value is not set, then don't display
+	'social' => array(
+		// 'vimeo' => '',
+		// 'snapchat' => '',
+		'instagram' => 'julius.melendres',
+		'facebook' => 'julius.melendres',
+		'twitter' => 'julius.melendres',
+		),
+	);
+// $array_members['keith'] = array(
+// 	'description' => $loremipsum,
+// 	'name' => array(
+// 		'first' => 'keith',
+// 		'last' => 'nichols',
+// 		),
+// 	'position' => 'technician',
+// 	'motorcycle' => 'img_2453_1.jpg',
+// 	'details' => array(
+// 		'year' => 1980,
+// 		'make' => 'harley davidson',
+// 		'model' => 'FXE',
+// 		),
+// 	// 'gif' => 'gif_.gif',
+// 	'still' => 'rmco-cover-2601.jpg', 
+// 	'video' => '162911217', 
+// 		// this should be an introduction of self. if value is not set, then don't display
+// 	'social' => array(
+// 		// 'vimeo' => '',
+// 		// 'snapchat' => '',
+// 		// 'instagram' => '',
+// 		'facebook' => 'thomas.pike.18',
+// 		// 'twitter' => '',
+// 		),
+// 	);
 // $array_members['jeli'] = array(
 // 	'description' => $loremipsum,
 // 	'name' => array(
