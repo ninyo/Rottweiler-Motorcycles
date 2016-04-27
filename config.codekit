@@ -486,6 +486,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_library\/img\/team\/rmco-cover-2640.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64404,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2640.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2640.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_library\/img\/team\/rmco-cover-2643.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54201,
+		"inputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2643.jpg",
+		"outputAbbreviatedPath": "\/_library\/img\/team\/rmco-cover-2643.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_library\/link\/css\/__collect\/__dl\/animate.css": {
 		"fileType": 16,
 		"ignore": 0,
