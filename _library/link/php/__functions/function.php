@@ -430,7 +430,7 @@ function group_top_motorcycle($_section_primary_title){
 						$output = $output . '<div class="left"></div>';
 					$output = $output . '</div>';
 				$output = $output . '</a>';
-					}
+					} //
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_video js-video [vimeo, widescreen]">';
 				foreach($array_motorcycles as $id => $motorcycle){
