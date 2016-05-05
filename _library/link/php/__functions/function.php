@@ -24,6 +24,33 @@ $description_medium = "Rottweiler Motorcycle Company began producing quality mot
 
 /* ————————————————————————————————————————————————————————— */
 
+function titlecase($string, $delimiters = array(" ", "-", "O'"), $exceptions = array("to", "a", "the", "of", "by", "for", "and", "with", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")) { 
+	/* 
+	Exceptions in lower case are words you don't want converted 
+	Exceptions all in upper case are any words you don't want converted to title case 
+	but should be converted to upper case, e.g.: 
+	king henry viii or king henry Viii should be King Henry VIII 
+	*/ 
+	foreach ($delimiters as $delimiter){ 
+		$words = explode($delimiter, $string); 
+		$newwords = array(); 
+		foreach ($words as $word){ 
+			if (in_array(strtoupper($word), $exceptions)){ 
+							// check exceptions list for any words that should be in upper case 
+							$word = strtoupper($word); 
+				} elseif (!in_array($word, $exceptions)){ 
+							// convert to uppercase 
+					$word = ucfirst($word); 
+					} 
+			array_push($newwords, $word); 
+			} 
+		$string = join($delimiter, $newwords); 
+		} 
+		return $string; 
+	// titlecase(); can be used to intermingle.
+	} 
+
+/* ————————————————————————————————————————————————————————— */
 
 function section_copyright(){
 	/* ——————————————————————————————————
@@ -46,7 +73,7 @@ function group_header(){
 	global $description_long;
 	global $description_short;
 	/* ——————————————————————————————————
-	DESCRIPTION:
+	DESCRIPTION: This is the top section for the main header
 	——————————————————————————————————— */
 	$output = $output . '<div class="parallax-window header_main" style="height:100vh; background-position:center; background-repeat:no-repeat; background-size:cover;" data-parallax="scroll" data-image-src="_library/img/asset/bg_motorcyles.jpg">';
 		$output = $output . '<div class="block_header">';
@@ -63,7 +90,6 @@ function group_header(){
 	$output = $output . '</div>';
 	$output = $output . '</div>';
 
-
 	/* ———————————————————————————————— */
 	return $output;} //close function 
 	/* ———————————————————————————————— */
@@ -75,7 +101,7 @@ function group_footer($array_social_network){
 	global $array_social_network;
 	global $description_short;
 	/* ——————————————————————————————————
-	DESCRIPTION:
+	DESCRIPTION: This is placed on all pages
 	—————————————————————————————————— */
 
 	$output = $output . '<div class="container_footer">';
@@ -106,41 +132,12 @@ function group_footer($array_social_network){
 	/* ———————————————————————————————— */
 	$_group_footer = group_footer();
 
-
-/* ————————————————————————————————————————————————————————— */
-
-function titlecase($string, $delimiters = array(" ", "-", "O'"), $exceptions = array("to", "a", "the", "of", "by", "for", "and", "with", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")) { 
-	/* 
-	Exceptions in lower case are words you don't want converted 
-	Exceptions all in upper case are any words you don't want converted to title case 
-	but should be converted to upper case, e.g.: 
-	king henry viii or king henry Viii should be King Henry VIII 
-	*/ 
-	foreach ($delimiters as $delimiter){ 
-		$words = explode($delimiter, $string); 
-		$newwords = array(); 
-		foreach ($words as $word){ 
-			if (in_array(strtoupper($word), $exceptions)){ 
-							// check exceptions list for any words that should be in upper case 
-							$word = strtoupper($word); 
-				} elseif (!in_array($word, $exceptions)){ 
-							// convert to uppercase 
-					$word = ucfirst($word); 
-					} 
-			array_push($newwords, $word); 
-			} 
-		$string = join($delimiter, $newwords); 
-		} 
-		return $string; 
-	// titlecase(); can be used to intermingle.
-	} 
-
 /* ————————————————————————————————————————————————————————— */
 
 function vertical_logo(){
 	global $headtitle;
 	/* ——————————————————————————————————
-	DESCRIPTION:
+	DESCRIPTION: 
 	——————————————————————————————————— */
 
 	if($headtitle !== 'main'){$output = $output . '<div class="vertical_logo"><a href="/" style="width:100%;height:100%;display:block;"></a></div>';}
@@ -197,12 +194,11 @@ function section_testimonial(){
 		'bg_2618.jpg',
 		);
 	/* ——————————————————————————————————
-	DESCRIPTION:
+	DESCRIPTION: This testimonial section randomizes the testimonial by pulling from a data source from $array_testimonial
 	——————————————————————————————————— */
 	shuffle($array_testimonial);
 	shuffle($array_bg_testimonial);
 	$counta = 0;
-
 		foreach($array_bg_testimonial as $cover){
 			shuffle($cover);
 			foreach($cover as $urls){
@@ -247,7 +243,7 @@ function section_testimonial(){
 function section_coreteam(){
 	global $array_members;
 	/* ——————————————————————————————————
-	DESCRIPTION:
+	DESCRIPTION: this section is placed on the about.php page
 	——————————————————————————————————— */
 	$output = $output . '<div class="section">';
 		$output = $output . '<div class="inner">';
@@ -278,8 +274,7 @@ function section_coreteam(){
 
 function section_primary_title($above, $title){
 	/* ——————————————————————————————————
-	DESCRIPTION:
-	
+	DESCRIPTION: this is the header badge, which accepts an above and title text
 	——————————————————————————————————- */
 
 	$output = $output . '<div class="title_primary">';
@@ -299,8 +294,7 @@ function section_primary_title($above, $title){
 function section_grid_motorcycles(){
 	global $array_motorcycles;
 	/* ——————————————————————————————————
-	DESCRIPTION:
-	
+	DESCRIPTION: 
 	——————————————————————————————————- */
 	$output = $output . '<div class="img_grid_motorcycles">';
 		$output = $output . '<ul>';
@@ -310,6 +304,7 @@ function section_grid_motorcycles(){
 						$output = $output . '<div class="container">';
 							$output = $output . '<p class="title_year">'.$motorcycle['specs']['year'].'</p>';
 							$output = $output . '<h1 class="title_name">'.$motorcycle['motorcycle_nick'].'</h1>';
+							$output = $output . '<p style="color:white;">test</p>';
 						$output = $output . '</div>';
 						$photo_count = 0;
 						foreach($motorcycle[images] as $photo => $description){
@@ -318,7 +313,7 @@ function section_grid_motorcycles(){
 								$output = $output . '<div class="cover" style="background:url(_library/img/motorcycles/'.$photo.')center no-repeat;background-size:cover;"></div>';
 								}
 							}
-						$output = $output . '<div class="under"></div>';
+						$output = $output . '<div class="under"></div>'; // this is the color of the hoverstate
 					$output = $output . '</a>';
 				$output = $output . '</li>';
 				}
@@ -435,7 +430,7 @@ function group_top_motorcycle($_section_primary_title){
 						$output = $output . '<div class="left"></div>';
 					$output = $output . '</div>';
 				$output = $output . '</a>';
-					}
+					} //
 			$output = $output . '</div>';
 			$output = $output . '<div class="section_video js-video [vimeo, widescreen]">';
 				foreach($array_motorcycles as $id => $motorcycle){
@@ -468,14 +463,27 @@ function group_top_motorcycle($_section_primary_title){
 			foreach($array_motorcycles as $id => $motorcycle){
 				if($id == $match){
 					$output = $output . '<p>'.$motorcycle[description].'</p>';
-					$output = $output . '<div class="img_grid_double" style="">';
-					$count = 0;
-					foreach($motorcycle[images] as $url => $description){
-						$count = $count +1;
-						if($count != 1){
-							$output = $output . '<div class="" style="background:url(_library/img/motorcycles/'.$url.')center no-repeat;background-size:cover;"></div>';	
+					$output = $output . '<div class="cycle_pair">';
+						$output = $output . '<div class="img_grid_double" style="">';
+						$count = 0;
+						foreach($motorcycle[images] as $url => $description){
+							$count = $count +1;
+							if($count != 1){
+								$output = $output . '<div class="" style="background:url(_library/img/motorcycles/'.$url.')center no-repeat;background-size:cover;"></div>';	
+								}
 							}
-						}
+						$output = $output . '</div>';
+						$output = $output . '<div class="specs_container">';
+							$output = $output . '<p class="title">motorcycle details</p>';
+							$output = $output . '<ul class="details">';
+								foreach($motorcycle[specs] as $category => $detail){
+									$output = $output . '<li>';
+										$output = $output . '<p class="category">'.ucwords($category).'</p>';
+										$output = $output . '<p class="detail">'.ucwords($detail).'</p>';
+									$output = $output . '</li>';
+									}
+							$output = $output . '</ul>';
+						$output = $output . '</div>';
 					$output = $output . '</div>';
 					}
 				}
