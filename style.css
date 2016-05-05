@@ -1544,7 +1544,7 @@ div.header_main {
           background-size: 85%; } }
       @media screen and (min-width: 1080px) {
         div.header_main div.block_header .logo {
-          background-size: 100%; } }
+          background-size: 96%; } }
     div.header_main div.block_header p {
       -webkit-text-shadow: 0 0 7px rgba(0,0,0,0.2);
       -moz-text-shadow: 0 0 7px rgba(0,0,0,0.2);
