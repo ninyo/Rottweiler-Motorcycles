@@ -43,7 +43,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 		'2016-04-15_3.57.35.png' => 'photo3', //pair photo 2
 		),
 	'specs' => array(
-		'price' => '$7995',
+		'price' => '$7,995',
 		'year' => 1972,
 		'make' => 'yamaha',
 		'handle bars' => 'rottweiler z-bars',
@@ -86,7 +86,7 @@ $array_motorcycles[] = array( //——–––––––motorcycle 1
 		'2016-04-15_4.10.59.png' => 'photo3', //pair photo 2
 		),
 	'specs' => array(
-		'price' => '$11995',
+		'price' => '$11,995',
 		'year' => 2006,
 		'make' => 'Harley Davidson',
 		'exhaust' => 'vance & hines big radius',

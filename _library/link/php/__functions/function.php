@@ -20,7 +20,7 @@ $description_medium = "Rottweiler Motorcycle Company began producing quality mot
 /* ———————————————————————————————— */  
 //function name_function(){return $output;}//close function $_name_function = name_function();
 /* ———————————————————————————————— */  
-//test
+
 
 /* ————————————————————————————————————————————————————————— */
 
@@ -304,7 +304,7 @@ function section_grid_motorcycles(){
 						$output = $output . '<div class="container">';
 							$output = $output . '<p class="title_year">'.$motorcycle['specs']['year'].'</p>';
 							$output = $output . '<h1 class="title_name">'.$motorcycle['motorcycle_nick'].'</h1>';
-							$output = $output . '<p style="color:white;">test</p>';
+							$output = $output . '<p style="color:white;">'.$motorcycle['specs']['price'].'</p>';
 						$output = $output . '</div>';
 						$photo_count = 0;
 						foreach($motorcycle[images] as $photo => $description){
