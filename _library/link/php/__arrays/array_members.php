@@ -112,7 +112,7 @@ $array_members['donnie'] = array(
 		),
 	);
 $array_members['drew'] = array(
-	'description' => "What up y'all! My name is Drew. I am the Director of Business Development at Rottweiler Motorcycle Co. I started working here in late 2007 under Chris Hicks as a T-Shirt “Designer” in which I was HARDLY that. Now, years later I find myself embodying the brand & what it stands for… or at least trying to do so. Growing as an adult in a small business has been an amazing experience with its fair share of trials & tribulations, but it has provided a great deal of inspiration that I use towards, not only Rottweiler, but in other areas of my life. I am blessed to be apart of such a great company.",
+	'description' => "What up y'all! My name is Drew. I am the Director of Business Development at Rottweiler Motorcycle Co. I started working here in late 2007 under Chris Hicks as a T-Shirt \"Designer\" in which I was HARDLY that. Now, years later I find myself embodying the brand & what it stands for&mdash;or at least trying to do so. Growing as an adult in a small business has been an amazing experience with its fair share of trials & tribulations, but it has provided a great deal of inspiration that I use towards, not only Rottweiler, but in other areas of my life. I am blessed to be apart of such a great company.",
 	'name' => array(
 		'first' => 'drew',
 		'last' => 'quitugua',
